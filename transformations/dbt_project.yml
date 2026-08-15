@@ -1,0 +1,13 @@
+name: healthcare_decision_intelligence
+version: "1.0.0"
+config-version: 2
+profile: healthcare_decision_intelligence
+model-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+models:
+  healthcare_decision_intelligence:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

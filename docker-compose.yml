@@ -1,0 +1,31 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      HDIP_LIVE_DATA: "0"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: healthcare_di
+      POSTGRES_USER: healthcare_di
+      POSTGRES_PASSWORD: local_only_change_me
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U healthcare_di -d healthcare_di"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postgres_data:

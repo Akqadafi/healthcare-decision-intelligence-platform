@@ -1,0 +1,16 @@
+county_key,hospital_count,rated_hospital_count,average_hospital_rating,emergency_hospital_count,birthing_friendly_count
+APACHE,4,0,,3,2
+COCHISE,4,1,2.00,4,1
+COCONINO,4,1,4.00,2,3
+GILA,3,2,3.00,2,1
+GRAHAM,1,0,,1,1
+GREENLEE,0,0,,0,0
+LAPAZ,2,1,2.00,2,0
+MARICOPA,53,29,3.21,29,16
+MOHAVE,5,4,2.50,5,3
+NAVAJO,6,1,4.00,3,2
+PIMA,13,9,3.00,12,4
+PINAL,5,3,3.33,5,2
+SANTACRUZ,1,0,,1,1
+YAVAPAI,5,3,3.67,4,2
+YUMA,2,1,2.00,2,1

@@ -1,0 +1,16 @@
+version: 1
+dataset: cms_hospital_general_information
+owner: analytics-engineering
+grain: one row per hospital before county aggregation
+primary_key: facility_id
+phi: false
+required_columns:
+  facility_id: {type: string, nullable: false}
+  countyparish: {type: string, nullable: false}
+  state: {type: string, pattern: "^[A-Z]{2}$", nullable: false}
+  hospital_overall_rating: {type: string, nullable: true}
+quality_notes:
+  - Missing ratings are retained and surfaced as insufficient data.
+  - County names are normalized only for matching and never used as a stable national key.
+freshness:
+  warn_after_days: 120

@@ -1,0 +1,30 @@
+{
+  "scope": "Arizona counties",
+  "contains_phi": false,
+  "sources": [
+    {
+      "name": "CDC PLACES County Data (GIS Friendly Format), 2025 release",
+      "dataset_id": "i46a-9kgh",
+      "source_url": "https://data.cdc.gov/d/i46a-9kgh",
+      "data_vintage": "2022-2023 BRFSS; 2023 population",
+      "snapshot_retrieved": "2026-08-15",
+      "license_note": "U.S. government public data"
+    },
+    {
+      "name": "CMS Hospital General Information",
+      "dataset_id": "xubh-q36u",
+      "source_url": "https://data.cms.gov/provider-data/dataset/xubh-q36u",
+      "data_modified": "2026-04-28",
+      "snapshot_retrieved": "2026-08-15",
+      "license_note": "U.S. government public data"
+    },
+    {
+      "name": "Census ACS 2024 5-Year Data Profiles",
+      "dataset_id": "2024/acs/acs5/profile",
+      "source_url": "https://api.census.gov/data/2024/acs/acs5/profile",
+      "data_vintage": "2020-2024 ACS 5-year estimates",
+      "snapshot_retrieved": "2026-08-15",
+      "license_note": "U.S. government public data"
+    }
+  ]
+}

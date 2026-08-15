@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: public_health
+    schema: raw
+    tables:
+      - name: cdc_places_county
+  - name: analytics
+    schema: analytics
+    tables:
+      - name: community_priority_score
+
+models:
+  - name: mart_community_priority
+    description: One explainable resource-priority record per county.
+    columns:
+      - name: county_fips
+        tests: [not_null, unique]
+      - name: total_priority_score
+        tests: [not_null]
+      - name: recommended_action
+        tests: [not_null]

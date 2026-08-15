@@ -1,0 +1,11 @@
+version: 1
+dataset: census_acs_5_year_profile
+owner: analytics-engineering
+grain: one row per county
+primary_key: county_fips
+phi: false
+authentication: CENSUS_API_KEY
+required_columns:
+  county_fips: {type: string, pattern: "^[0-9]{5}$", nullable: false}
+  median_household_income: {type: number, min: 0, nullable: true}
+  poverty_rate: {type: number, min: 0, max: 100, nullable: true}

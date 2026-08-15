@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "healthcare-decision-intelligence"
+version = "1.0.0"
+description = "Transparent community health prioritization using public CDC and CMS data"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "pandas>=2.2,<4",
+  "plotly>=5.24,<7",
+  "requests>=2.32,<3",
+  "streamlit>=1.40,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<10",
+  "pytest-cov>=6,<8",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+hdi-build = "healthcare_di.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=healthcare_di --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

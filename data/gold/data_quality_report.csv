@@ -1,0 +1,7 @@
+check,passed,observed
+required_columns,True,"['county_fips', 'county_name', 'population', 'recommended_action', 'total_priority_score']"
+row_count,True,15 Arizona counties
+unique_county_fips,True,15 unique values
+valid_fips,True,five-digit strings
+score_range,True,25.4-75.1
+non_null_recommendations,True,0 nulls

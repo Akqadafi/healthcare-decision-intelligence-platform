@@ -1,0 +1,16 @@
+version: 1
+dataset: cdc_places_county
+owner: analytics-engineering
+grain: one row per county
+primary_key: county_fips
+phi: false
+required_columns:
+  county_fips: {type: string, pattern: "^[0-9]{5}$", nullable: false}
+  county_name: {type: string, nullable: false}
+  population: {type: integer, min: 1, nullable: false}
+  uninsured_rate: {type: number, min: 0, max: 100, nullable: false}
+  obesity_rate: {type: number, min: 0, max: 100, nullable: false}
+  diabetes_rate: {type: number, min: 0, max: 100, nullable: false}
+  food_insecurity_rate: {type: number, min: 0, max: 100, nullable: false}
+freshness:
+  warn_after_days: 450
