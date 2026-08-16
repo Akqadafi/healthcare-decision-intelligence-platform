@@ -16,6 +16,26 @@ county; and turns the result into recommended actions and a budget-aware allocat
 
 ![Executive dashboard preview](evidence/dashboard/executive-summary.png)
 
+## What this project actually does
+
+This is not a patient-risk model and it does not make clinical decisions. It is a **community
+planning tool** for teams that must distribute limited resources across multiple counties.
+
+The platform turns three disconnected public datasets into one repeatable decision workflow:
+
+1. **Collect:** load reproducible CDC, Census, and CMS snapshots—or refresh supported sources.
+2. **Standardize:** align county identifiers, units, missing values, and reporting vintages.
+3. **Score:** convert each measure to an Arizona percentile and calculate four auditable domains.
+4. **Prioritize:** combine the domains into a 0–100 planning score and assign a priority tier.
+5. **Explain:** identify the two strongest drivers and attach a recommended operational response.
+6. **Allocate:** test how a fixed budget and delivery capacity change the deployment scenario.
+
+For example, Apache County ranks first in the included snapshot at **75.1/100**. The dashboard
+does not merely show that rank: it identifies social need and health burden as the leading
+drivers, recommends mobile-clinic and transportation outreach, and shows how the county fits
+within a constrained budget. Every recommendation remains a planning hypothesis that requires
+local validation and community input.
+
 ## Decision product
 
 - Ranks all 15 Arizona counties across health burden, social need, care access, and hospital gap.
@@ -45,6 +65,9 @@ With Docker:
 ```bash
 docker compose up --build
 ```
+
+For prerequisites, AWS safeguards, Terraform apply/destroy steps, verification checks, and
+dashboard deployment options, follow the [deployment runbook](docs/runbooks/DEPLOYMENT.md).
 
 ## Architecture
 
@@ -108,6 +131,7 @@ data_contracts/            Source-level contracts
 transformations/           dbt-ready analytics models
 database/                  PostgreSQL warehouse schema
 infra/terraform/           Safe-by-default AWS foundation
+docs/runbooks/             Deployment and operations instructions
 architecture/              Diagram, lineage, and ADRs
 ml/model_cards/            Model governance
 portfolio/                 Portfolio-ready case study and project card
@@ -142,6 +166,10 @@ terraform -chdir=infra/terraform plan \
 ```
 
 No `terraform apply` is run by CI.
+
+Terraform provisions the storage, encryption, and logging foundation only; it does **not** host
+the Streamlit container. The [deployment runbook](docs/runbooks/DEPLOYMENT.md) separates the AWS
+foundation from local and container dashboard deployment so the operational boundary is clear.
 
 ## Data governance
 
