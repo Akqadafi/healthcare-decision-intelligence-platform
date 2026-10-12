@@ -1,8 +1,12 @@
 """Configuration and data contracts used throughout the platform."""
 
+import os
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+# Installed packages live outside the application data directory in containers.
+PROJECT_ROOT = Path(
+    os.environ.get("HDIP_PROJECT_ROOT", Path(__file__).resolve().parents[2])
+).expanduser().resolve()
 SNAPSHOT_DIR = PROJECT_ROOT / "data" / "snapshots"
 GOLD_DIR = PROJECT_ROOT / "data" / "gold"
 

@@ -16,3 +16,9 @@ infra/terraform/*.tfstate*
 infra/terraform/*.tfplan
 *.log
 .DS_Store
+
+# Local AWS plan review, state credentials, and runtime evidence
+infra/terraform/*.tfvars
+infra/terraform/*.tfvars.json
+infra/terraform/*.plan.json
+evidence/

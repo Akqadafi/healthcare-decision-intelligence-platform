@@ -16,7 +16,7 @@ variable "environment" {
 }
 
 variable "deploy_cloud_resources" {
-  description = "Explicit cost/safety gate. Nothing is provisioned when false."
+  description = "Cost gate for the optional S3/KMS foundation; hosting uses deploy_hosting separately."
   type        = bool
   default     = false
 }

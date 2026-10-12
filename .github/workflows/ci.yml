@@ -4,6 +4,7 @@ on:
   push:
     branches: [main, master, "agent/**", "codex/**"]
   pull_request:
+  workflow_call:
 
 permissions:
   contents: read
@@ -48,5 +49,9 @@ jobs:
       - uses: docker/build-push-action@v6
         with:
           context: .
+          load: true
           push: false
           tags: community-health-intelligence:ci
+
+      - name: Verify bundled data and all dashboard pages
+        run: docker run --rm --entrypoint python community-health-intelligence:ci /app/scripts/verify_dashboard.py

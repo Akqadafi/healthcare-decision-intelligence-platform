@@ -21,7 +21,7 @@ resource "aws_s3_bucket" "data_lake" {
 
   lifecycle {
     precondition {
-      condition     = var.data_lake_bucket_name != null && length(var.data_lake_bucket_name) >= 3
+      condition     = var.data_lake_bucket_name == null ? false : length(var.data_lake_bucket_name) >= 3
       error_message = "Set data_lake_bucket_name when deploy_cloud_resources is true."
     }
   }

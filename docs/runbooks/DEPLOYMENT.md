@@ -5,10 +5,7 @@ This runbook covers two independent deployment surfaces:
 1. the optional AWS data and logging foundation managed by Terraform; and
 2. the Streamlit dashboard, which can run directly with Python or as a container.
 
-The current Terraform intentionally does **not** create dashboard compute. It provisions a
-versioned, private, KMS-encrypted S3 bucket and an encrypted CloudWatch log group. Keeping that
-boundary explicit prevents a routine portfolio demonstration from creating unreviewed cloud
-compute costs.
+AWS container hosting is independently gated by deploy_hosting. See [AWS_HOSTING.md](AWS_HOSTING.md) for ECR/ECS, reviewed releases, recovery testing, evidence, and cleanup. Both AWS deployment gates default to false.
 
 ## 1. Prerequisites
 
@@ -65,8 +62,10 @@ aws sts get-caller-identity --profile YOUR_PROFILE
 
 The returned account and ARN must match the account you intend to bill. Stop if they do not.
 
-For the remaining commands, either add `--profile YOUR_PROFILE` to AWS CLI commands and set
-`AWS_PROFILE=YOUR_PROFILE`, or use your organization's approved credential process.
+For the remaining commands, either add `--profile YOUR_PROFILE` to AWS CLI commands or select the
+profile in your shell. In Windows PowerShell, run `$env:AWS_PROFILE = "YOUR_PROFILE"`. In macOS or
+Linux, run `export AWS_PROFILE=YOUR_PROFILE`. You can also use your organization's approved
+credential process.
 
 ### 3.2 Choose inputs
 
@@ -90,10 +89,7 @@ terraform -chdir=infra/terraform validate
 ### 3.4 Create and review a saved plan
 
 ```bash
-terraform -chdir=infra/terraform plan \
-  -out=healthcare.tfplan \
-  -var="deploy_cloud_resources=true" \
-  -var="data_lake_bucket_name=YOUR-GLOBALLY-UNIQUE-NAME"
+terraform -chdir=infra/terraform plan -out=healthcare.tfplan -var="deploy_cloud_resources=true" -var="data_lake_bucket_name=YOUR-GLOBALLY-UNIQUE-NAME"
 
 terraform -chdir=infra/terraform show healthcare.tfplan
 ```
@@ -144,11 +140,7 @@ Use this path to validate the deployable image without starting PostgreSQL:
 
 ```bash
 docker build -t community-health-intelligence:local .
-docker run --rm \
-  --name community-health-dashboard \
-  -p 8501:8501 \
-  -e HDIP_LIVE_DATA=0 \
-  community-health-intelligence:local
+docker run --rm --name community-health-dashboard -p 8501:8501 -e HDIP_LIVE_DATA=0 community-health-intelligence:local
 ```
 
 Open `http://localhost:8501` and verify the health endpoint:
@@ -192,15 +184,26 @@ a production clinical system.
 
 ## 5. Refreshing source data
 
-Use the committed snapshots for normal deployment. To refresh supported public APIs:
+Use the committed snapshots for normal deployment. Live mode refreshes the CDC, CMS, and Census
+sources, so set a Census API key in your shell first.
 
-```bash
+Windows PowerShell:
+
+```powershell
+$env:CENSUS_API_KEY = "YOUR_KEY"
 python -m healthcare_di.pipeline --live
 ```
 
-Set `CENSUS_API_KEY` only in your shell or approved secret manager when Census enrichment is
-required. Review the changed snapshots, quality report, build manifest, and county rankings before
-publishing a refreshed image.
+macOS or Linux:
+
+```bash
+export CENSUS_API_KEY="YOUR_KEY"
+python -m healthcare_di.pipeline --live
+```
+
+Keep `CENSUS_API_KEY` only in your shell or approved secret manager. Never put it in source code,
+documentation, or Git history. Review the changed snapshots, quality report, build manifest, and
+county rankings before publishing a refreshed image.
 
 ## 6. Rollback
 
@@ -210,10 +213,7 @@ verify `/_stcore/health` and the four dashboard tabs.
 Terraform rollback should be a new reviewed plan. To remove the portfolio foundation:
 
 ```bash
-terraform -chdir=infra/terraform plan -destroy \
-  -out=destroy.tfplan \
-  -var="deploy_cloud_resources=true" \
-  -var="data_lake_bucket_name=YOUR-GLOBALLY-UNIQUE-NAME"
+terraform -chdir=infra/terraform plan -destroy -out=destroy.tfplan -var="deploy_cloud_resources=true" -var="data_lake_bucket_name=YOUR-GLOBALLY-UNIQUE-NAME"
 
 terraform -chdir=infra/terraform apply destroy.tfplan
 ```

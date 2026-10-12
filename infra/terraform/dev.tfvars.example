@@ -1,0 +1,15 @@
+# Copy to dev.tfvars, verify the account and review a saved plan before any apply.
+aws_region           = "us-west-2"
+environment          = "dev"
+expected_account_id  = "233781468925"
+deploy_cloud_resources = false
+deploy_hosting       = true
+github_repository    = "Akqadafi/healthcare-decision-intelligence-platform"
+github_publish_environment = "dev-build"
+github_deploy_environment  = "dev"
+# No public clients until explicitly reviewed. Add your IPv4/32 for manual browser testing.
+# GitHub hosted runners need network access too; review public demo access or use a self-hosted runner.
+allowed_client_cidrs = []
+container_image      = null
+# certificate_arn = "arn:aws:acm:us-west-2:ACCOUNT:certificate/ID"
+preserve_evidence_logs = true

@@ -5,30 +5,53 @@
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-6946ba)](https://www.terraform.io/)
 [![Data](https://img.shields.io/badge/data-public%20aggregate-2f855a)](#data-governance)
 
-An enterprise-style decision intelligence platform that helps healthcare leaders answer:
+## The short version
 
-> Where should we invest outreach, care coordination, mobile-clinic resources, or grant
-> funding first?
+Imagine Arizona has one box of money for community healthcare, but 15 counties need help. This
+project helps a planning team decide **which counties may need help first and why**.
 
-The MVP joins public CDC population-health estimates, Census ACS socioeconomic measures, and
-CMS hospital access and quality data; produces an explainable priority score for every Arizona
-county; and turns the result into recommended actions and a budget-aware allocation scenario.
+It takes public information from the CDC, Census, and CMS, lines up the information by county,
+and gives each county a planning score from 0 to 100. The dashboard then shows:
+
+- which counties have the greatest combination of health and access challenges;
+- what is pushing each county's score higher;
+- an action the planning team could investigate; and
+- how a limited pretend budget could be divided without overspending.
+
+```text
+Public government data
+        ↓
+Clean and match Arizona's 15 counties
+        ↓
+Calculate simple, explainable scores
+        ↓
+Check the data for mistakes
+        ↓
+Show rankings, reasons, and possible actions in a dashboard
+```
+
+This is **not** a doctor, a patient-risk system, or a tool that makes medical decisions. It uses
+county-level totals and estimates—not people's names or medical records. Its recommendations are
+starting ideas that should be checked with local experts and community members.
 
 ![Executive dashboard preview](evidence/dashboard/executive-summary.png)
 
-## What this project actually does
+## What happens when you run it
 
-This is not a patient-risk model and it does not make clinical decisions. It is a **community
-planning tool** for teams that must distribute limited resources across multiple counties.
+The platform turns three separate public datasets into one repeatable workflow:
 
-The platform turns three disconnected public datasets into one repeatable decision workflow:
+1. **Load:** read the included CDC, Census, and CMS data files.
+2. **Clean:** make county names, ID numbers, units, and missing values work together.
+3. **Score:** compare each county with the other Arizona counties in four areas.
+4. **Rank:** combine those areas into one 0–100 planning score.
+5. **Explain:** show the two biggest reasons for the score and suggest a possible response.
+6. **Display:** put the results into a dashboard and a pretend budget-planning tool.
 
-1. **Collect:** load reproducible CDC, Census, and CMS snapshots—or refresh supported sources.
-2. **Standardize:** align county identifiers, units, missing values, and reporting vintages.
-3. **Score:** convert each measure to an Arizona percentile and calculate four auditable domains.
-4. **Prioritize:** combine the domains into a 0–100 planning score and assign a priority tier.
-5. **Explain:** identify the two strongest drivers and attach a recommended operational response.
-6. **Allocate:** test how a fixed budget and delivery capacity change the deployment scenario.
+The pipeline creates three main files in `data/gold/`:
+
+- `mart_community_priority.csv`: the county rankings and explanations;
+- `data_quality_report.csv`: the results of six automatic data checks; and
+- `build_manifest.json`: a receipt showing when and how the data was built.
 
 For example, Apache County ranks first in the included snapshot at **75.1/100**. The dashboard
 does not merely show that rank: it identifies social need and health burden as the leading
@@ -46,28 +69,103 @@ local validation and community input.
 - Runs six automated data-quality controls and records build metadata.
 - Uses only public, aggregate data; no patient-level data or PHI is present.
 
-## Quick start
+## How to use it
 
-```bash
+You do **not** have to write the dashboard yourself. The code is already built. The first time,
+you download the repo, prepare Python, build the results, and start the dashboard.
+
+### Option 1: Windows PowerShell
+
+Install [Git](https://git-scm.com/downloads) and [Python 3.11 or newer](https://www.python.org/downloads/),
+then run these commands one at a time:
+
+```powershell
+git clone https://github.com/Akqadafi/healthcare-decision-intelligence-platform.git
+cd healthcare-decision-intelligence-platform
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
+.\.venv\Scripts\Activate.ps1
 python -m pip install -e ".[dev]"
 python -m healthcare_di.pipeline
 streamlit run dashboard/app.py
 ```
 
-Open `http://localhost:8501`. The default uses committed public-data snapshots, so the demo is
-reproducible and works without API credentials.
+Open <http://localhost:8501> if it does not open by itself. Keep the PowerShell window running
+while you use the dashboard. Press `Ctrl+C` in that window when you want to stop it.
 
-With Docker:
+| Command | What it means in simple language |
+|---|---|
+| `git clone ...` | Download a copy of the project. You only do this once. |
+| `cd ...` | Walk into the project's folder. |
+| `python -m venv .venv` | Make a private Python toolbox for this project. |
+| `Activate.ps1` | Turn on that toolbox. |
+| `pip install ...` | Put the project's required Python packages in the toolbox. |
+| `python -m healthcare_di.pipeline` | Read, clean, check, score, and save the included data. |
+| `streamlit run dashboard/app.py` | Start the dashboard on your computer. |
+
+The next time you want to open the dashboard, return to the project folder and run:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+streamlit run dashboard/app.py
+```
+
+You only need to run the pipeline again when you change the data or scoring code, want to rebuild
+the output, or delete the files in `data/gold/`.
+
+If PowerShell blocks the activation script, run this once in the same PowerShell window and then
+try activation again:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+### Option 2: macOS or Linux
+
+Use the same commands as above, but activate the toolbox with:
+
+```bash
+source .venv/bin/activate
+```
+
+### Option 3: Docker
+
+If Docker Desktop is installed and running, this single command builds and starts the app:
 
 ```bash
 docker compose up --build
 ```
 
-For prerequisites, AWS safeguards, Terraform apply/destroy steps, verification checks, and
-dashboard deployment options, follow the [deployment runbook](docs/runbooks/DEPLOYMENT.md).
+Then open <http://localhost:8501>. Press `Ctrl+C` to stop it.
+
+### Included data versus fresh data
+
+The normal pipeline command uses public-data snapshots already stored in the repo. That makes the
+demo predictable and means **you do not need an API key**:
+
+```powershell
+python -m healthcare_di.pipeline
+```
+
+Fresh-data mode asks the government APIs for newer CDC, CMS, and Census data. It requires a Census
+API key and can produce different rankings when the agencies update their data:
+
+```powershell
+$env:CENSUS_API_KEY = "YOUR_KEY"
+python -m healthcare_di.pipeline --live
+```
+
+Never paste a real API key into the README, source code, or Git history. An API key should be kept
+in an environment variable like the example above.
+
+### What you should see
+
+- Rankings for all 15 Arizona counties.
+- Apache County at 75.1/100 in the included snapshot.
+- Tabs for the executive summary, county profile, resource simulator, and trust center.
+- Six passing data-quality checks in the generated quality report.
+
+For Terraform prerequisites, AWS cost safeguards, exact apply/destroy commands, verification,
+and dashboard deployment choices, use the [step-by-step deployment runbook](docs/runbooks/DEPLOYMENT.md).
 
 ## Architecture
 
@@ -75,7 +173,7 @@ dashboard deployment options, follow the [deployment runbook](docs/runbooks/DEPL
 flowchart LR
   CDC["CDC PLACES<br/>county health & social need"] --> ING["Python ingestion<br/>schema normalization"]
   CMS["CMS Hospital General Information<br/>access & quality"] --> ING
-  ACS["Census ACS<br/>optional keyed enrichment"] -.-> ING
+  ACS["Census ACS<br/>social and economic context"] --> ING
   ING --> SNAP["Versioned public snapshots"]
   SNAP --> SCORE["Explainable scoring<br/>four domain indices"]
   SCORE --> GOLD["Gold priority mart<br/>quality checks + manifest"]
@@ -111,14 +209,14 @@ validation requirements.
 | CMS Provider Data Catalog | Hospital General Information (`xubh-q36u`) | Modified 2026-04-28; retrieved 2026-08-15 |
 | Census ACS 5-year | 2020–2024 income and poverty estimates | Snapshot included; live refresh requires `CENSUS_API_KEY` |
 
-Refresh the uncredentialed CDC/CMS sources:
+Refresh all three live sources after setting `CENSUS_API_KEY`:
 
 ```bash
 python -m healthcare_di.pipeline --live
 ```
 
 The live command can change scores as source agencies revise their data. Snapshot mode is the
-default for review, tests, and portfolio demonstrations.
+default for review, tests, and portfolio demonstrations, and it does not require credentials.
 
 ## Repository map
 
@@ -167,9 +265,11 @@ terraform -chdir=infra/terraform plan \
 
 No `terraform apply` is run by CI.
 
-Terraform provisions the storage, encryption, and logging foundation only; it does **not** host
-the Streamlit container. The [deployment runbook](docs/runbooks/DEPLOYMENT.md) separates the AWS
-foundation from local and container dashboard deployment so the operational boundary is clear.
+Terraform also defines an independently gated ECR/ECS Fargate hosting environment, an ALB,
+networking, deployment events, and GitHub OIDC roles. Hosting remains disabled by default.
+See the [AWS release and rollback runbook](docs/runbooks/AWS_HOSTING.md) and
+[cost review](docs/runbooks/COST_REVIEW.md) before creating resources. Cloud deployment and
+recovery results must be verified before being claimed.
 
 ## Data governance
 
@@ -182,17 +282,17 @@ foundation from local and container dashboard deployment so the operational boun
 
 ## Portfolio story
 
-See [portfolio/CASE_STUDY.md](portfolio/CASE_STUDY.md) for interview-ready impact, engineering
-decisions, and résumé bullets. The project intentionally shows healthcare analytics, data
-engineering, explainable modeling, DevOps, and governance in one coherent product.
+See the [portfolio case study](portfolio/CASE_STUDY.md) for an interview-ready explanation,
+engineering decisions, and résumé bullets. The project connects healthcare analytics, data
+engineering, explainable modeling, DevOps, and governance in one product.
 
 ## Roadmap
 
-- Census ACS enrichment after a key is configured.
+- Additional Census ACS variables and automated refresh after a key is configured.
 - HRSA shortage-area measures and provider workforce capacity.
 - ZCTA-level drill-down for Maricopa County.
 - Maternal/infant health module using CDC WONDER Natality.
-- Athena catalog and container hosting after an approved AWS cost review.
+- Athena catalog; execute the container deployment and recovery demonstration after AWS plan/cost approval.
 
 ## License
 

@@ -1,0 +1,119 @@
+name: Reviewed AWS release
+
+on:
+  workflow_dispatch:
+    inputs:
+      operation:
+        description: Publish only for bootstrap, or publish and deploy to the existing dev service
+        required: true
+        type: choice
+        options: [publish, deploy]
+        default: publish
+
+permissions:
+  contents: read
+
+concurrency:
+  group: healthcare-di-dev-release
+  cancel-in-progress: false
+
+jobs:
+  checks:
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/ci.yml
+
+  publish:
+    needs: checks
+    runs-on: ubuntu-latest
+    environment: dev-build
+    permissions:
+      contents: read
+      id-token: write
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_PUBLISH_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: Verify reviewed AWS account
+        env:
+          EXPECTED_ACCOUNT: ${{ vars.AWS_ACCOUNT_ID }}
+        run: test "$(aws sts get-caller-identity --query Account --output text)" = "$EXPECTED_ACCOUNT"
+      - uses: aws-actions/amazon-ecr-login@v2
+      - name: Build, verify, and publish the source-commit image
+        id: image
+        env:
+          REPOSITORY: ${{ vars.ECR_REPOSITORY_URL }}
+          ECR_NAME: ${{ vars.ECR_REPOSITORY_NAME }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p evidence/image
+          image="$REPOSITORY:$GITHUB_SHA"
+          docker build --platform linux/amd64 -t "$image" .
+          docker run --rm --entrypoint python "$image" /app/scripts/verify_dashboard.py > evidence/image/validated-data.json
+          # Tags are immutable. An existing commit is verified instead of overwritten.
+          if aws ecr describe-images --repository-name "$ECR_NAME" --image-ids imageTag="$GITHUB_SHA" > evidence/image/existing.json 2>/dev/null; then
+            digest=$(jq -r '.imageDetails[0].imageDigest' evidence/image/existing.json)
+            docker pull "$REPOSITORY@$digest"
+            docker run --rm --entrypoint python "$REPOSITORY@$digest" /app/scripts/verify_dashboard.py > evidence/image/validated-data.json
+          else
+            docker push "$image"
+            digest=$(aws ecr describe-images --repository-name "$ECR_NAME" --image-ids imageTag="$GITHUB_SHA" --query 'imageDetails[0].imageDigest' --output text)
+          fi
+          printf '%s\n' "$REPOSITORY@$digest" > evidence/image/image.txt
+          printf 'image=%s@%s\n' "$REPOSITORY" "$digest" >> "$GITHUB_OUTPUT"
+          printf 'Source commit: %s\nImage: %s@%s\n' "$GITHUB_SHA" "$REPOSITORY" "$digest" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-${{ github.sha }}
+          path: evidence/image
+          retention-days: 30
+
+  deploy:
+    if: inputs.operation == 'deploy'
+    needs: [checks, publish]
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    environment: dev
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: Verify reviewed AWS account
+        env:
+          EXPECTED_ACCOUNT: ${{ vars.AWS_ACCOUNT_ID }}
+        run: test "$(aws sts get-caller-identity --query Account --output text)" = "$EXPECTED_ACCOUNT"
+      - name: Deploy exact digest and verify the running revision
+        env:
+          IMAGE: ${{ needs.publish.outputs.image }}
+          ACCOUNT: ${{ vars.AWS_ACCOUNT_ID }}
+          CLUSTER: ${{ vars.ECS_CLUSTER }}
+          SERVICE: ${{ vars.ECS_SERVICE }}
+          TARGET: ${{ vars.TARGET_GROUP_ARN }}
+          APP_LOG: ${{ vars.APPLICATION_LOG_GROUP }}
+          EVENT_LOG: ${{ vars.DEPLOYMENT_LOG_GROUP }}
+          URL: ${{ vars.DASHBOARD_URL }}
+        run: |
+          python scripts/aws_release.py deploy --account "$ACCOUNT" --cluster "$CLUSTER" --service "$SERVICE" --target-group "$TARGET" --application-log "$APP_LOG" --event-log "$EVENT_LOG" --url "$URL" --image "$IMAGE" --evidence evidence/release
+      - name: Exercise deployed dashboard and capture screenshots
+        env:
+          URL: ${{ vars.DASHBOARD_URL }}
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+          python scripts/cloud_dashboard_smoke.py --url "$URL" --evidence evidence/release
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: release-${{ github.run_id }}
+          path: evidence/release
+          retention-days: 30

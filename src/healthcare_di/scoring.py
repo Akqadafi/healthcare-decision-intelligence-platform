@@ -22,34 +22,101 @@ def _weighted_score(frame: pd.DataFrame, weights: Mapping[str, float]) -> pd.Ser
     return sum(percentile(frame[column]) * weight for column, weight in weights.items())
 
 
-def _recommended_action(row: pd.Series) -> str:
-    domains = {
-        "health": row["health_burden_score"],
-        "sdoh": row["sdoh_score"],
-        "access": row["access_score"],
-        "quality": row["hospital_gap_score"],
-    }
-    driver = max(domains, key=domains.get)
-    if driver == "access" or row["transportation_barrier_rate"] >= 12:
-        return "Deploy mobile clinic and transportation outreach"
-    if driver == "sdoh" and row["uninsured_rate"] >= 18:
-        return "Launch benefits navigation and enrollment campaign"
+DOMAIN_WEIGHTS = {
+    "health_burden_score": ("Health burden", 0.35),
+    "sdoh_score": ("Social need", 0.25),
+    "access_score": ("Care access", 0.25),
+    "hospital_gap_score": ("Hospital gap", 0.15),
+}
+
+
+def action_decision(row: pd.Series) -> tuple[str, str]:
+    """Return the action and its first matching rule from one decision path."""
+    driver = max(DOMAIN_WEIGHTS, key=lambda column: row[column])
+    transport = row["transportation_barrier_rate"]
+    if driver == "access_score" or transport >= 12:
+        reasons = []
+        if transport >= 12:
+            reasons.append(
+                f"Transportation barrier rate {transport:.1f}% meets the >=12% threshold"
+            )
+        if driver == "access_score":
+            reasons.append("Care access is the highest unweighted domain score")
+        return "Deploy mobile clinic and transportation outreach", "; ".join(reasons) + "."
+    if driver == "sdoh_score" and row["uninsured_rate"] >= 18:
+        return (
+            "Launch benefits navigation and enrollment campaign",
+            f"Social need is the highest unweighted domain score and uninsured rate "
+            f"{row['uninsured_rate']:.1f}% meets the >=18% threshold.",
+        )
     if row["poor_mental_health_rate"] >= 18:
-        return "Expand community behavioral health outreach"
-    if driver == "quality":
-        return "Form hospital quality and referral partnership"
-    return "Target chronic disease prevention and care coordination"
+        return (
+            "Expand community behavioral health outreach",
+            f"Poor mental health rate {row['poor_mental_health_rate']:.1f}% meets "
+            "the >=18% threshold; earlier rules did not match.",
+        )
+    if driver == "hospital_gap_score":
+        return (
+            "Form hospital quality and referral partnership",
+            "Hospital gap is the highest unweighted domain score; earlier rules did not match.",
+        )
+    return (
+        "Target chronic disease prevention and care coordination",
+        "Fallback action: none of the earlier transportation, enrollment, mental health, "
+        "or hospital-gap rules matched.",
+    )
 
 
-def _driver_summary(row: pd.Series) -> str:
-    domains = {
-        "health burden": row["health_burden_score"],
-        "social need": row["sdoh_score"],
-        "care access": row["access_score"],
-        "hospital gap": row["hospital_gap_score"],
-    }
-    leaders = sorted(domains, key=domains.get, reverse=True)[:2]
-    return f"{leaders[0].title()} and {leaders[1]}"
+def explain_priority_mart(mart: pd.DataFrame) -> pd.DataFrame:
+    """Add explanations to both rebuilt and previously saved marts."""
+    result = mart.copy()
+    for column, (_, weight) in DOMAIN_WEIGHTS.items():
+        result[column.replace("_score", "_contribution")] = result[column] * weight
+    decisions = result.apply(action_decision, axis=1)
+    result["recommended_action"] = decisions.map(lambda decision: decision[0])
+    result["action_reason"] = decisions.map(lambda decision: decision[1])
+    result["primary_drivers"] = result.apply(
+        lambda row: " and ".join(
+            DOMAIN_WEIGHTS[column][0]
+            for column in sorted(
+                DOMAIN_WEIGHTS,
+                key=lambda column: row[column] * DOMAIN_WEIGHTS[column][1],
+                reverse=True,
+            )[:2]
+        ),
+        axis=1,
+    )
+    return result
+
+
+def rating_sensitivity(mart: pd.DataFrame) -> pd.DataFrame:
+    """Compare ranks across missing-rating assumptions, keeping other inputs fixed."""
+    result = (
+        mart[["county_name", "rank", "total_priority_score"]]
+        .rename(
+            columns={
+                "rank": "Baseline rank",
+                "total_priority_score": "Baseline score",
+                "county_name": "County",
+            }
+        )
+        .copy()
+    )
+    missing = mart["average_hospital_rating"].isna()
+    base = sum(mart[column] * weight for column, (_, weight) in DOMAIN_WEIGHTS.items())
+    without_rating = base - mart["hospital_gap_score"] * 0.15
+    for label, score in {
+        "Missing = 50": base.where(~missing, without_rating + 50 * 0.15),
+        "Exclude missing domain": base.where(~missing, without_rating / 0.85),
+    }.items():
+        score = score.round(1)
+        # County-source order matches baseline tie-breaking (county FIPS order).
+        ordered = score.loc[mart.sort_values("county_fips").index]
+        ranks = ordered.rank(method="first", ascending=False).astype(int)
+        result[f"{label}: score"] = score
+        result[f"{label}: rank"] = ranks
+    result["Missing rating"] = missing
+    return result
 
 
 def build_priority_mart(
@@ -123,11 +190,10 @@ def build_priority_mart(
         bins=[-1, 40, 60, 75, 101],
         labels=["Monitor", "Elevated", "High", "Critical"],
     ).astype(str)
-    merged["recommended_action"] = merged.apply(_recommended_action, axis=1)
-    merged["primary_drivers"] = merged.apply(_driver_summary, axis=1)
-    merged["rank"] = merged["total_priority_score"].rank(
-        method="first", ascending=False
-    ).astype(int)
+    merged = explain_priority_mart(merged)
+    merged["rank"] = (
+        merged["total_priority_score"].rank(method="first", ascending=False).astype(int)
+    )
     return merged.sort_values("rank").reset_index(drop=True)
 
 
