@@ -232,3 +232,18 @@ bucket deliberately, rerun the destroy plan, and verify the final resource list 
 - [ ] Executive summary, county profile, simulator, and trust center opened successfully
 - [ ] Deployment evidence recorded without credentials or PHI
 - [ ] Rollback target identified
+
+
+## Streamlit Community Cloud sharing
+
+Deploy `main` with entrypoint `dashboard/app.py` and Python 3.12.
+The root `requirements.txt` installs this setuptools project in editable mode,
+including its dependencies from `pyproject.toml`. This keeps `healthcare_di`
+importable and resolves bundled snapshots relative to the repository.
+Community Cloud selects `requirements.txt` before `pyproject.toml`; without it,
+the platform attempts a Poetry install and cannot find the differently named
+package in `src/healthcare_di`.
+
+Use the bundled public-data mode (the default). No AWS credentials are needed.
+Changes pushed to the deployed branch trigger a rebuild. Verify all four pages
+and the 15-county snapshot before sharing the public app URL.
