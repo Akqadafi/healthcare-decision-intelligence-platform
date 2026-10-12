@@ -247,3 +247,21 @@ package in `src/healthcare_di`.
 Use the bundled public-data mode (the default). No AWS credentials are needed.
 Changes pushed to the deployed branch trigger a rebuild. Verify all four pages
 and the 15-county snapshot before sharing the public app URL.
+
+
+Serving is read-only: the app loads a validated CSV, keys its cache by the SHA-256
+of that file, and never calls APIs or rebuilds data. Use `HDIP_DATA_DIR` to select
+a separately built directory. `python -m healthcare_di.pipeline --live` defaults
+to `data/live`; live builds into bundled `data/gold` are rejected. Review and
+publish a complete validated output before switching the serving directory.
+PostgreSQL is optional with Compose profile `warehouse`; dbt remains scaffolding.
+
+Runtime dependencies are pinned in `constraints-runtime.txt` for Community Cloud and Docker. The image runs as UID 10001, not root. Update the pins deliberately and rerun CI when dependencies change.
+
+Source contracts reject invalid/missing required fields and duplicate join keys.
+All 15 Arizona counties and Census input are required. Partial missing Census
+income/poverty values retain their source missingness and use the available median
+only for percentile scoring; an entirely missing metric fails. Missing hospital
+ratings retain the documented 60-point gap assumption. Freshness warnings in YAML
+remain metadata rather than an enforced age cutoff. Mart publication uses an atomic
+CSV replacement; the build manifest records its content hash.

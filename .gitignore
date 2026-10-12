@@ -11,6 +11,7 @@ htmlcov/
 data/raw/
 data/bronze/
 data/silver/
+data/live/
 infra/terraform/.terraform/
 infra/terraform/*.tfstate*
 infra/terraform/*.tfplan
@@ -22,3 +23,9 @@ infra/terraform/*.tfvars
 infra/terraform/*.tfvars.json
 infra/terraform/*.plan.json
 evidence/
+!docs/evidence/
+!docs/evidence/**
+!docs/evidence/
+!docs/evidence/
+!docs/evidence/**
+!docs/evidence/**

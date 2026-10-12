@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import os
 from pathlib import Path
 
@@ -11,8 +12,7 @@ import plotly.express as px
 import streamlit as st
 
 from healthcare_di.config import GOLD_DIR, INTERVENTION_COSTS
-from healthcare_di.pipeline import build
-from healthcare_di.quality import quality_frame
+from healthcare_di.quality import assert_quality, quality_frame
 from healthcare_di.scoring import (
     DOMAIN_WEIGHTS,
     explain_priority_mart,
@@ -96,7 +96,7 @@ def render_footer() -> None:
     st.markdown(
         f'<footer class="dashboard-footer">'
         '<div class="footer-name">Ahmad Qadafi'
-        '<small>Cloud Engineering &middot; Data Systems</small></div>'
+        "<small>Cloud Engineering &middot; Data Systems</small></div>"
         '<span class="footer-logo">'
         f'<img src="data:image/png;base64,{encoded}" alt="AQ Systems logo"></span></footer>',
         unsafe_allow_html=True,
@@ -108,18 +108,34 @@ def render_footer() -> None:
 
 
 @st.cache_data(show_spinner=False)
-def load_data(live: bool = False) -> pd.DataFrame:
-    path = GOLD_DIR / "mart_community_priority.csv"
-    if live or not path.exists():
-        return build(live=live)
-    return pd.read_csv(path, dtype={"county_fips": str})
+def load_data(path: str, version: str) -> pd.DataFrame:
+    payload = Path(path).read_bytes()
+    if hashlib.sha256(payload).hexdigest() != version:
+        raise ValueError("Dataset changed while loading; retry after the build completes.")
+    frame = pd.read_csv(path, dtype={"county_fips": str})
+    assert_quality(frame)
+    return frame
 
 
-live_requested = os.getenv("HDIP_LIVE_DATA", "0") == "1"
+def remember_widget(widget: str, setting: str) -> None:
+    st.session_state[setting] = st.session_state[widget]
+
+
+for setting, default in {
+    "budget": 250_000,
+    "intervention": "Mobile clinic day",
+    "capacity": 5,
+    "county": "Apache",
+}.items():
+    st.session_state.setdefault(setting, default)
+
+live_requested = False
 try:
-    mart = explain_priority_mart(load_data(live_requested))
+    data_path = Path(os.getenv("HDIP_DATA_DIR", str(GOLD_DIR))) / "mart_community_priority.csv"
+    version = hashlib.sha256(data_path.read_bytes()).hexdigest()
+    mart = explain_priority_mart(load_data(str(data_path), version))
 except Exception as exc:
-    st.error(f"The data pipeline could not start: {exc}")
+    st.error(f"The validated dataset could not load: {exc}. Build it separately before serving.")
     render_footer()
     st.stop()
 
@@ -139,7 +155,10 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("**Data mode**  ")
     data_mode = "Bundled, reproducible public-data snapshot"
-    st.caption(data_mode if not live_requested else "Live API refresh")
+    st.caption(
+        data_mode if "HDIP_DATA_DIR" not in os.environ else "Separately built, validated dataset"
+    )
+    st.caption(f"Dataset version: {version[:12]}")
     st.caption("No patient-level or protected health information is used.")
 
 filtered = mart[
@@ -208,8 +227,8 @@ if page == "Start here":
 if page == "Metrics & methods":
     st.subheader("Metrics glossary and scoring methods")
     st.markdown(
-        "**Score formula:** Health burden × 35% + Social need × 25% + Care access × 25% "
-        "+ Hospital gap × 15%. Weights and action thresholds are project assumptions."
+        "**Score formula:** Health burden Ã— 35% + Social need Ã— 25% + Care access Ã— 25% "
+        "+ Hospital gap Ã— 15%. Weights and action thresholds are project assumptions."
     )
     st.write(
         "For percentile-based inputs, 0 is the lowest relative need and 100 the highest "
@@ -269,7 +288,7 @@ if page == "Metrics & methods":
                 ],
                 [
                     "Hospitals per 100,000",
-                    "CMS facility count / county population × 100,000",
+                    "CMS facility count / county population Ã— 100,000",
                     "Lower = more need",
                     "Access: 35%",
                 ],
@@ -288,7 +307,7 @@ if page == "Metrics & methods":
                 [
                     "Primary drivers",
                     "Two largest weighted contributions to the total",
-                    "Contribution = domain × weight",
+                    "Contribution = domain Ã— weight",
                     "Not the action trigger",
                 ],
             ],
@@ -347,13 +366,21 @@ if page == "Trust center":
     )
     st.dataframe(checks, hide_index=True, width="stretch")
     st.write(
-        "These checks cover required columns, 15 county rows, unique identifiers, FIPS format, "
-        "score bounds, and non-null actions. They run on the full dataset. They do not validate "
+        "These checks cover required columns, 15 county rows, Arizona identifiers, "
+        "positive population, percentage ranges, score bounds, and non-null actions. "
+        "They run on the full dataset. They do not validate "
         "the chosen weights, source accuracy, intervention effectiveness, or privacy compliance."
     )
     st.markdown(
         "**Lineage:** CDC PLACES + Census ACS + CMS hospital data → normalized county keys "
         "→ four domain scores → weighted priority mart → dashboard and allocation scenario."
+    )
+    st.markdown(
+        "**Engineering evidence:** [Repository and passing CI](https://github.com/Akqadafi/"
+        "healthcare-decision-intelligence-platform) · [AWS deployment and rollback evidence]"
+        "(https://github.com/Akqadafi/healthcare-decision-intelligence-platform/blob/main/"
+        "docs/evidence/aws-rollback-summary.json). The live app runs on Streamlit Community Cloud; "
+        "the AWS test used local credentials. GitHub OIDC remains untested."
     )
     st.subheader("Do rankings change when missing ratings are treated differently?")
     st.caption(
@@ -481,7 +508,7 @@ with tabs[0]:
         )
 
     st.caption(
-        "Showing the ten highest-ranked counties in the current view. "
+        f"Showing {len(ranking)} highest-ranked counties of {len(filtered)} in the current view. "
         "Statewide scores and ranks remain fixed when filters change."
     )
     st.dataframe(
@@ -497,10 +524,19 @@ with tabs[0]:
         ],
         hide_index=True,
         width="stretch",
-        column_config={"total_priority_score": st.column_config.ProgressColumn(max_value=100)},
+        column_config={
+            "total_priority_score": st.column_config.ProgressColumn(
+                min_value=0, max_value=100, format="%.1f"
+            )
+        },
     )
 
 with tabs[1]:
+    map_view = st.radio(
+        "Map view",
+        ["County locations (no external tiles)", "Street map (requires internet)"],
+        horizontal=True,
+    )
     map_fig = px.scatter_map(
         filtered,
         lat="latitude",
@@ -523,16 +559,54 @@ with tabs[1]:
         map_style="carto-positron",
     )
     map_fig.update_layout(height=500, margin=dict(l=0, r=0, t=0, b=0))
-    st.plotly_chart(map_fig, width="stretch")
+    if map_view == "Street map (requires internet)":
+        st.plotly_chart(map_fig, width="stretch")
+        st.caption("If street tiles do not load, choose County locations for a tile-free view.")
+    else:
+        location_fig = px.scatter(
+            filtered,
+            x="longitude",
+            y="latitude",
+            size="population",
+            size_max=34,
+            color="total_priority_score",
+            hover_name="county_name",
+            text="county_name",
+            range_color=[0, 100],
+            color_continuous_scale=["#8C9D76", "#C69745", "#8B392D"],
+        )
+        location_fig.update_traces(textposition="top center")
+        location_fig.update_layout(height=500, xaxis_title="Longitude", yaxis_title="Latitude")
+        st.plotly_chart(location_fig, width="stretch", key="county_locations")
+        st.caption(
+            "County reference locations, not county boundaries. No external map tiles needed."
+        )
 
-    county = st.selectbox("County profile", filtered.sort_values("rank")["county_name"])
+    counties = filtered.sort_values("rank")["county_name"].tolist()
+    preferred = st.session_state["county"]
+    st.session_state["_county"] = preferred if preferred in counties else counties[0]
+    county = st.selectbox(
+        "County profile",
+        counties,
+        key="_county",
+        on_change=remember_widget,
+        args=("_county", "county"),
+    )
     row = filtered.loc[filtered["county_name"].eq(county)].iloc[0]
     profile_cols = st.columns(3)
     profile_cols[0].metric("Priority", f"#{row['rank']}")
     profile_cols[1].metric("Uninsured", f"{row['uninsured_rate']:.1f}%")
-    profile_cols[2].metric("Poverty", f"{row['poverty_rate']:.1f}%")
+    profile_cols[2].metric(
+        "Poverty",
+        "Not available" if pd.isna(row["poverty_rate"]) else f"{row['poverty_rate']:.1f}%",
+    )
     profile_cols = st.columns(3)
-    profile_cols[0].metric("Median income", f"${row['median_household_income']:,.0f}")
+    profile_cols[0].metric(
+        "Median income",
+        "Not available"
+        if pd.isna(row["median_household_income"])
+        else f"${row['median_household_income']:,.0f}",
+    )
     profile_cols[1].metric("Hospitals", f"{row['hospital_count']:.0f}")
     rating = (
         "Not enough data"
@@ -586,15 +660,39 @@ with tabs[2]:
         "**illustrative reach** is a population-based assumption, not a forecast of people served."
     )
     control_a, control_b, control_c = st.columns(3)
-    budget = control_a.slider("Available budget", 25_000, 1_000_000, 250_000, 25_000)
-    intervention = control_b.selectbox("Intervention", list(INTERVENTION_COSTS))
-    max_communities = control_c.slider("Operational capacity (counties)", 1, 15, 5)
+    for setting in ["budget", "intervention", "capacity"]:
+        st.session_state[f"_{setting}"] = st.session_state[setting]
+    budget = control_a.slider(
+        "Available budget",
+        25_000,
+        1_000_000,
+        step=25_000,
+        key="_budget",
+        on_change=remember_widget,
+        args=("_budget", "budget"),
+    )
+    intervention = control_b.selectbox(
+        "Intervention",
+        list(INTERVENTION_COSTS),
+        key="_intervention",
+        on_change=remember_widget,
+        args=("_intervention", "intervention"),
+    )
+    max_communities = control_c.slider(
+        "Operational capacity (counties)",
+        1,
+        15,
+        key="_capacity",
+        on_change=remember_widget,
+        args=("_capacity", "capacity"),
+    )
     allocation = simulate_allocation(filtered, budget, intervention, max_communities)
     spent = int(allocation["allocated_budget"].sum()) if not allocation.empty else 0
     reached = int(allocation["estimated_people_reached"].sum()) if not allocation.empty else 0
     a, b, c = st.columns(3)
     a.metric("Recommended counties", len(allocation))
-    b.metric("Allocated", f"${spent:,.0f}", f"${budget - spent:,.0f} unallocated")
+    b.metric("Allocated", f"${spent:,.0f}")
+    b.caption(f"${budget - spent:,.0f} unallocated")
     c.metric("Illustrative reach", f"{reached:,}")
     st.dataframe(
         allocation.rename(columns={"estimated_people_reached": "illustrative_reach"}),
@@ -602,7 +700,9 @@ with tabs[2]:
         width="stretch",
         column_config={
             "allocated_budget": st.column_config.NumberColumn(format="$%d"),
-            "total_priority_score": st.column_config.ProgressColumn(max_value=100),
+            "total_priority_score": st.column_config.ProgressColumn(
+                min_value=0, max_value=100, format="%.1f"
+            ),
         },
     )
     st.markdown(

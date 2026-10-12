@@ -1,0 +1,11 @@
+version: 1
+dataset: cms_county_aggregate
+grain: one row per county with hospitals
+primary_key: county_key
+required_columns:
+  county_key: {type: string, nullable: false}
+  hospital_count: {type: integer, min: 0, nullable: false}
+  rated_hospital_count: {type: integer, min: 0, nullable: false}
+  emergency_hospital_count: {type: integer, min: 0, nullable: false}
+  birthing_friendly_count: {type: integer, min: 0, nullable: false}
+  average_hospital_rating: {type: number, min: 1, max: 5, nullable: true}

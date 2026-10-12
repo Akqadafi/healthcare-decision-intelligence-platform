@@ -14,6 +14,7 @@ from healthcare_di.config import (
     CENSUS_PROFILE_URL,
     CMS_API_URL,
 )
+from healthcare_di.contracts import validate_contract
 
 
 class IngestionError(RuntimeError):
@@ -83,6 +84,9 @@ def normalize_cdc(frame: pd.DataFrame) -> pd.DataFrame:
         "latitude",
         "longitude",
     ]
+    missing = sorted(set(numeric + ["county_fips", "county_name"]) - set(normalized.columns))
+    if missing:
+        raise ValueError(f"CDC source missing columns: {missing}")
     for column in numeric:
         normalized[column] = pd.to_numeric(normalized[column], errors="coerce")
     normalized["county_fips"] = normalized["county_fips"].astype(str).str.zfill(5)
@@ -108,6 +112,7 @@ def fetch_cms_hospitals(state: str = "AZ") -> pd.DataFrame:
 
 def aggregate_cms(frame: pd.DataFrame) -> pd.DataFrame:
     """Create auditable access/quality measures from hospital-level CMS data."""
+    validate_contract(frame, "cms_hospital_contract.yml")
     data = frame.copy()
     data["hospital_rating_numeric"] = pd.to_numeric(
         data["hospital_overall_rating"], errors="coerce"

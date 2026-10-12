@@ -8,6 +8,7 @@ def test_cms_aggregation_preserves_missing_ratings() -> None:
         [
             {
                 "facility_id": "1",
+                "state": "AZ",
                 "countyparish": "TEST",
                 "hospital_overall_rating": "Not Available",
                 "emergency_services": "Yes",
@@ -15,6 +16,7 @@ def test_cms_aggregation_preserves_missing_ratings() -> None:
             },
             {
                 "facility_id": "2",
+                "state": "AZ",
                 "countyparish": "TEST",
                 "hospital_overall_rating": "4",
                 "emergency_services": "No",

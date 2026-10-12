@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "region": "us-west-2",
+  "resources_created": 30,
+  "resources_destroyed": 30,
+  "detection_seconds": 779.443,
+  "rollback_completion_event_seconds": 36.0,
+  "timing_note": "Detection uses ECS deployment createdAt to EventBridge failure publication. Rollback duration uses EventBridge failure/completion timestamps. Verification was delayed by repairing log pagination.",
+  "authentication_used": "Local AWSCLI IAM credentials; GitHub OIDC token exchange was not exercised.",
+  "first_attempt": "Verifier incorrectly rejected new AWS circuit-breaker fields. Fixed with a regression test; first attempt destroyed and evidence preserved.",
+  "superseded_monitor": "Original rollback monitor did not paginate application logs. Stopped after corrected read-only verification passed. Original driver failure status preserved; no second fault was injected.",
+  "redaction_note": "Selected excerpts from local AWS CLI evidence; account IDs, ARNs, IPs and session identifiers omitted. Historical evidence, not a new cloud test.",
+  "baseline_revision": 2,
+  "failed_candidate_revision": 3,
+  "recovered_revision": 2,
+  "application_health": "200/ok",
+  "image_digest": "sha256:94868109e220f528f5980e4f8cdddbfe3cf49617fc52de93c1b76646791c0ee5",
+  "cleanup_api_verification": "passed",
+  "ongoing_demo_hosting_resources": false,
+  "events": [
+    {
+      "name": "SERVICE_DEPLOYMENT_FAILED",
+      "published_at": "2026-10-11T19:21:50Z"
+    },
+    {
+      "name": "SERVICE_DEPLOYMENT_COMPLETED",
+      "published_at": "2026-10-11T19:22:26Z"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ owner: analytics-engineering
 grain: one row per county
 primary_key: county_fips
 phi: false
+expected_arizona_counties: true
 authentication: CENSUS_API_KEY
 required_columns:
   county_fips: {type: string, pattern: "^[0-9]{5}$", nullable: false}

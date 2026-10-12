@@ -1,3 +1,4 @@
 # Community Cloud uses this file instead of treating pyproject.toml as Poetry.
 # Editable installation keeps bundled snapshots relative to the repository.
+-c constraints-runtime.txt
 -e .

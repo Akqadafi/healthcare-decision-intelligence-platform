@@ -3,13 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from datetime import UTC, datetime
 from pathlib import Path
 
 import pandas as pd
 
-from healthcare_di.config import GOLD_DIR, SNAPSHOT_DIR
+from healthcare_di.config import GOLD_DIR, PROJECT_ROOT, SNAPSHOT_DIR
 from healthcare_di.ingestion import (
     fetch_cdc_places,
     fetch_census_acs,
@@ -27,7 +28,10 @@ def load_snapshots() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     return places, hospitals, census
 
 
-def build(*, live: bool = False, output_dir: Path = GOLD_DIR) -> pd.DataFrame:
+def build(*, live: bool = False, output_dir: Path | None = None) -> pd.DataFrame:
+    output_dir = output_dir or (PROJECT_ROOT / "data/live" if live else GOLD_DIR)
+    if live and output_dir.resolve() == GOLD_DIR.resolve():
+        raise ValueError("Live refresh output must be separate from bundled data/gold.")
     places, hospitals, census = (
         (fetch_cdc_places(), fetch_cms_hospitals(), fetch_census_acs())
         if live
@@ -36,11 +40,15 @@ def build(*, live: bool = False, output_dir: Path = GOLD_DIR) -> pd.DataFrame:
     mart = build_priority_mart(places, hospitals, census)
     assert_quality(mart)
     output_dir.mkdir(parents=True, exist_ok=True)
-    mart.to_csv(output_dir / "mart_community_priority.csv", index=False)
+    mart_path = output_dir / "mart_community_priority.csv"
+    temporary = mart_path.with_suffix(".csv.tmp")
+    mart.to_csv(temporary, index=False)
+    temporary.replace(mart_path)
     quality_frame(mart).to_csv(output_dir / "data_quality_report.csv", index=False)
     manifest = {
         "built_at_utc": datetime.now(UTC).isoformat(),
         "mode": "live" if live else "snapshot",
+        "mart_sha256": hashlib.sha256(mart_path.read_bytes()).hexdigest(),
         "row_count": len(mart),
         "quality_status": "passed",
     }
@@ -51,10 +59,11 @@ def build(*, live: bool = False, output_dir: Path = GOLD_DIR) -> pd.DataFrame:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--live", action="store_true", help="Refresh CDC and CMS APIs")
-    parser.add_argument("--output-dir", type=Path, default=GOLD_DIR)
+    parser.add_argument("--output-dir", type=Path, default=None)
     args = parser.parse_args()
-    mart = build(live=args.live, output_dir=args.output_dir)
-    print(f"Built {len(mart)} county records in {args.output_dir}")
+    output_dir = args.output_dir or (PROJECT_ROOT / "data/live" if args.live else GOLD_DIR)
+    mart = build(live=args.live, output_dir=output_dir)
+    print(f"Built {len(mart)} county records in {output_dir}")
 
 
 if __name__ == "__main__":

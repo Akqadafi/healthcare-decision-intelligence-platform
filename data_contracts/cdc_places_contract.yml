@@ -4,6 +4,7 @@ owner: analytics-engineering
 grain: one row per county
 primary_key: county_fips
 phi: false
+expected_arizona_counties: true
 required_columns:
   county_fips: {type: string, pattern: "^[0-9]{5}$", nullable: false}
   county_name: {type: string, nullable: false}
@@ -12,5 +13,12 @@ required_columns:
   obesity_rate: {type: number, min: 0, max: 100, nullable: false}
   diabetes_rate: {type: number, min: 0, max: 100, nullable: false}
   food_insecurity_rate: {type: number, min: 0, max: 100, nullable: false}
+  annual_checkup_rate: {type: number, min: 0, max: 100, nullable: false}
+  hypertension_rate: {type: number, min: 0, max: 100, nullable: false}
+  poor_physical_health_rate: {type: number, min: 0, max: 100, nullable: false}
+  poor_mental_health_rate: {type: number, min: 0, max: 100, nullable: false}
+  transportation_barrier_rate: {type: number, min: 0, max: 100, nullable: false}
+  latitude: {type: number, min: -90, max: 90, nullable: false}
+  longitude: {type: number, min: -180, max: 180, nullable: false}
 freshness:
   warn_after_days: 450

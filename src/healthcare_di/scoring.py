@@ -7,11 +7,16 @@ from collections.abc import Mapping
 import pandas as pd
 
 from healthcare_di.config import INTERVENTION_COSTS
+from healthcare_di.contracts import validate_scoring_inputs
 
 
 def percentile(series: pd.Series, *, reverse: bool = False) -> pd.Series:
     """Map a measure to 0-100 using rank percentiles, preserving ties."""
     values = pd.to_numeric(series, errors="coerce")
+    if values.isna().all():
+        raise ValueError(
+            f"{series.name or 'Metric'} is entirely missing; cannot compute percentiles."
+        )
     filled = values.fillna(values.median())
     ranks = filled.rank(method="average", ascending=not reverse)
     denominator = max(len(filled) - 1, 1)
@@ -125,9 +130,10 @@ def build_priority_mart(
     census: pd.DataFrame | None = None,
 ) -> pd.DataFrame:
     """Join public sources and calculate leadership-friendly domain scores."""
+    validate_scoring_inputs(places, hospitals, census)
     health = places.copy()
     health["county_key"] = health["county_name"].str.upper().str.replace(" ", "", regex=False)
-    merged = health.merge(hospitals, on="county_key", how="left")
+    merged = health.merge(hospitals, on="county_key", how="left", validate="one_to_one")
     if census is not None:
         acs = census.copy()
         acs["county_fips"] = acs["county_fips"].astype(str).str.zfill(5)
@@ -135,6 +141,7 @@ def build_priority_mart(
             acs[["county_fips", "median_household_income", "poverty_rate"]],
             on="county_fips",
             how="left",
+            validate="one_to_one",
         )
     else:
         merged["median_household_income"] = pd.NA

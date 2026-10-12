@@ -5,3 +5,15 @@ unique_county_fips,True,15 unique values
 valid_fips,True,five-digit strings
 score_range,True,25.4-75.1
 non_null_recommendations,True,0 nulls
+positive_integer_population,True,finite positive integers
+arizona_county_set,True,exactly the 15 Arizona county identifiers
+range_uninsured_rate,True,"finite percentages in [0, 100]"
+range_annual_checkup_rate,True,"finite percentages in [0, 100]"
+range_obesity_rate,True,"finite percentages in [0, 100]"
+range_diabetes_rate,True,"finite percentages in [0, 100]"
+range_hypertension_rate,True,"finite percentages in [0, 100]"
+range_poor_physical_health_rate,True,"finite percentages in [0, 100]"
+range_poor_mental_health_rate,True,"finite percentages in [0, 100]"
+range_food_insecurity_rate,True,"finite percentages in [0, 100]"
+range_transportation_barrier_rate,True,"finite percentages in [0, 100]"
+range_poverty_rate,True,"finite percentages in [0, 100]"

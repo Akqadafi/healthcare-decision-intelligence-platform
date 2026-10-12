@@ -6,9 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     HDIP_PROJECT_ROOT=/app
 
 WORKDIR /app
-COPY pyproject.toml README.md LICENSE ./
+COPY pyproject.toml README.md LICENSE constraints-runtime.txt ./
 COPY src ./src
-RUN python -m pip install .
+RUN python -m pip install -c constraints-runtime.txt .
 
 COPY dashboard ./dashboard
 COPY .streamlit ./.streamlit
@@ -18,6 +18,9 @@ COPY scripts ./scripts
 
 # Exercise the installed package and bundle freshly validated reporting outputs.
 RUN python -m healthcare_di.pipeline
+
+RUN useradd --create-home --user-group --uid 10001 dashboard
+USER dashboard
 
 EXPOSE 8501
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \

@@ -9,6 +9,8 @@ required_columns:
   countyparish: {type: string, nullable: false}
   state: {type: string, pattern: "^[A-Z]{2}$", nullable: false}
   hospital_overall_rating: {type: string, nullable: true}
+  emergency_services: {type: string, nullable: false}
+  meets_criteria_for_birthing_friendly_designation: {type: string, nullable: true, allow_empty: true}
 quality_notes:
   - Missing ratings are retained and surfaced as insufficient data.
   - County names are normalized only for matching and never used as a stable national key.

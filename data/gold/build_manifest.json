@@ -1,6 +1,7 @@
 {
-  "built_at_utc": "2026-10-10T18:55:30.993912+00:00",
+  "built_at_utc": "2026-10-12T23:46:43.962015+00:00",
   "mode": "snapshot",
+  "mart_sha256": "3e993c32d7a2edcf08d1d847b509e81936b54872fed8c7a476add859ac596a48",
   "row_count": 15,
   "quality_status": "passed"
 }

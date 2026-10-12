@@ -50,7 +50,7 @@ The platform turns three separate public datasets into one repeatable workflow:
 The pipeline creates three main files in `data/gold/`:
 
 - `mart_community_priority.csv`: the county rankings and explanations;
-- `data_quality_report.csv`: the results of six automatic data checks; and
+- `data_quality_report.csv`: the results of automatic data-contract and quality checks; and
 - `build_manifest.json`: a receipt showing when and how the data was built.
 
 For example, Apache County ranks first in the included snapshot at **75.1/100**. The dashboard
@@ -66,7 +66,7 @@ local validation and community input.
 - Maps priority and opens a county-level health/access profile.
 - Allocates a configurable budget without overspending it.
 - Surfaces missing hospital-rating data as uncertainty—not as poor quality.
-- Runs six automated data-quality controls and records build metadata.
+- Enforces source contracts and automated data-quality controls and records build metadata.
 - Uses only public, aggregate data; no patient-level data or PHI is present.
 
 ## How to use it
@@ -162,7 +162,7 @@ in an environment variable like the example above.
 - Rankings for all 15 Arizona counties.
 - Apache County at 75.1/100 in the included snapshot.
 - Tabs for the executive summary, county profile, resource simulator, and trust center.
-- Six passing data-quality checks in the generated quality report.
+- Passing source-contract and data-quality checks in the generated quality report.
 
 For Terraform prerequisites, AWS cost safeguards, exact apply/destroy commands, verification,
 and dashboard deployment choices, use the [step-by-step deployment runbook](docs/runbooks/DEPLOYMENT.md).
@@ -297,3 +297,8 @@ engineering, explainable modeling, DevOps, and governance in one product.
 ## License
 
 MIT. Source datasets remain subject to their agencies' terms and attribution guidance.
+
+
+PostgreSQL is optional (`docker compose --profile warehouse up`). The dashboard serves validated CSV outputs; the PostgreSQL schema and dbt models are scaffolding and are not an exercised warehouse pipeline.
+
+[Historical AWS evidence](docs/evidence/README.md) · [Modeling roadmap](docs/MODELING_PLAN.md)

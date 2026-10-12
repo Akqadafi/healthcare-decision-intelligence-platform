@@ -68,3 +68,14 @@ preserve_evidence_logs=true intentionally retains the two hosting log groups aft
 - https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html
 - https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-circuit-breaker.html
 - https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws
+
+
+## Public evidence and remaining operational work
+
+See [sanitized historical test evidence](../evidence/README.md), including event
+timestamps and the recovered screenshot. OIDC remains untested. These artifacts
+describe the earlier AWS deployment; the shared live demo uses Community Cloud.
+The updated container runs as a non-root user and uses pinned runtime dependencies.
+Before an ongoing public AWS deployment, require HTTPS, configure actionable
+CloudWatch alarms with reviewed recipients, and exercise the GitHub OIDC path.
+No AWS resources are created by publishing these improvements.
