@@ -19,7 +19,7 @@ with sync_playwright() as playwright:
     page.set_default_timeout(60000)
     page.goto(args.url, wait_until="domcontentloaded")
     expect(page.get_by_role("heading", name="What this dashboard looks at")).to_be_visible()
-    page.get_by_text(\"Explore counties\", exact=True).click()
+    page.get_by_text("Explore counties", exact=True).click()
     expect(page.get_by_role("heading", name="Where to invest first")).to_be_visible()
     expect(page.get_by_text("75.1 / 100", exact=True)).to_be_visible()
     expect(page.get_by_test_id("stMetric").filter(has_text="Counties in view")).to_contain_text(
@@ -46,12 +46,12 @@ with sync_playwright() as playwright:
     expect(page.get_by_test_id("stMetric").filter(has_text="Recommended counties")).to_contain_text(
         "2"
     )
-    page.get_by_text(\"Metrics & methods\", exact=True).click()
+    page.get_by_text("Metrics & methods", exact=True).click()
     expect(page.get_by_role("heading", name="Metrics glossary and scoring methods")).to_be_visible()
-    page.get_by_text(\"Trust center\", exact=True).click()
+    page.get_by_text("Trust center", exact=True).click()
     expect(page.get_by_role("heading", name="Data checks and modeling assumptions")).to_be_visible()
     page.screenshot(path=str(args.evidence / "trust-center.png"))
-    page.get_by_text(\"Explore counties\", exact=True).click()
+    page.get_by_text("Explore counties", exact=True).click()
     page.get_by_role("tab", name="Allocation scenario").click()
     expect(page.get_by_role("slider", name="Operational capacity (counties)")).to_have_attribute(
         "aria-valuenow", "2"
