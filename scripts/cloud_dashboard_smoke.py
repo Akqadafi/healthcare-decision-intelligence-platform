@@ -36,14 +36,16 @@ with sync_playwright() as playwright:
     expect(page.locator(".scatterlayer .point").first).to_be_visible()
     page.get_by_role("combobox", name="County profile", exact=True).fill("Santa")
     page.get_by_role("option", name="Santa Cruz", exact=True).click()
-    expect(page.get_by_test_id("stMetric").filter(has_text="Priority").first).to_contain_text("#2")
+    expect(
+        page.get_by_test_id("stMetric").filter(has=page.get_by_text("Priority", exact=True))
+    ).to_contain_text("#2")
     page.get_by_role("tab", name="Allocation scenario").click()
     expect(page.get_by_role("heading", name="Resource allocation scenario")).to_be_visible()
     capacity = page.get_by_role("slider", name="Operational capacity (counties)")
     capacity.press("Home")
     capacity.press("ArrowRight")
     capacity.press("Tab")
-    expect(capacity).to_have_attribute("aria-valuenow", "2")
+    expect(capacity).to_have_value("2")
     expect(page.get_by_test_id("stMetric").filter(has_text="Recommended counties")).to_contain_text(
         "2"
     )
@@ -54,9 +56,7 @@ with sync_playwright() as playwright:
     page.screenshot(path=str(args.evidence / "trust-center.png"))
     page.get_by_text("Explore counties", exact=True).click()
     page.get_by_role("tab", name="Allocation scenario").click()
-    expect(page.get_by_role("slider", name="Operational capacity (counties)")).to_have_attribute(
-        "aria-valuenow", "2"
-    )
+    expect(page.get_by_role("slider", name="Operational capacity (counties)")).to_have_value("2")
     page.get_by_role("tab", name="Map & county profile").click()
     expect(page.get_by_role("combobox", name="County profile", exact=True)).to_have_value(
         "Santa Cruz"
