@@ -57,7 +57,7 @@ with sync_playwright() as playwright:
         "aria-valuenow", "2"
     )
     page.get_by_role("tab", name="Map & county profile").click()
-    expect(page.get_by_role("combobox", name="County profile", exact=True)).to_contain_text(
+    expect(page.get_by_role("combobox", name="County profile", exact=True)).to_have_value(
         "Santa Cruz"
     )
     page.screenshot(path=str(args.evidence / "county-locations.png"))
