@@ -34,14 +34,15 @@ with sync_playwright() as playwright:
     expect(page.get_by_text("County profile", exact=True)).to_be_visible()
     # The default is tile-free: actual Plotly point paths must render.
     expect(page.locator(".scatterlayer .point").first).to_be_visible()
-    page.get_by_role("combobox", name="County profile", exact=True).click()
+    page.get_by_role("combobox", name="County profile", exact=True).fill("Santa")
     page.get_by_role("option", name="Santa Cruz", exact=True).click()
+    expect(page.get_by_test_id("stMetric").filter(has_text="Priority").first).to_contain_text("#2")
     page.get_by_role("tab", name="Allocation scenario").click()
     expect(page.get_by_role("heading", name="Resource allocation scenario")).to_be_visible()
     capacity = page.get_by_role("slider", name="Operational capacity (counties)")
     capacity.press("Home")
     capacity.press("ArrowRight")
-    page.get_by_role("heading", name="Resource allocation scenario").click()
+    capacity.press("Tab")
     expect(capacity).to_have_attribute("aria-valuenow", "2")
     expect(page.get_by_test_id("stMetric").filter(has_text="Recommended counties")).to_contain_text(
         "2"
