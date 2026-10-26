@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "rows": 18,
+  "model": "kmeans_k2",
+  "csv_hash_verified": true,
+  "page_errors": [],
+  "elapsed_seconds": 43.8,
+  "browser": "155.0.4283.45"
+}

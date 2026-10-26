@@ -1,5 +1,18 @@
 # Community Health Operations Intelligence
 
+**Status reviewed October 18, 2026:** The Arizona dashboard and data pipeline are built.
+A temporary AWS deployment and recovery demonstration was completed on October 11, then
+removed. As of October 21, the Research Workbench has tested CSV validation and comparison
+functions; its upload interface and complete study workflow remain unfinished.
+See the [current status and evidence record](docs/CURRENT_STATUS.md).
+
+**October 24 local update:** The original dashboard now includes **Explore census tracts**.
+Users can filter counties, groups, and measure ranges; compare tract estimates and uncertainty;
+switch between ten saved K-means/Ward models; and download filtered data with a study receipt.
+These controls do not retrain models. Start with the [guide](docs/user-guide/TRACT_DASHBOARD_GUIDE.md)
+and [Apache County walkthrough](docs/user-guide/TRACT_DASHBOARD_TUTORIAL.md).
+The public deployment has not been updated for this feature.
+
 [![Python](https://img.shields.io/badge/Python-3.11%2B-1f6f78)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-f06c5d)](https://streamlit.io/)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-6946ba)](https://www.terraform.io/)
@@ -292,7 +305,9 @@ engineering, explainable modeling, DevOps, and governance in one product.
 - HRSA shortage-area measures and provider workforce capacity.
 - ZCTA-level drill-down for Maricopa County.
 - Maternal/infant health module using CDC WONDER Natality.
-- Athena catalog; execute the container deployment and recovery demonstration after AWS plan/cost approval.
+- Athena catalog remains proposed. The October 11 deployment and recovery demonstration is
+  complete; see [historical AWS evidence](docs/evidence/README.md). GitHub OIDC remains untested.
+  A future public AWS service also needs HTTPS and actionable alarms.
 
 ## License
 

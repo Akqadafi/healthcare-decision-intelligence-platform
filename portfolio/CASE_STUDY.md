@@ -1,47 +1,33 @@
-# Portfolio case study: Community Health Operations Intelligence
+# Community Health Operations Intelligence
 
-## The challenge
+Status reviewed October 18, 2026. See [current status](../docs/CURRENT_STATUS.md) for evidence and limits.
 
-Health systems and public-health teams often have abundant data but no consistent answer to a
-practical question: where should the next outreach dollar go? Data arrives from different agencies,
-uses different geography fields, carries different update cycles, and rarely ends in an action.
+## The question
 
-## What I built
+How can a public-health team compare community conditions across Arizona counties and examine a possible outreach budget?
 
-I built an end-to-end decision intelligence product for Arizona's 15 counties. It retrieves and
-normalizes public CDC and CMS data, computes a transparent four-domain priority index, explains
-the strongest drivers, and presents recommendations in an executive Streamlit application. A
-resource simulator turns a budget and operating limit into a ranked deployment scenario.
+## Current application
 
-## Engineering highlights
+The Python pipeline combines public CDC, Census, and CMS snapshots for Arizona's 15 counties. It checks source fields and county identifiers, calculates a weighted planning score, and writes a county table with a quality report and build manifest.
 
-- Designed API ingestion with reproducible snapshot fallback for reliable demonstrations.
-- Resolved county geography and missing-quality-data semantics explicitly.
-- Created testable, deterministic scoring instead of fitting an unjustified model to 15 records.
-- Added contracts, lineage, an ADR, model card, automated data-quality evidence, and CI.
-- Containerized the product and authored safe-by-default Terraform for S3, KMS, and CloudWatch.
-- Prevented accidental AWS spend by requiring an explicit deployment opt-in; CI never applies IaC.
+The Streamlit dashboard shows county profiles, score explanations, and a budget scenario. It also compares rankings under different assumptions about missing hospital ratings. The score and suggested actions are planning assumptions that need review with local experts. They do not establish where spending will produce the greatest benefit.
 
-## Outcome
+The dashboard reads validated CSV outputs. PostgreSQL and dbt files are scaffolding; they are not an exercised warehouse pipeline. API refresh code exists, but the repeatable demonstration uses bundled snapshots.
 
-The platform produces an action and an explanation for every Arizona county, validates all 15
-records in CI, and demonstrates a credible bridge across healthcare analytics, data engineering,
-DevOps, cloud governance, and executive communication.
+## AWS recovery demonstration
 
-## Résumé bullets
+On October 11, a temporary ECS/Fargate environment hosted the application. A new task revision reused the working image but changed its container health check to fail. Saved evidence records a failed deployment and recovery from revision 3 to revision 2, followed by healthy application checks.
 
-- Built a healthcare decision intelligence platform integrating CDC PLACES and CMS hospital data
-  to rank 15 Arizona counties by health burden, social need, access, and provider-quality gaps.
-- Developed an explainable scoring and resource-allocation engine with automated data contracts,
-  lineage, quality controls, model governance, and explicit missing-data handling.
-- Containerized a Streamlit executive dashboard and implemented GitHub Actions plus Terraform for
-  a KMS-encrypted, versioned AWS data-lake foundation and CloudWatch observability.
+The verification scripts also needed repairs: one rejected newer AWS response fields, and another failed to paginate application logs. The evidence preserves those failures and corrections. Cleanup records show 30 Terraform resources removed and API absence checks passing.
 
-## 30-second interview explanation
+This was one controlled health-check failure. The 36-second interval between published failure and rollback-completion events is not downtime or a recovery guarantee. Detection took about 13 minutes. Local AWS credentials were used; GitHub OIDC was not exercised. The current public Streamlit deployment is separate from this historical AWS test.
 
-“I wanted the project to end with a decision, not just a chart. I combined public CDC and CMS data,
-normalized it at county level, and chose an explainable weighted index because there are only 15
-Arizona observations and no defensible outcome label for supervised learning. The app shows where
-to invest first, why, and what a fixed budget can cover. I also treated reliability and governance
-as product features: snapshots, contracts, tests, lineage, missing-data disclosure, Docker, CI,
-and safe Terraform are all part of the repository.”
+[Saved AWS evidence](../docs/evidence/README.md)
+
+## Proposed next release
+
+The Public Health Research Workbench would support researcher-supplied aggregate files, measure selection, and study exports. Those features are planned. The current dashboard has no researcher upload workflow or national study catalog.
+
+## Interview explanation
+
+“My background is in public-health analysis and research. This project brings county data into a repeatable pipeline, checks it, and makes the scoring assumptions visible in a dashboard. I also tested a failed deployment in AWS and recorded the recovery. The research workbench is the next proposed stage; the working application currently covers Arizona.”

@@ -1,0 +1,12 @@
+{
+  "review_date": "2026-10-25",
+  "local_base": "ae378ff0bff13ca2ab6c74f065927766cfcbdd70",
+  "changed_and_untracked_files_reviewed": 65,
+  "credential_pattern_matches": [],
+  "tracts": 1765,
+  "saved_models": 10,
+  "geometry_features": 1765,
+  "saved_output_checksums": "passed",
+  "public_release_status": "Not pushed or deployed",
+  "limits": "Targeted credential-pattern scan only; not a comprehensive security audit."
+}

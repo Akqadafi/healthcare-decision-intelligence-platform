@@ -1,0 +1,110 @@
+{
+  "B01003_001E": {
+    "label": "Estimate!!Total",
+    "concept": "Total Population",
+    "predicateType": "int",
+    "group": "B01003",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Total population"
+  },
+  "B01003_001M": {
+    "label": "Margin of Error!!Total",
+    "concept": "Total Population",
+    "predicateType": "int",
+    "group": "B01003",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Total population"
+  },
+  "B19013_001E": {
+    "label": "Estimate!!Median household income in the past 12 months (in 2023 inflation-adjusted dollars)",
+    "concept": "Median Household Income in the Past 12 Months (in 2023 Inflation-Adjusted Dollars)",
+    "predicateType": "int",
+    "group": "B19013",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Households"
+  },
+  "B19013_001M": {
+    "label": "Margin of Error!!Median household income in the past 12 months (in 2023 inflation-adjusted dollars)",
+    "concept": "Median Household Income in the Past 12 Months (in 2023 Inflation-Adjusted Dollars)",
+    "predicateType": "int",
+    "group": "B19013",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Households"
+  },
+  "B17001_001E": {
+    "label": "Estimate!!Total:",
+    "concept": "Poverty Status in the Past 12 Months by Sex by Age",
+    "predicateType": "int",
+    "group": "B17001",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Population for whom poverty status is determined"
+  },
+  "B17001_001M": {
+    "label": "Margin of Error!!Total:",
+    "concept": "Poverty Status in the Past 12 Months by Sex by Age",
+    "predicateType": "int",
+    "group": "B17001",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Population for whom poverty status is determined"
+  },
+  "B17001_002E": {
+    "label": "Estimate!!Total:!!Income in the past 12 months below poverty level:",
+    "concept": "Poverty Status in the Past 12 Months by Sex by Age",
+    "predicateType": "int",
+    "group": "B17001",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Population for whom poverty status is determined"
+  },
+  "B17001_002M": {
+    "label": "Margin of Error!!Total:!!Income in the past 12 months below poverty level:",
+    "concept": "Poverty Status in the Past 12 Months by Sex by Age",
+    "predicateType": "int",
+    "group": "B17001",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Population for whom poverty status is determined"
+  },
+  "B08201_001E": {
+    "label": "Estimate!!Total:",
+    "concept": "Household Size by Vehicles Available",
+    "predicateType": "int",
+    "group": "B08201",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Households"
+  },
+  "B08201_001M": {
+    "label": "Margin of Error!!Total:",
+    "concept": "Household Size by Vehicles Available",
+    "predicateType": "int",
+    "group": "B08201",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Households"
+  },
+  "B08201_002E": {
+    "label": "Estimate!!Total:!!No vehicle available",
+    "concept": "Household Size by Vehicles Available",
+    "predicateType": "int",
+    "group": "B08201",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Households"
+  },
+  "B08201_002M": {
+    "label": "Margin of Error!!Total:!!No vehicle available",
+    "concept": "Household Size by Vehicles Available",
+    "predicateType": "int",
+    "group": "B08201",
+    "limit": 0,
+    "predicateOnly": true,
+    "universe": "Households"
+  }
+}
