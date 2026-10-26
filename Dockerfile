@@ -15,6 +15,9 @@ COPY .streamlit ./.streamlit
 COPY data ./data
 COPY data_contracts ./data_contracts
 COPY scripts ./scripts
+COPY docs/evidence/tract-study ./docs/evidence/tract-study
+COPY docs/user-guide ./docs/user-guide
+COPY docs/evidence/tract-dashboard ./docs/evidence/tract-dashboard
 
 # Exercise the installed package and bundle freshly validated reporting outputs.
 RUN python -m healthcare_di.pipeline

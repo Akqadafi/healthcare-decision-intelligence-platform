@@ -89,7 +89,7 @@ st.markdown(
 )
 
 
-def render_footer() -> None:
+def render_footer(tract: bool = False) -> None:
     """Show the user's selected logo and attribution after each page's content."""
     logo = Path(__file__).parent / "assets" / "aq-systems-desert.png"
     encoded = base64.b64encode(logo.read_bytes()).decode("ascii")
@@ -101,7 +101,8 @@ def render_footer() -> None:
         f'<img src="data:image/png;base64,{encoded}" alt="AQ Systems logo"></span></footer>',
         unsafe_allow_html=True,
     )
-    st.caption(
+    st.caption("Public aggregate data only · CDC PLACES 2025 · Census ACS 2019–2023"
+               if tract else
         "Public aggregate data only · CDC PLACES 2025 · Census ACS 2024 5-year · "
         "CMS modified April 2026"
     )
@@ -141,24 +142,30 @@ except Exception as exc:
 
 with st.sidebar:
     page = st.radio(
-        "Dashboard index", ["Start here", "Explore counties", "Metrics & methods", "Trust center"]
+        "Dashboard index", ["Start here", "Explore counties", "Explore census tracts",
+                            "Metrics & methods", "Trust center"]
     )
-    st.markdown("## Decision controls")
-    tiers = st.multiselect(
-        "Priority tier",
-        options=["Critical", "High", "Elevated", "Monitor"],
-        default=["Critical", "High", "Elevated", "Monitor"],
-    )
-    minimum_population = st.number_input(
-        "Minimum population", min_value=0, max_value=5_000_000, value=0, step=10_000
-    )
+    tiers = ["Critical", "High", "Elevated", "Monitor"]
+    minimum_population = 0
+    if page != "Explore census tracts":
+        st.markdown("## County decision controls")
+        tiers = st.multiselect("Priority tier", options=tiers, default=tiers,
+                               help="Show counties in the selected priority categories. "
+                                    "Clear all to show none. "
+                                    "Scores and statewide ranks stay fixed.")
+        minimum_population = st.number_input(
+            "Minimum population", min_value=0, max_value=5_000_000, value=0, step=10_000,
+            help="Show counties with at least this population. Use 0 to include all population "
+                 "sizes. This combines with the tier filter and does not recalculate scores."
+        )
     st.markdown("---")
     st.markdown("**Data mode**  ")
     data_mode = "Bundled, reproducible public-data snapshot"
     st.caption(
         data_mode if "HDIP_DATA_DIR" not in os.environ else "Separately built, validated dataset"
     )
-    st.caption(f"Dataset version: {version[:12]}")
+    st.caption("Tract study: az-tract-v1" if page == "Explore census tracts"
+               else f"Dataset version: {version[:12]}")
     st.caption("No patient-level or protected health information is used.")
 
 filtered = mart[
@@ -186,8 +193,18 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+if page == "Explore census tracts":
+    from healthcare_di.tract_view import render
+
+    render()
+    render_footer(tract=True)
+    st.stop()
+
 if page == "Start here":
     st.subheader("What this dashboard looks at")
+    st.info("New: Explore census tracts compares saved K-means and hierarchical community "
+            "profiles. Filter counties and measures, compare tracts, and inspect stability. "
+            "This descriptive study uses ACS 2019–2023 and is separate from county scoring.")
     st.write(
         "This portfolio dashboard compares public health, social need, care access, and "
         "hospital-rating measures across all 15 Arizona counties. It creates a relative "

@@ -1,0 +1,65 @@
+{
+  "study_version": "az-tract-v1",
+  "seed": 20261024,
+  "features": [
+    "diabetes_pct",
+    "mhlth_pct",
+    "access2_pct",
+    "poverty_pct",
+    "no_vehicle_pct"
+  ],
+  "eligible_tracts": 1730,
+  "excluded_tracts": 35,
+  "display_model": "kmeans_k2",
+  "status": "passes_project_heuristics",
+  "selection": "Highest silhouette among passing candidates, otherwise exploratory best",
+  "settings": {
+    "k": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "subsamples": 20,
+    "fraction": 0.8,
+    "kmeans_n_init": 30,
+    "scaler": "StandardScaler",
+    "thread_limit": 1
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "threadpoolctl": "3.7.0",
+    "pyshp": "3.1.6"
+  },
+  "input_sha256": {
+    "docs\\evidence\\tract-study\\tract_join_audit.csv": "eaa5cb477f2f75056087ecef198dc1931ce388afee392852f482c7b3e014643d",
+    "docs\\evidence\\tract-study\\boundary_join.csv": "6ad5838bf339e66e0e2eeb53729ace23270740e2b5249054a1b4c3de0d14ae37",
+    "docs\\evidence\\tract-study\\boundary_audit.json": "38a296b03bb624762346dc9abdfff142c1e9a2f519d199deb22af603136d1e99",
+    "docs\\evidence\\tract-study\\source_audit.json": "01e92d3102b6b13cebb20be1622bf9ac9b59e87b59c5cbfecf1c255195b833e5",
+    "src\\healthcare_di\\tract_models.py": "e410e75d7b8a2df431536e976eb89b6c4ff9df7a4a131e4d0400954dffa168bb",
+    "C:\\Users\\Semio\\Documents\\Repos\\healthcare-decision-intelligence-platform\\scripts\\tract_model_study.py": "192075828079f0639882456d09d04a7c4c2e75bae3663f62361dbdbf4020dd33",
+    "docs\\TRACT_MODEL_DECISIONS.md": "c74422698ebb40b8e0f2632dd1ec44c0dddaaefa259e59ffb9eb0d830dfbd750"
+  },
+  "limitations": [
+    "No causal or individual health inference",
+    "No propagation of survey/model uncertainty through clustering",
+    "Derived-rate margins of error omitted; source components retained",
+    "PLACES modeled estimates include ACS inputs; crude rates reflect age",
+    "ARI perturbations are not predictive validation",
+    "Group numbers have no rank; filters must not refit saved models"
+  ],
+  "output_sha256": {
+    "all_assignments.csv": "016d117160560480d5b633f1889de1e7289f0625eee5c4859e0bae7d2d6ef5a3",
+    "cohort_coverage.csv": "a7b0b96214354b3b95e704430126a4dfab08c68ec1b3d146fad276a4a5bb8258",
+    "model_comparison.csv": "c2272446ae36e6760d9ed6d41e2b0e9cbefe239ff3ca1a3dea21da7cabce1acb",
+    "perturbations.csv": "13539fbcc4b437b75ec6880487c7e435a8d4e7b6f0b6ce7d0c1260047afe0247",
+    "profile_sizes.csv": "309991fef2e27de3f018dad28065d4efae23a9c17e7e71667148bf4743bdcff9",
+    "profile_statistics.csv": "6493248f72d3d6356fb489b773f436f1797b209b07828132be98cac4daf51bd5",
+    "profiles_by_county.csv": "20043564f7789e72649e0dcc8a2d9326e63ec7311c46e33734443b69e5111dc5",
+    "tract_profiles.csv": "b5b75c748a6aa4490a849478c2ed177a59b1af19cc55ed891f02d6891cc12473"
+  }
+}

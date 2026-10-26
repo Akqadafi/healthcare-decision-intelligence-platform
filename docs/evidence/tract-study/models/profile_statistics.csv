@@ -1,0 +1,5 @@
+,diabetes_pct,diabetes_pct,diabetes_pct,diabetes_pct,mhlth_pct,mhlth_pct,mhlth_pct,mhlth_pct,access2_pct,access2_pct,access2_pct,access2_pct,poverty_pct,poverty_pct,poverty_pct,poverty_pct,no_vehicle_pct,no_vehicle_pct,no_vehicle_pct,no_vehicle_pct
+,mean,median,min,max,mean,median,min,max,mean,median,min,max,mean,median,min,max,mean,median,min,max
+profile,,,,,,,,,,,,,,,,,,,,
+Group 1,10.568648208469055,10.0,2.4,22.4,14.323534201954397,14.5,7.3,23.0,9.875162866449513,9.0,3.3,26.1,8.374312637268467,7.476257402484712,0.0,25.457038391224863,3.336657053354359,2.3157595267231503,0.0,23.57266435986159
+Group 2,14.666733067729083,14.350000000000001,2.2,26.2,18.913147410358565,18.4,11.0,31.7,22.51454183266932,21.25,8.9,42.0,25.834082216641008,24.117223628501826,5.186089078706528,64.18604651162791,10.906215666900579,9.042813748429626,0.0,38.91444342226311

@@ -2,6 +2,9 @@
 
 This runbook covers two independent deployment surfaces:
 
+For the free public portfolio dashboard, use the focused
+[Streamlit Community Cloud runbook](STREAMLIT_COMMUNITY_CLOUD.md).
+
 1. the optional AWS data and logging foundation managed by Terraform; and
 2. the Streamlit dashboard, which can run directly with Python or as a container.
 
@@ -34,7 +37,7 @@ Create an isolated Python environment and run the same checks used in CI:
 python -m venv .venv
 # Windows PowerShell: .\.venv\Scripts\Activate.ps1
 # macOS/Linux: source .venv/bin/activate
-python -m pip install -e ".[dev]"
+python -m pip install -e ".[dev,analysis]"
 ruff check .
 pytest
 python -m healthcare_di.pipeline

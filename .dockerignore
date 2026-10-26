@@ -7,3 +7,6 @@ __pycache__
 infra/terraform/.terraform
 infra/terraform/*.tfstate*
 evidence
+data/raw/
+!docs/evidence/
+!docs/evidence/**

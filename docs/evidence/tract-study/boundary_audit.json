@@ -1,0 +1,16 @@
+{
+  "source": {
+    "url": "https://www2.census.gov/geo/tiger/GENZ2023/shp/cb_2023_04_tract_500k.zip",
+    "retrieved_utc": "2026-10-24T18:47:57.534892+00:00",
+    "last_modified": "Tue, 16 Apr 2024 12:24:27 GMT",
+    "file": "cb_2023_04_tract_500k.zip",
+    "sha256": "ab22caaf8a8b7a26ee0cceddf1ccc7733e26740a6705115517a28a59908e7ee7"
+  },
+  "projection": "GEOGCS[\"GCS_North_American_1983\",DATUM[\"D_North_American_1983\",SPHEROID[\"GRS_1980\",6378137,298.257222101]],PRIMEM[\"Greenwich\",0],UNIT[\"Degree\",0.017453292519943295]]",
+  "counts": {
+    "both": 1765,
+    "left_only": 0,
+    "right_only": 0
+  },
+  "use": "Generalized 1:500,000 display boundaries; not distance or area analysis"
+}

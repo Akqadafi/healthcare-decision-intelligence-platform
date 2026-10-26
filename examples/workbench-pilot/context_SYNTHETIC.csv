@@ -1,0 +1,5 @@
+county_fips,county_name,observation_month,need_percent,resident_population
+04001,Apache,2025-01,30,10000
+04003,Cochise,2025-01,10,20000
+04005,Coconino,2025-01,25,10000
+04013,Maricopa,2025-01,22,50000

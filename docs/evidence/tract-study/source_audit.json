@@ -1,0 +1,95 @@
+{
+  "sources": [
+    {
+      "url": "https://data.cdc.gov/api/views/yjkw-uj5s.json",
+      "retrieved_utc": "2026-10-24T18:35:47.553401+00:00",
+      "last_modified": null,
+      "file": "places_metadata.json",
+      "sha256": "11f671ea07c776d06716f9046d512ba5cc19c1d220efdf8eddfe25e3d22ef0b5"
+    },
+    {
+      "url": "https://data.cdc.gov/resource/yjkw-uj5s.json?%24where=stateabbr%3D%27AZ%27&%24limit=10000&%24order=tractfips",
+      "retrieved_utc": "2026-10-24T18:35:49.342483+00:00",
+      "last_modified": "Thu, 04 Dec 2025 10:40:53 GMT",
+      "file": "places_az.json",
+      "sha256": "667affede8e86eb2055ff8fc43830b4c39152bf80d52b4c92956751fd40eaf6c"
+    },
+    {
+      "url": "https://api.census.gov/data/2023/acs/acs5/groups/B01003.json",
+      "retrieved_utc": "2026-10-24T18:35:50.626047+00:00",
+      "last_modified": null,
+      "file": "B01003_metadata.json",
+      "sha256": "663e1dbe57ab2f71f0ac430fd5524b0d66f17dfbec13463a31eae75085152259"
+    },
+    {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b01003.dat",
+      "retrieved_utc": "2026-10-24T18:36:05.984240+00:00",
+      "last_modified": "Thu, 31 Oct 2024 14:48:45 GMT",
+      "file": "B01003.dat",
+      "sha256": "24ae3f523b4c54332ce0a71ba534569685a8a729056f975915d860d1eb943565"
+    },
+    {
+      "url": "https://api.census.gov/data/2023/acs/acs5/groups/B19013.json",
+      "retrieved_utc": "2026-10-24T18:36:08.083481+00:00",
+      "last_modified": null,
+      "file": "B19013_metadata.json",
+      "sha256": "44dd3590b59a19c32cb09ae70a24a1cfbb2c65af5d164ed81065e1ff7689e648"
+    },
+    {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b19013.dat",
+      "retrieved_utc": "2026-10-24T18:36:25.346466+00:00",
+      "last_modified": "Thu, 31 Oct 2024 14:52:11 GMT",
+      "file": "B19013.dat",
+      "sha256": "c9007017b7bb29ba758c77612ec9a4a0b897a4ed931d527754629866f580a110"
+    },
+    {
+      "url": "https://api.census.gov/data/2023/acs/acs5/groups/B17001.json",
+      "retrieved_utc": "2026-10-24T18:36:29.539669+00:00",
+      "last_modified": null,
+      "file": "B17001_metadata.json",
+      "sha256": "2f02ea85593de9ce072403647e652c30cfeb5414e83504e17816be046d01406e"
+    },
+    {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b17001.dat",
+      "retrieved_utc": "2026-10-24T18:38:01.598436+00:00",
+      "last_modified": "Thu, 31 Oct 2024 14:51:05 GMT",
+      "file": "B17001.dat",
+      "sha256": "578e998daf0823a16e923e937cdff470392fcdd5fc1b0f963487ba5672c1c0b7"
+    },
+    {
+      "url": "https://api.census.gov/data/2023/acs/acs5/groups/B08201.json",
+      "retrieved_utc": "2026-10-24T18:38:21.310438+00:00",
+      "last_modified": null,
+      "file": "B08201_metadata.json",
+      "sha256": "3b0ac6bce4fda5b8dfac538d45c87c9c142ad2980d927b080c01d952d158c48c"
+    },
+    {
+      "url": "https://www2.census.gov/programs-surveys/acs/summary_file/2023/table-based-SF/data/5YRData/acsdt5y2023-b08201.dat",
+      "retrieved_utc": "2026-10-24T18:39:07.190197+00:00",
+      "last_modified": "Thu, 31 Oct 2024 14:49:58 GMT",
+      "file": "B08201.dat",
+      "sha256": "71e502d0d2b456cb49af97cf9ff2d43fcbd9a7f9c2ee737fdb41721f9ad87a8b"
+    }
+  ],
+  "acs_period": "2019-2023",
+  "places_release": "2025",
+  "acs_tracts": 1765,
+  "places_tracts": 1740,
+  "join_counts": {
+    "both": 1740,
+    "left_only": 25,
+    "right_only": 0
+  },
+  "candidate_complete_tracts": 1725,
+  "candidate_missing_counts": {
+    "diabetes_pct": 25,
+    "mhlth_pct": 25,
+    "access2_pct": 25,
+    "poverty_pct": 27,
+    "no_vehicle_pct": 30,
+    "median_household_income": 40
+  },
+  "status": "Data audit only. Candidate features are not an approved fitted model.",
+  "boundary_status": "2023 tract identifiers; polygon boundary audit pending",
+  "uncertainty": "Raw ACS MOEs and PLACES 95% intervals retained. Derived ratio MOEs pending."
+}

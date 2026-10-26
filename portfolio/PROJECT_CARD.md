@@ -2,8 +2,9 @@
 
 **Healthcare analytics · Python · Streamlit · Terraform · Docker · AWS**
 
-An explainable decision platform that combines public CDC and CMS data to prioritize outreach,
-mobile-clinic, and care-coordination investment across Arizona counties. Includes a resource
-allocation simulator, data quality and lineage, CI/CD, and secure cloud infrastructure as code.
+A planning dashboard combining public CDC, Census, and CMS data for Arizona's 15 counties.
+Includes visible scoring assumptions, data checks, and illustrative budget scenarios.
+Saved evidence documents a temporary AWS deployment and controlled rollback test on October 11,
+followed by cleanup. Researcher uploads and national study workflows remain proposed.
 
 **Suggested CTA:** View case study · Explore source code
