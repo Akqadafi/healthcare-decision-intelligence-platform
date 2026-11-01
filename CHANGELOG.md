@@ -27,6 +27,6 @@ Unreleased entries describe local work; they do not establish public deployment.
 - Updated the user guide with contextual help and limitations.
 
 ### Release status
-- Release preparation: version 1.1.0. Public deployment verification is pending.
+- Version 1.1.0 published to Streamlit and verified November 1, 2026; PR #2, commit 285a52f.
 - Existing county scores, public snapshots and saved tract models are unchanged.
 - Verification and deployment evidence: docs/RELEASE_1.1.0.md.

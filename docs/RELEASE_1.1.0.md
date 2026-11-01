@@ -13,7 +13,14 @@ The sidebar identifies version 1.1.0. Public datasets and fitted models are unch
 - Public-data pipeline: rebuilt 15 county records successfully.
 - Non-blocking local warnings: pytest cache directory unavailable; Streamlit automatically
   coerced mixed tract-comparison column types for Arrow rendering.
-- GitHub CI and public deployment verification: pending at release preparation.
+- GitHub CI passed: Python, Terraform, container build and rendered browser checks.
+- PR #2 merged as 285a52f. Public Streamlit verification completed November 1, 2026.
+- Public sidebar showed version 1.1.0 and all six navigation entries.
+- Apache tutorial step 2 enabled the diabetes filter and returned eight matching tracts.
+- Outreach example loaded four counties, three activity records, and one unknown record.
+- Screenshot: attached to the GitHub v1.1.0 release.
+- Public CSV uploads and report download were covered by local automated tests, not
+  separately exercised through the public browser in this release check.
 
 ## Scope and recovery
 
