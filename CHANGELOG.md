@@ -3,6 +3,15 @@
 Application changes are separate from public dataset releases and saved model versions.
 Unreleased entries describe local work; they do not establish public deployment.
 
+## 1.2.0 — 2026-11-01
+
+- Added optional HRSA health-center locations to tract exploration, filtered by selected counties.
+- Permanent sites shown by default; mobile and seasonal listed addresses are optional.
+- Added facility selection/highlighting, address and phone details, coordinate-quality notes and an accessible table.
+- Bundled a validated Arizona snapshot: 264 active sites (208 permanent, 30 mobile, 26 seasonal), retrieved November 1, 2026. Source update date is not exposed.
+- Added refresh script, integrity/geography/coordinate checks and regression tests. Facility locations do not change models or scores.
+- Deployment verification pending; see docs/HRSA_HEALTH_CENTERS.md.
+
 ## 1.1.0 — 2026-11-01
 
 ### October 28 — explain tract groupings

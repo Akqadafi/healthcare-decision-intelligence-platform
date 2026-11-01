@@ -1,0 +1,5649 @@
+{
+  "displayFieldName": "SITE_NM",
+  "fieldAliases": {
+    "SITE_SOURCE_ID": "SITE_SOURCE_ID",
+    "SITE_NM": "SITE_NM",
+    "SITE_ADDRESS": "SITE_ADDRESS",
+    "SITE_CITY": "SITE_CITY",
+    "SITE_STATE_ABBR": "SITE_STATE_ABBR",
+    "SITE_ZIP_CD": "SITE_ZIP_CD",
+    "SITE_PHONE_NUM": "SITE_PHONE_NUM",
+    "HCC_STATUS_DESC": "HCC_STATUS_DESC",
+    "HCC_LOC_DESC": "HCC_LOC_DESC",
+    "HCC_TYP_DESC": "HCC_TYP_DESC",
+    "STATE_COUNTY_FIPS_CD": "STATE_COUNTY_FIPS_CD",
+    "COUNTY_NM": "COUNTY_NM",
+    "LOC_NAME_DESC": "LOC_NAME_DESC"
+  },
+  "geometryType": "esriGeometryPoint",
+  "spatialReference": {
+    "wkid": 4326,
+    "latestWkid": 4326
+  },
+  "fields": [
+    {
+      "name": "SITE_SOURCE_ID",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_SOURCE_ID",
+      "length": 50
+    },
+    {
+      "name": "SITE_NM",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_NM",
+      "length": 255
+    },
+    {
+      "name": "SITE_ADDRESS",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_ADDRESS",
+      "length": 100
+    },
+    {
+      "name": "SITE_CITY",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_CITY",
+      "length": 50
+    },
+    {
+      "name": "SITE_STATE_ABBR",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_STATE_ABBR",
+      "length": 2
+    },
+    {
+      "name": "SITE_ZIP_CD",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_ZIP_CD",
+      "length": 25
+    },
+    {
+      "name": "SITE_PHONE_NUM",
+      "type": "esriFieldTypeString",
+      "alias": "SITE_PHONE_NUM",
+      "length": 25
+    },
+    {
+      "name": "HCC_STATUS_DESC",
+      "type": "esriFieldTypeString",
+      "alias": "HCC_STATUS_DESC",
+      "length": 100
+    },
+    {
+      "name": "HCC_LOC_DESC",
+      "type": "esriFieldTypeString",
+      "alias": "HCC_LOC_DESC",
+      "length": 50
+    },
+    {
+      "name": "HCC_TYP_DESC",
+      "type": "esriFieldTypeString",
+      "alias": "HCC_TYP_DESC",
+      "length": 50
+    },
+    {
+      "name": "STATE_COUNTY_FIPS_CD",
+      "type": "esriFieldTypeString",
+      "alias": "STATE_COUNTY_FIPS_CD",
+      "length": 5
+    },
+    {
+      "name": "COUNTY_NM",
+      "type": "esriFieldTypeString",
+      "alias": "COUNTY_NM",
+      "length": 50
+    },
+    {
+      "name": "LOC_NAME_DESC",
+      "type": "esriFieldTypeString",
+      "alias": "LOC_NAME_DESC",
+      "length": 100
+    }
+  ],
+  "features": [
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "189575C0-1C9D-4AF8-B54E-3265707C9231",
+        "SITE_NM": "Adelante Healthcare - MMU 1",
+        "SITE_ADDRESS": "13471 W Cornerstone Blvd",
+        "SITE_CITY": "Goodyear",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85395-2713",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.34794176799994,
+        "y": 33.462152133000075
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "431796A6-09CB-4BD0-B918-13374CDDC5A7",
+        "SITE_NM": "Adelante Healthcare Mesa",
+        "SITE_ADDRESS": "1705 W Main St",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85201-6920",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.86769065099998,
+        "y": 33.41447167700005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F02090DA-5C00-4DAC-A44C-916E8337399E",
+        "SITE_NM": "Adelante Healthcare Wickenburg",
+        "SITE_ADDRESS": "811 N Tegner St, Suite 113",
+        "SITE_CITY": "Wickenburg",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85390-5410",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.73520388299994,
+        "y": 33.97612444300006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "98972534-3E9A-4B4B-9683-49B5B7482C15",
+        "SITE_NM": "Adelante Healthcare West Phoenix",
+        "SITE_ADDRESS": "9610 N Metro Pkwy W",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85051-1402",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.12581278399995,
+        "y": 33.57348438500003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A1705ACE-1869-463B-86FD-550E8E9663E1",
+        "SITE_NM": "Adelante Healthcare Surprise Dental Office",
+        "SITE_ADDRESS": "15317 W Bell Rd STE 108",
+        "SITE_CITY": "Surprise",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85374-3901",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.39019678599999,
+        "y": 33.63858746500006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "583C7232-9B70-4DBC-B67F-CCE52E6A0D38",
+        "SITE_NM": "Mountain Park Health Center - Goodyear",
+        "SITE_ADDRESS": "140 N Litchfield Rd",
+        "SITE_CITY": "Goodyear",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85338-1277",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.35870522099998,
+        "y": 33.447998410000025
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "07CC7F43-AED0-407F-93E1-1284AFB5A92C",
+        "SITE_NM": "Mountain Park Health Center - 303 Baseline",
+        "SITE_ADDRESS": "303 E Baseline Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85042-6530",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07010053699997,
+        "y": 33.37680436800002
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "CCE305FE-4A1C-4365-97AD-14D6E22FFC06",
+        "SITE_NM": "Mountain Park Health Center - Atkinson",
+        "SITE_ADDRESS": "4222 N 51st Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85031-1908",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.17093902299996,
+        "y": 33.49793296900003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "722C0907-BFAF-40E0-9415-4094592404DF",
+        "SITE_NM": "Mountain Park Health Center - Gateway",
+        "SITE_ADDRESS": "3830 E Van Buren St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-6938",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.99797191299996,
+        "y": 33.45164038900003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "0B1D43AC-2DAA-451C-8BA1-2A9A9ED5A777",
+        "SITE_NM": "Mountain Park Health Center - Baseline",
+        "SITE_ADDRESS": "635 E Baseline Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85042-6583",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06800614999997,
+        "y": 33.37682968200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "DE8400E3-7593-4639-BCCB-5303FE527D99",
+        "SITE_NM": "EL RIO OB/GYN ASSOCIATES",
+        "SITE_ADDRESS": "225 W Irvington Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85714-3054",
+        "SITE_PHONE_NUM": "520-670-3707",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97188815999999,
+        "y": 32.16267953300007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "37AB0BE8-6EA9-4A0D-85AE-3C79E033C9D0",
+        "SITE_NM": "EL RIO NORTHWEST MEDICAL",
+        "SITE_ADDRESS": "320 W Prince Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85705-3526",
+        "SITE_PHONE_NUM": "520-670-3707",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97650801299994,
+        "y": 32.27251662000003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "984279CD-D9D4-4CF7-B211-91117C52F766",
+        "SITE_NM": "EL RIO SOUTHWEST HEALTH CENTERS",
+        "SITE_ADDRESS": "1500 W Commerce Ct",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85746-6031",
+        "SITE_PHONE_NUM": "520-806-2650",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.99675902699994,
+        "y": 32.133346224000036
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1FF0BDBE-BD7B-43AD-8025-FC07F80098E2",
+        "SITE_NM": "El Rio Health Abrams Health Center",
+        "SITE_ADDRESS": "3950 S Country Club Rd, Suite 130",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85714-2203",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.92784452799998,
+        "y": 32.17616354200004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "E178A78F-7F2A-49E0-B165-C07400FB2238",
+        "SITE_NM": "HealthOn Broadway",
+        "SITE_ADDRESS": "1 W Broadway Blvd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85701-3029",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97128231599999,
+        "y": 32.220871901000066
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "65C7B599-7B79-4A06-A5C0-11620A16D84F",
+        "SITE_NM": "El Rio Health Center of Opportunity",
+        "SITE_ADDRESS": "4550 S Palo Verde Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85714-1995",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.91924209699994,
+        "y": 32.16966580700006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1FC3D7C1-3481-4DA5-B808-B6CAE527C10F",
+        "SITE_NM": "El Rio Health Stone Health Center",
+        "SITE_ADDRESS": "4888 N Stone Ave, #120",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85704-5749",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97050372099994,
+        "y": 32.29446128100005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "684BEBDE-D168-450A-AD8C-01E0EB42E01A",
+        "SITE_NM": "MHC Counseling and Wellness Center",
+        "SITE_ADDRESS": "13395B N Marana Main St",
+        "SITE_CITY": "Marana",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85653",
+        "SITE_PHONE_NUM": "520-682-4111",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.21497835599996,
+        "y": 32.44946174000006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FA140CCE-94CB-4FFF-A27B-30CCDF399A5B",
+        "SITE_NM": "ORTIZ COMMUNITY HEALTH CENTER",
+        "SITE_ADDRESS": "12635 W Rudasill Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85743-9724",
+        "SITE_PHONE_NUM": "520-682-3777",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.23668379699996,
+        "y": 32.31330015300006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "395B712B-98A5-4A94-AA47-A98C09DAA878",
+        "SITE_NM": "CLINICA DEL ALMA",
+        "SITE_ADDRESS": "3690 S Park Ave, Suite 805",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85713-5042",
+        "SITE_PHONE_NUM": "520-616-6760",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.95698136399994,
+        "y": 32.18023781800002
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6C4596F2-91F1-4441-A64D-41144F8C6E51",
+        "SITE_NM": "EL RIO SANTA CRUZ NEIGHBORHOOD",
+        "SITE_ADDRESS": "839 W Congress St",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85745-2819",
+        "SITE_PHONE_NUM": "520-670-3707",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.98584620799994,
+        "y": 32.22062731700004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A2297355-A4BE-4136-944D-699216149DD4",
+        "SITE_NM": "EL RIO SOUTHEAST HEALTH CENTER",
+        "SITE_ADDRESS": "6950 E Golf Links Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85730-1017",
+        "SITE_PHONE_NUM": "520-792-9890",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -110.84448222599997,
+        "y": 32.19086942400003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F11505B0-B7EE-43A0-B108-4EAE497C9B35",
+        "SITE_NM": "El Rio Health University Health Center",
+        "SITE_ADDRESS": "434 E University Blvd, #200",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85705-7851",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.96463915499999,
+        "y": 32.231420694000064
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7BC0A6A5-0A69-46CB-BD3B-951480729989",
+        "SITE_NM": "EL RIO PASCUA YAQUI HEALTH CENTER",
+        "SITE_ADDRESS": "7490 S Camino DE Oeste",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85746-9308",
+        "SITE_PHONE_NUM": "520-879-6006",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.06374593999999,
+        "y": 32.11489078200003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "E50C9CCF-25E1-4EBE-BFD8-32C51F103A2E",
+        "SITE_NM": "HealthOn University",
+        "SITE_ADDRESS": "434 E University Blvd, #100",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85705-7851",
+        "SITE_PHONE_NUM": "520-309-4250",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.96463865199996,
+        "y": 32.23146268700003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F956E00D-559D-4AAB-9107-0CA63E014089",
+        "SITE_NM": "EL PUEBLO HEALTH CENTER",
+        "SITE_ADDRESS": "101 W Irvington Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85714-3099",
+        "SITE_PHONE_NUM": "520-670-3707",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.96999996899996,
+        "y": 32.16271000100005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "789E6B3C-C9A7-4160-86EE-F46560E432C2",
+        "SITE_NM": "El Rio Cherrybell Health Center",
+        "SITE_ADDRESS": "1230 S Cherrybell Stra",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85713-1907",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.94849862699999,
+        "y": 32.20592265100004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F02680A2-22FA-4721-948E-01342C2C9128",
+        "SITE_NM": "El Rio Health Mobile Unit",
+        "SITE_ADDRESS": "1230 S Cherrybell Stra",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85713-1907",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.94849862699999,
+        "y": 32.20592265100004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "465C79E0-98F8-49A8-8969-B7A0D7EEECC6",
+        "SITE_NM": "El Rio Health - Grant Health Center",
+        "SITE_ADDRESS": "3655 E Grant Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85716-2933",
+        "SITE_PHONE_NUM": "520-670-3909",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.91484436299999,
+        "y": 32.250779873000056
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "BFAB40F8-78C1-40E3-A028-D2FC294935A6",
+        "SITE_NM": "Special Immunology Associates (SIA) at Cherrybell",
+        "SITE_ADDRESS": "1230 S Cherrybell Stra",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85713-1907",
+        "SITE_PHONE_NUM": "520-628-8287",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.94849862699999,
+        "y": 32.20592265100004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "02A4119D-9711-4226-932B-9AEE475A474F",
+        "SITE_NM": "Ina Health Center",
+        "SITE_ADDRESS": "2945 W Ina Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85741-2350",
+        "SITE_PHONE_NUM": "520-616-1531",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.03059852999996,
+        "y": 32.33652033000004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "326D56FC-3E62-4BF3-82E5-DC3E9F0AA6DA",
+        "SITE_NM": "MHC Healthcare Dental Office",
+        "SITE_ADDRESS": "899 N Wilmot Rd STE E",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85711-1714",
+        "SITE_PHONE_NUM": "520-290-1100",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -110.85805361699994,
+        "y": 32.23206668700004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7C815723-BA96-4BEE-B2BD-086ABD5D767D",
+        "SITE_NM": "FLOWING WELLS FAMILY PRACTICE",
+        "SITE_ADDRESS": "1323 W Prince Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85705-3191",
+        "SITE_PHONE_NUM": "520-887-0800",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.99380147199997,
+        "y": 32.27163706500005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "CDDAC232-5E60-4709-8520-46219F22C066",
+        "SITE_NM": "Dove Mountain Health Center",
+        "SITE_ADDRESS": "5224 W Dove Centre Rd",
+        "SITE_CITY": "Marana",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85658-5063",
+        "SITE_PHONE_NUM": "520-616-1445",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.07665943499995,
+        "y": 32.42595062700008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "EB24AD22-39C5-47B6-833D-F592A9B413A3",
+        "SITE_NM": "MHC Healthcare Ronald McDonald Mobile",
+        "SITE_ADDRESS": "13395 N Marana Main St",
+        "SITE_CITY": "Marana",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85653-7008",
+        "SITE_PHONE_NUM": "520-682-4111",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.21319401599999,
+        "y": 32.44946702000004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "889F7B90-A42C-4335-B064-01234C875BE1",
+        "SITE_NM": "Oro Valley Pediatrics",
+        "SITE_ADDRESS": "1856 E Innovation Park Dr",
+        "SITE_CITY": "Oro Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85755-1963",
+        "SITE_PHONE_NUM": "520-825-7111",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.94431295599998,
+        "y": 32.43249605500006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "AB823892-3B00-4DEC-B5E0-7936DCD6FF75",
+        "SITE_NM": "West Side Health Center",
+        "SITE_ADDRESS": "1707 W Saint Marys Rd, Suite 175",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85745-2613",
+        "SITE_PHONE_NUM": "520-682-4111",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.00224883799996,
+        "y": 32.227182510000034
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "AFCE9D19-7B0C-448E-88CC-B081862B8C66",
+        "SITE_NM": "Wilmot Family Health Center",
+        "SITE_ADDRESS": "899 N Wilmot Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85711-1714",
+        "SITE_PHONE_NUM": "520-290-1100",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.85910034899996,
+        "y": 32.232073686000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "58F06809-37FB-4487-8ED5-0B82697B1F7C",
+        "SITE_NM": "Marana Health Center",
+        "SITE_ADDRESS": "13395 N Marana Main St",
+        "SITE_CITY": "Marana",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85653-7008",
+        "SITE_PHONE_NUM": "520-682-4111",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.21319401599999,
+        "y": 32.44946702000004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "12BFCCAE-0997-4A57-AF97-156E8F02E91B",
+        "SITE_NM": "Santa Catalina Health Center",
+        "SITE_ADDRESS": "16701 N Oracle Rd",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85739-9102",
+        "SITE_PHONE_NUM": "520-825-6763",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.92653996799999,
+        "y": 32.509108997000055
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "4E8A8F0F-3F91-4692-BF5D-80422457E3FC",
+        "SITE_NM": "Adelante Healthcare Buckeye",
+        "SITE_ADDRESS": "306 E Monroe Ave",
+        "SITE_CITY": "Buckeye",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85326-2706",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.58731836099997,
+        "y": 33.37077798900003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "22B2C993-8D1E-4C4C-9B1C-0BD665E79098",
+        "SITE_NM": "Adelante Healthcare Goodyear",
+        "SITE_ADDRESS": "13471 W Cornerstone Blvd",
+        "SITE_CITY": "Goodyear",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85395-2713",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.34794176799994,
+        "y": 33.462152133000075
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B6EAC863-29FE-40F0-82FA-B48FCE25FD11",
+        "SITE_NM": "Adelante Healthcare Gila Bend",
+        "SITE_ADDRESS": "100 North Gila Boulevard",
+        "SITE_CITY": "Gila Bend",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85337",
+        "SITE_PHONE_NUM": "602-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.73544100699996,
+        "y": 32.943198291000044
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "963A21B6-CCF4-4E90-A7AD-70144C166164",
+        "SITE_NM": "Adelante Healthcare Surprise Care Today",
+        "SITE_ADDRESS": "15317 W Bell Rd, Suite 100",
+        "SITE_CITY": "Surprise",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85374-3900",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.38986611899998,
+        "y": 33.63827586800005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "4000F971-08B0-41EA-BA0C-8DC1C58322CD",
+        "SITE_NM": "Adelante Healthcare Roosevelt",
+        "SITE_ADDRESS": "3130 E Roosevelt St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-5036",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.01392158499999,
+        "y": 33.45882929600003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "58E09915-C378-4D0F-AFB5-07D33EC8A638",
+        "SITE_NM": "Adelante Healthcare Peoria",
+        "SITE_ADDRESS": "15525 N 83rd Ave, Suite 104",
+        "SITE_CITY": "Peoria",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85382-5820",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.23706394099997,
+        "y": 33.62552825100005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1AF19F40-A6A2-4E97-AEAA-BB9FDE8097E4",
+        "SITE_NM": "Adelante Healthcare Surprise Pharmacy",
+        "SITE_ADDRESS": "15317 West Bell Road, #109",
+        "SITE_CITY": "Surprise",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85374",
+        "SITE_PHONE_NUM": "480-546-7606",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.39024950799995,
+        "y": 33.63859190800002
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "55BA9B9F-33CC-41B1-933B-535B5181F0E3",
+        "SITE_NM": "Adelante Healthcare Surprise",
+        "SITE_ADDRESS": "15351 W Bell Rd",
+        "SITE_CITY": "Surprise",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85374-4580",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.39085459699999,
+        "y": 33.63837452300004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "74BF8F9B-160C-4D5A-8FF2-82EA98661986",
+        "SITE_NM": "Adelante Healthcare Surprise Behavioral Health",
+        "SITE_ADDRESS": "15317 W Bell Rd, Suite 106",
+        "SITE_CITY": "Surprise",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85374-3901",
+        "SITE_PHONE_NUM": "480-964-2273",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.39011589999996,
+        "y": 33.63831329300007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "48B7EDAA-666A-44D4-B9B6-2F75DE9D6583",
+        "SITE_NM": "Mountain Park Health Center - 325 E Baseline",
+        "SITE_ADDRESS": "325 E Baseline Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85042-6589",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06906084499997,
+        "y": 33.376964421000025
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B6237B06-461C-4C3E-B641-ED6FD18178FD",
+        "SITE_NM": "Mountain Park Health Center - Christown",
+        "SITE_ADDRESS": "5517 N 17th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85015-2516",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.09445247999997,
+        "y": 33.51730354800003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C6ED673E-BD25-4AAF-8DE5-2F0CD2E0EF15",
+        "SITE_NM": "Mountain Park Health Center - Tempe",
+        "SITE_ADDRESS": "1840 E Broadway Rd",
+        "SITE_CITY": "Tempe",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85282-1614",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.907406203,
+        "y": 33.40834714600004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "967A99F3-9006-480E-B45E-A78EC440BE02",
+        "SITE_NM": "Mountain Park Health Center - Maryvale",
+        "SITE_ADDRESS": "6601 W Thomas Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85033-5700",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.20118235399997,
+        "y": 33.480083371000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "DA5CBC1A-43FD-4644-9681-2EDB40976EE6",
+        "SITE_NM": "Mountain Park Health Center - Glendale",
+        "SITE_ADDRESS": "6975 W Glendale Ave",
+        "SITE_CITY": "Glendale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85303-2611",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.20890074599998,
+        "y": 33.53763029100003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "21721642-A604-450E-8DF3-CE1578530C15",
+        "SITE_NM": "Mountain Park Health Center - Goodyear Suite 100",
+        "SITE_ADDRESS": "140 N Litchfield Rd",
+        "SITE_CITY": "Goodyear",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85338-1277",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.35870522099998,
+        "y": 33.447998410000025
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C583DD49-028D-4227-B234-1EF52344662E",
+        "SITE_NM": "Mountain Park Health Center - Goodyear Suite 106",
+        "SITE_ADDRESS": "140 N Litchfield Rd STE 106",
+        "SITE_CITY": "Goodyear",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85338-1226",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.35862534099999,
+        "y": 33.44788429000005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7EA96282-FA3B-4D86-B92A-137431D39009",
+        "SITE_NM": "Mountain Park Health Center - Balsz",
+        "SITE_ADDRESS": "1300 N 48th St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-5803",
+        "SITE_PHONE_NUM": "602-243-7277",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.97945100799996,
+        "y": 33.46187301600003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "AA245ED5-D652-4BF8-8215-452A52D8B125",
+        "SITE_NM": "Continental Family Medical Center",
+        "SITE_ADDRESS": "1260 S Campbell Ave, Building 1",
+        "SITE_CITY": "Green Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85614-0504",
+        "SITE_PHONE_NUM": "520-407-5900",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97361256899995,
+        "y": 31.851996454000073
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "E0C7584A-9A07-449F-AD99-1184510A06AD",
+        "SITE_NM": "United Community Health Center at Freeport McMoRan Copper & Gold Building",
+        "SITE_ADDRESS": "1260 S Campbell Ave, Building 2",
+        "SITE_CITY": "Green Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85614-0502",
+        "SITE_PHONE_NUM": "520-407-5400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97391733499995,
+        "y": 31.85284357100005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "88DE5913-7D69-4846-B0AF-D3A9049E4B3A",
+        "SITE_NM": "United Community Health Center at La Canada Pediatrics",
+        "SITE_ADDRESS": "18857 S LA Canada Dr",
+        "SITE_CITY": "Sahuarita",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85629-7990",
+        "SITE_PHONE_NUM": "520-407-5800",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.99429809999998,
+        "y": 31.90805843700008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "209E939B-7DFE-411D-991C-286AE2094C4D",
+        "SITE_NM": "United Community Health Center at Whitehouse Canyon",
+        "SITE_ADDRESS": "1150 E Whitehouse Canyon Rd",
+        "SITE_CITY": "Green Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85614-0560",
+        "SITE_PHONE_NUM": "520-407-5600",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97440172499995,
+        "y": 31.85084297900005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "07AAB24A-CC82-4B0C-80F3-11612CF14939",
+        "SITE_NM": "United Community Health Center at Amado",
+        "SITE_ADDRESS": "28720 S Nogales Hwy",
+        "SITE_CITY": "Amado",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85645-9997",
+        "SITE_PHONE_NUM": "520-407-5510",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.06098141999996,
+        "y": 31.729430818000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8E99678A-0D21-49B6-82D0-72FC0DDA6D53",
+        "SITE_NM": "United Community Health Center at Arivaca",
+        "SITE_ADDRESS": "17388 W 3rd St",
+        "SITE_CITY": "Arivaca",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85601-0284",
+        "SITE_PHONE_NUM": "520-407-5500",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.33460026799997,
+        "y": 31.57747734900005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B55ECBC7-0708-4DAE-BBC4-1375F40CD0F2",
+        "SITE_NM": "United Community Health Center at Three Points",
+        "SITE_ADDRESS": "15921 W Ajo Hwy",
+        "SITE_CITY": "Tucson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85735-2032",
+        "SITE_PHONE_NUM": "520-407-5700",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.30742705999995,
+        "y": 32.07827230100003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FC8663C3-A7F9-497C-A226-9A5A0DD6ABB2",
+        "SITE_NM": "UCHC Dental - Mobile RV 2",
+        "SITE_ADDRESS": "1260 S Campbell Ave, Building 1",
+        "SITE_CITY": "Green Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85614-0504",
+        "SITE_PHONE_NUM": "520-407-5617",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97361256899995,
+        "y": 31.851996454000073
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2EEDA476-0A93-4C20-ACC2-8A1D2352EA04",
+        "SITE_NM": "United Community Health Center at Green Valley",
+        "SITE_ADDRESS": "4475 S I 19 Frontage Rd, Suite 139",
+        "SITE_CITY": "Green Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85614-6338",
+        "SITE_PHONE_NUM": "520-407-5910",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.01044038799995,
+        "y": 31.80608751300008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B07AA37C-CC37-4B3C-9F36-C7317BE2DB5D",
+        "SITE_NM": "United Community Health Center at Old Vail Middle School",
+        "SITE_ADDRESS": "13299 E Colossal Cave Rd",
+        "SITE_CITY": "Vail",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85641-9090",
+        "SITE_PHONE_NUM": "520-762-5200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.71129998699996,
+        "y": 32.04959998900006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "96CB5EC3-0075-420F-9EFD-7337C90C00BE",
+        "SITE_NM": "United Community Health Center at Sahuarita Heights",
+        "SITE_ADDRESS": "2875 E Sahuarita Rd",
+        "SITE_CITY": "Sahuarita",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85629-9434",
+        "SITE_PHONE_NUM": "520-576-5770",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.93027963799994,
+        "y": 31.958407188000024
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "369ED9FE-F603-4288-9FFE-8A12799EA463",
+        "SITE_NM": "United Community Health Center at Sahuarita Pediatric Behavioral Health",
+        "SITE_ADDRESS": "18861 S LA Canada Dr",
+        "SITE_CITY": "Sahuarita",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85629-7990",
+        "SITE_PHONE_NUM": "520-407-5400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.99426825999996,
+        "y": 31.907938785000056
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9DE9E049-303E-4229-BB96-23F696982461",
+        "SITE_NM": "UCHC Dental",
+        "SITE_ADDRESS": "1260 S Campbell Ave, Building 1",
+        "SITE_CITY": "Green Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85614-0504",
+        "SITE_PHONE_NUM": "520-407-5617",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.97361256899995,
+        "y": 31.851996454000073
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5FC0CB45-4A8B-4E2B-B504-38AE9CE0688C",
+        "SITE_NM": "UCHC Dental @ LaCanada",
+        "SITE_ADDRESS": "18841 S LA Canada Dr",
+        "SITE_CITY": "Sahuarita",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85629-7990",
+        "SITE_PHONE_NUM": "520-407-5617",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.99429273599998,
+        "y": 31.908180770000058
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "512C6BDC-D96F-40C5-8555-1F6983B1C381",
+        "SITE_NM": "Canyonlands Healthcare - Palo Verde",
+        "SITE_ADDRESS": "18 W Center St",
+        "SITE_CITY": "Pima",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85543-0030",
+        "SITE_PHONE_NUM": "928-485-5353",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04009",
+        "COUNTY_NM": "Graham",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.82773406899997,
+        "y": 32.896525172000054
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D030C5B3-67CE-42A3-8FBA-A1636972B574",
+        "SITE_NM": "Canyonlands Healthcare - Urgent Care",
+        "SITE_ADDRESS": "440 N Navajo Dr",
+        "SITE_CITY": "Page",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86040-0950",
+        "SITE_PHONE_NUM": "928-645-1700",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.46279996799996,
+        "y": 36.916689992000045
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3160F9CA-48B2-4146-8D3D-FE991BEB1358",
+        "SITE_NM": "Canyonlands Healthcare - Adams Chiropractic",
+        "SITE_ADDRESS": "635 Elm Street, #9",
+        "SITE_CITY": "Page",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86040",
+        "SITE_PHONE_NUM": "928-645-9675",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.45917018499995,
+        "y": 36.91641133600007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D7573275-2F62-4EF4-A52D-79F9540685AC",
+        "SITE_NM": "Canyonlands Healthcare - Beaver Dam",
+        "SITE_ADDRESS": "3272 E Rio Virgin Rd",
+        "SITE_CITY": "Littlefield",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86432-3200",
+        "SITE_PHONE_NUM": "928-347-5971",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04015",
+        "COUNTY_NM": "Mohave",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -113.93001325099999,
+        "y": 36.90655245800008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "CE6B4B36-A923-4BC0-9A96-BFF62B0A1305",
+        "SITE_NM": "Canyonlands Healthcare - Mobile Clinic",
+        "SITE_ADDRESS": "827 Vista Ave",
+        "SITE_CITY": "Page",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86040-7501",
+        "SITE_PHONE_NUM": "928-645-9675",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.46100624099995,
+        "y": 36.92139806500006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "571F5A75-28FC-4678-AA81-78BC1E9056CC",
+        "SITE_NM": "Canyonlands Healthcare - Chilchinbeto",
+        "SITE_ADDRESS": "Chilchinbeto Chapter House Complex",
+        "SITE_CITY": "Kayenta",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86033",
+        "SITE_PHONE_NUM": "928-697-8154",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04017",
+        "COUNTY_NM": "Navajo",
+        "LOC_NAME_DESC": "Data was matched at 5 digit ZIP code level using AGOL"
+      },
+      "geometry": {
+        "x": -110.06599999999997,
+        "y": 36.52410000000003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8E7A7C7C-89F0-45B2-98B3-5A1008DCC4F7",
+        "SITE_NM": "Canyonlands Healthcare - Duncan",
+        "SITE_ADDRESS": "227 Southwest Main Street",
+        "SITE_CITY": "Duncan",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85534",
+        "SITE_PHONE_NUM": "928-359-1380",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04011",
+        "COUNTY_NM": "Greenlee",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.10650859999998,
+        "y": 32.72025261700003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "78242FA2-1B30-49B7-A97A-F2AE50A27403",
+        "SITE_NM": "Canyonlands Healthcare - Clifton",
+        "SITE_ADDRESS": "10 Ward Canyon Rd",
+        "SITE_CITY": "Clifton",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85533-8233",
+        "SITE_PHONE_NUM": "928-865-2500",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04011",
+        "COUNTY_NM": "Greenlee",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.29369798899995,
+        "y": 33.04183514700003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "ECAF79B9-019F-44FB-A6E0-0875A4E03BA3",
+        "SITE_NM": "Canyonlands Healthcare - Globe",
+        "SITE_ADDRESS": "5860 S Hospital Dr",
+        "SITE_CITY": "Globe",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85501-9449",
+        "SITE_PHONE_NUM": "928-402-0491",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04007",
+        "COUNTY_NM": "Gila",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.82618612399995,
+        "y": 33.40681640100007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "60CC9545-7197-4235-90C2-C8D463B5D43A",
+        "SITE_NM": "Canyonlands Healthcare - Lake Powell",
+        "SITE_ADDRESS": "467 Vista Ave",
+        "SITE_CITY": "Page",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86040-1478",
+        "SITE_PHONE_NUM": "928-645-8123",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.46276996099999,
+        "y": 36.91838498100003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1693521A-E3E6-4A00-B290-13CF3D5E6C09",
+        "SITE_NM": "Canyonlands Healthcare - Safford",
+        "SITE_ADDRESS": "2016 W 16th St",
+        "SITE_CITY": "Safford",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85546-4026",
+        "SITE_PHONE_NUM": "928-428-1500",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04009",
+        "COUNTY_NM": "Graham",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.73366036499999,
+        "y": 32.82233673700006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C558B4D0-B89C-48E9-94D4-31AA76F81F52",
+        "SITE_NM": "Canyonlands Healthcare - Safford Integrated",
+        "SITE_ADDRESS": "1615 S 1st Ave",
+        "SITE_CITY": "Safford",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85546-2103",
+        "SITE_PHONE_NUM": "928-348-1701",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04009",
+        "COUNTY_NM": "Graham",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.70704270999994,
+        "y": 32.82015228800003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6AB9B130-5282-4FCB-BD99-AEE0F4DCF08D",
+        "SITE_NM": "Sun Life Health - Mesa Family Practice",
+        "SITE_ADDRESS": "10032 E Southern Ave",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85209-2759",
+        "SITE_PHONE_NUM": "480-351-2850",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.61359434599996,
+        "y": 33.393774663000045
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "AEA1D7FC-206E-4FD9-865F-32DFC5DF190B",
+        "SITE_NM": "Sun Life Health - Casa Grande Medical Campus",
+        "SITE_ADDRESS": "1863 E Florence Blvd",
+        "SITE_CITY": "Casa Grande",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85122-5304",
+        "SITE_PHONE_NUM": "888-381-3446",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.70655945899995,
+        "y": 32.87879950000007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D643941E-03C3-4CF6-8664-E206C84DF053",
+        "SITE_NM": "Sun Life Health - Coolidge Family Practice",
+        "SITE_ADDRESS": "1284 N Arizona Blvd",
+        "SITE_CITY": "Coolidge",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85128-3206",
+        "SITE_PHONE_NUM": "520-723-9131",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.52447426299995,
+        "y": 32.990841154000066
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "00812171-540C-4C28-8730-E3C0857BC020",
+        "SITE_NM": "Sun Life Health - Chandler Center for Women",
+        "SITE_ADDRESS": "655 S Dobson Rd, Suite 201",
+        "SITE_CITY": "Chandler",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85224-5669",
+        "SITE_PHONE_NUM": "480-307-9477",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.87564180799995,
+        "y": 33.294631458000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "BDFE7726-5027-471A-8361-6A37E36FAB01",
+        "SITE_NM": "Sun Life Health - Oracle Family Practice",
+        "SITE_ADDRESS": "1040 W American Ave",
+        "SITE_CITY": "Oracle",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85623-6089",
+        "SITE_PHONE_NUM": "520-896-2902",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.78486401199996,
+        "y": 32.61640854800004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "62BED3E0-5EEE-400F-ABB0-689AC2837E1A",
+        "SITE_NM": "Sun Life Health - Casa Grande Family & Pediatric Dentistry and Orthodontics",
+        "SITE_ADDRESS": "865 N Arizola Rd",
+        "SITE_CITY": "Casa Grande",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85122-6011",
+        "SITE_PHONE_NUM": "520-836-3446",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.71489526099998,
+        "y": 32.88217124700003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "38E32EAE-9AF7-4925-9266-8DBF95D6AC2F",
+        "SITE_NM": "Sun Life Health - Maricopa Family Practice & Center for Women",
+        "SITE_ADDRESS": "44572 W Bowlin Rd",
+        "SITE_CITY": "Maricopa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85138-4558",
+        "SITE_PHONE_NUM": "520-568-2245",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.04649927699995,
+        "y": 33.044115316000045
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8AF3C114-7FC0-4E04-8100-37AFBAC7F48D",
+        "SITE_NM": "Sun Life Health - Eloy Family Practice",
+        "SITE_ADDRESS": "205 N Stuart Blvd",
+        "SITE_CITY": "Eloy",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85131-2507",
+        "SITE_PHONE_NUM": "520-466-7883",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.55180982899998,
+        "y": 32.751552487000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "4453B89B-09C0-4C44-96B4-394A6F31A628",
+        "SITE_NM": "Sun Life Health - Florence Family Practice",
+        "SITE_ADDRESS": "174 W Highway 287",
+        "SITE_CITY": "Florence",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85132-8170",
+        "SITE_PHONE_NUM": "520-868-5811",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.39012165899999,
+        "y": 33.01991843800005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "4248893E-1A9B-4FA0-9C22-B8B2B99BDF66",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Sierra Vista Family Dental Center and Administration",
+        "SITE_ADDRESS": "115 Calle Portal",
+        "SITE_CITY": "Sierra Vista",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85635-2950",
+        "SITE_PHONE_NUM": "520-364-1429 x41429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.26533320099998,
+        "y": 31.553295055000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "22CC5420-4208-444B-8F8B-803245EF4C73",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Behavioral Health Center - Sierra Vista",
+        "SITE_ADDRESS": "77 Calle Portal, Suite C 240",
+        "SITE_CITY": "Sierra Vista",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85635-2986",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.26617717499994,
+        "y": 31.55329723400007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FEF1156B-D7E0-4E8C-BA74-F21DE677C290",
+        "SITE_NM": "Medical Mobile Clinic- 'Hank'",
+        "SITE_ADDRESS": "815 E 15th St",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1631",
+        "SITE_PHONE_NUM": "429-429-1429 x41429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.54912010999999,
+        "y": 31.349269599000024
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D709E3ED-82AC-4A33-BDEC-E560948C7F1B",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Cliff Whetten Clinic",
+        "SITE_ADDRESS": "10566 N Highway 191",
+        "SITE_CITY": "Elfrida",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85610-9021",
+        "SITE_PHONE_NUM": "520-642-2222",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.68753265699996,
+        "y": 31.697082958000067
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C0CBD98A-C6B7-42D6-AB97-1948D7D0D1B3",
+        "SITE_NM": "Bisbee Administration and Community Health",
+        "SITE_ADDRESS": "310 Arizona St",
+        "SITE_CITY": "Bisbee",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85603-1502",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.87718287299998,
+        "y": 31.412870472000066
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "94D7C941-A312-4C4E-B807-BC1E97AEBC50",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Douglas Acute Care, Laboratory, and Pharmacy",
+        "SITE_ADDRESS": "1111 N F Ave",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1918",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.55262592499997,
+        "y": 31.345968974000073
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "53519837-724D-4820-A0D9-AF9C14E330E5",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Benson Family Health Center",
+        "SITE_ADDRESS": "335 S Ocotillo St",
+        "SITE_CITY": "Benson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85602-6406",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.30630293799999,
+        "y": 31.96641760500006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "33250978-A921-4AEB-827D-8486BD85E4DF",
+        "SITE_NM": "Mobile Medical Clinic 'Sue'",
+        "SITE_ADDRESS": "1100 N F Ave",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1919",
+        "SITE_PHONE_NUM": "520-364-3285 x52022",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.55327309199998,
+        "y": 31.34573088600007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B2A734A3-EC63-4A20-BA98-E6ED17D4C723",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Bisbee Family Health Center",
+        "SITE_ADDRESS": "108 Arizona St",
+        "SITE_CITY": "Bisbee",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85603-1896",
+        "SITE_PHONE_NUM": "520-432-3309",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.87784066699999,
+        "y": 31.411159938000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6D2599B7-5623-4575-887B-77B1C6DC6093",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Behavioral Health Center Suite A140",
+        "SITE_ADDRESS": "77 Calle Portal, Suite A 140",
+        "SITE_CITY": "Sierra Vista",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85635-2988",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.26637121599998,
+        "y": 31.553402469000048
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "947B21F6-6F44-44DE-93EB-26E0D01C3855",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Ronald Mobile Dental Clinic",
+        "SITE_ADDRESS": "115 Calle Portal",
+        "SITE_CITY": "Sierra Vista",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85635-2950",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.26533320099998,
+        "y": 31.553295055000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FA308AE5-66F1-492E-BE1A-F7E8317EC2D5",
+        "SITE_NM": "Chiricahua Community Health Centers Inc. Pediatric Center of Excellence",
+        "SITE_ADDRESS": "815 15th St",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1631",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.54912010999999,
+        "y": 31.349269599000024
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C9BDB91A-D847-477B-8F35-462B21B86323",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Dardo Mobile Clinic",
+        "SITE_ADDRESS": "815 E 15th St",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1631",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.54912010999999,
+        "y": 31.349269599000024
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7C5D17C8-9068-4B2F-A229-40E95722D4DE",
+        "SITE_NM": "Adel Mobile Medical Unit",
+        "SITE_ADDRESS": "815 E 15th St",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1631",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.54912010999999,
+        "y": 31.349269599000024
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7FE5D91A-78E7-477F-97BB-B87DE02FDC04",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Early Childhood Center of Excellence",
+        "SITE_ADDRESS": "1151 16th St",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1603",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.54455884599997,
+        "y": 31.35044365300007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "46725592-674F-4259-B348-903B8A9394B1",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Jennifer 'Ginger' Ryan Clinic",
+        "SITE_ADDRESS": "1100 N F Ave",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1919",
+        "SITE_PHONE_NUM": "520-364-3285",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.55327309199998,
+        "y": 31.34573088600007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1075233B-E62E-4978-A051-3D5154B0A846",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Sierra Vista Pediatrics",
+        "SITE_ADDRESS": "155 Calle Portal, Suite 700",
+        "SITE_CITY": "Sierra Vista",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85635-2973",
+        "SITE_PHONE_NUM": "520-459-0203",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.26637381399996,
+        "y": 31.55240401700007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6952EF51-F4A4-42B6-9587-7E64E616538E",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Willcox Clinic",
+        "SITE_ADDRESS": "251 W Rex Allen Dr",
+        "SITE_CITY": "Willcox",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85643",
+        "SITE_PHONE_NUM": "520-364-1429",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.82852772299998,
+        "y": 32.26266383300003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7BA476C6-12E8-4E97-BF06-4BBE12F5FE2E",
+        "SITE_NM": "Chiricahua Community Health Centers, Inc. Sierra Vista Adult Clinic",
+        "SITE_ADDRESS": "155 Calle Portal, Suite 300",
+        "SITE_CITY": "Sierra Vista",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85635-2900",
+        "SITE_PHONE_NUM": "520-459-1200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.26637657999999,
+        "y": 31.55256352500004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "36F37BD3-F206-4220-8AAE-74404D07FEF9",
+        "SITE_NM": "CCHCI Mobile Medical Unit 'Murphy'",
+        "SITE_ADDRESS": "1100 N F Ave",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1919",
+        "SITE_PHONE_NUM": "520-364-3285",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.55327309199998,
+        "y": 31.34573088600007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1D6E94EE-5720-418F-9254-135A152FC08C",
+        "SITE_NM": "CCHCI Mobile Dental Unit",
+        "SITE_ADDRESS": "1100 N F Ave",
+        "SITE_CITY": "Douglas",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85607-1919",
+        "SITE_PHONE_NUM": "520-364-3285",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04003",
+        "COUNTY_NM": "Cochise",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -109.55327309199998,
+        "y": 31.34573088600007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "441471CF-EEE7-4528-BF94-537E516A0D7B",
+        "SITE_NM": "MCHC - Mesquite Building Site",
+        "SITE_ADDRESS": "1835 N Mastick Way",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-1064",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -110.93412793799996,
+        "y": 31.36560639000004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9E4D2A2B-4CB9-4DE0-AB16-16E9505B7B41",
+        "SITE_NM": "MCHC - Rio Rico Clinical Site",
+        "SITE_ADDRESS": "1103 Circulo Mercado",
+        "SITE_CITY": "Rio Rico",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85648-6248",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.99862886199998,
+        "y": 31.47026811300003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5198888F-4CCC-42AB-A27D-14A07497D0EA",
+        "SITE_NM": "Mariposa Community Health Center",
+        "SITE_ADDRESS": "507 N Western Ave",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-2060",
+        "SITE_PHONE_NUM": "520-761-2128",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.95148878699996,
+        "y": 31.342155459000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "CE3B7AE3-ECEA-44A5-A5E2-C5AAB3B72767",
+        "SITE_NM": "MCHC - Patagonia Family Health Center Site",
+        "SITE_ADDRESS": "101 N Taylor Ln",
+        "SITE_CITY": "Patagonia",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85624-9600",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -110.75210786899999,
+        "y": 31.541114935000053
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5C60D4F8-E085-426D-A683-E979C5739CE1",
+        "SITE_NM": "Mariposa Nogales West",
+        "SITE_ADDRESS": "1209 W Target Range Rd",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-2466",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.96074978399997,
+        "y": 31.34034639300006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3291F521-D172-4926-8629-39F48FA0CE49",
+        "SITE_NM": "Mariposa Nogales North",
+        "SITE_ADDRESS": "3231 N Grand Ave",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-3905",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.95386254199997,
+        "y": 31.390748621000057
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "691534DB-F7E0-4A2B-9008-775857C9FDB9",
+        "SITE_NM": "Mariposa Community Health Center Inc. - MDU",
+        "SITE_ADDRESS": "825 N Grand Ave, Suite 100",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-2385",
+        "SITE_PHONE_NUM": "520-375-5032",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.93109486199995,
+        "y": 31.347338325000067
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "E4000C55-3BA1-4919-9066-0445424D5D93",
+        "SITE_NM": "MCHC - Main Clinical Site",
+        "SITE_ADDRESS": "1852 N Mastick Way",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-1063",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.93286101299998,
+        "y": 31.365234610000073
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F05A7FAD-7215-47C1-A4B4-176EC6073422",
+        "SITE_NM": "Mobile Medical Unit",
+        "SITE_ADDRESS": "1852 N Mastick Way",
+        "SITE_CITY": "Nogales",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85621-1063",
+        "SITE_PHONE_NUM": "520-281-1550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04023",
+        "COUNTY_NM": "Santa Cruz",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.93286101299998,
+        "y": 31.365234610000073
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "871BF084-889B-46AB-9A24-025E519C7827",
+        "SITE_NM": "Desert Senita Community Health Center Arizona City",
+        "SITE_ADDRESS": "13060 S Sunland Gin Rd",
+        "SITE_CITY": "Arizona City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85123-8448",
+        "SITE_PHONE_NUM": "520-466-5774",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.67157004199998,
+        "y": 32.761263718000066
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "34AF044F-A086-43E7-BF2F-1663C4E96A3F",
+        "SITE_NM": "Desert Senita Behavioral Health Outpatient - Casa Grande",
+        "SITE_ADDRESS": "1269 North Promenade Parkway",
+        "SITE_CITY": "Casa Grande",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85194-5423",
+        "SITE_PHONE_NUM": "520-387-5651",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.68510673199995,
+        "y": 32.88525427800005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "83E7E9F2-D4C7-4974-9987-D4550CCA50BF",
+        "SITE_NM": "Desert Senita Dental Center",
+        "SITE_ADDRESS": "410 N Malacate St",
+        "SITE_CITY": "Ajo",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85321-2254",
+        "SITE_PHONE_NUM": "520-387-5651",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.86366836799999,
+        "y": 32.375574509000046
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A28B938F-51F9-47F4-A886-7C1DDA865108",
+        "SITE_NM": "Desert Senita Community Health Center Arizona City",
+        "SITE_ADDRESS": "14574 S Sunland Gin Rd",
+        "SITE_CITY": "Arizona City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85123",
+        "SITE_PHONE_NUM": "520-387-5651",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.67185519399999,
+        "y": 32.747236687000054
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FAD380BB-3205-4209-B3DE-74E4704BB911",
+        "SITE_NM": "Desert Senita Community Health Center - Stanfield",
+        "SITE_ADDRESS": "515 S Stanfield Rd BLDG O",
+        "SITE_CITY": "Stanfield",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85172-9687",
+        "SITE_PHONE_NUM": "520-387-5651",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.96255242099994,
+        "y": 32.87616565500008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FFFC4C48-A26B-47C6-B8AD-0EF9D2E3691B",
+        "SITE_NM": "Desert Senita Community Health Center - Coolidge",
+        "SITE_ADDRESS": "1435 N Arizona Blvd",
+        "SITE_CITY": "Coolidge",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85128-3214",
+        "SITE_PHONE_NUM": "520-387-5651",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.52224249699998,
+        "y": 32.992930553000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2B292DE4-F611-414A-8EC5-B87062E6606E",
+        "SITE_NM": "DESERT SENITA COMMUNITY HEALTH CENTER",
+        "SITE_ADDRESS": "410 N Malacate St",
+        "SITE_CITY": "Ajo",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85321-2254",
+        "SITE_PHONE_NUM": "520-387-5651",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04019",
+        "COUNTY_NM": "Pima",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.86366836799999,
+        "y": 32.375574509000046
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FACA7A21-99B3-4B1A-A8A7-1496AF0B3855",
+        "SITE_NM": "PRESCOTT",
+        "SITE_ADDRESS": "1090 Commerce Dr",
+        "SITE_CITY": "Prescott",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86305-3700",
+        "SITE_PHONE_NUM": "928-583-1000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.46117029899995,
+        "y": 34.60829449600004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1B3228D5-D444-4152-A4B7-0EC93917A0F6",
+        "SITE_NM": "Cottonwood Mobile CHC",
+        "SITE_ADDRESS": "51 Brian Mickelsen Parkway",
+        "SITE_CITY": "Cottonwood",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86326-3610",
+        "SITE_PHONE_NUM": "928-583-1000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.02394726299997,
+        "y": 34.73788073000003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1AA9EB02-B668-4025-BC9E-5E49F6F0F796",
+        "SITE_NM": "PRESCOTT VALLEY",
+        "SITE_ADDRESS": "3212 N Windsong Dr",
+        "SITE_CITY": "Prescott Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86314-2288",
+        "SITE_PHONE_NUM": "928-583-1000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.32782377499996,
+        "y": 34.590332371000045
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "781F0688-6CCB-4400-9D08-C7713755EC14",
+        "SITE_NM": "COTTONWOOD",
+        "SITE_ADDRESS": "51 Brian Mickelsen Pkwy",
+        "SITE_CITY": "Cottonwood",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86326-3610",
+        "SITE_PHONE_NUM": "928-639-8132",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.02395824299998,
+        "y": 34.73788605300007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FF75CF59-22EB-42CD-A727-F8DACCFDAE55",
+        "SITE_NM": "Prescott Mobile Unit",
+        "SITE_ADDRESS": "1090 Commerce Dr",
+        "SITE_CITY": "Prescott",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86305-3700",
+        "SITE_PHONE_NUM": "928-583-1000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.46117029899995,
+        "y": 34.60829449600004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F24B5BA5-AE22-4330-8ED4-147257E05DCB",
+        "SITE_NM": "Ash Fork",
+        "SITE_ADDRESS": "112 W Park Ave",
+        "SITE_CITY": "Ash Fork",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86320",
+        "SITE_PHONE_NUM": "928-583-1000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.48001767899996,
+        "y": 35.22298672900007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "88F7AA64-19C7-40BA-9835-12A9D34DD4B7",
+        "SITE_NM": "Sunset Mobile Medical Unit",
+        "SITE_ADDRESS": "115 N Somerton Ave",
+        "SITE_CITY": "Somerton",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85350",
+        "SITE_PHONE_NUM": "928-819-8999",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.70991044999994,
+        "y": 32.59690842700007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2441FB62-319E-4AF6-BADF-DC7ACE359BF1",
+        "SITE_NM": "SUNSET COMMUNITY HEALTH CENTER, INC.",
+        "SITE_ADDRESS": "115 N Somerton Ave",
+        "SITE_CITY": "Somerton",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85350",
+        "SITE_PHONE_NUM": "928-627-2051",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.70991044999994,
+        "y": 32.59690842700007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C5EC23AB-13CF-4F67-AEB1-19D68C87B1D7",
+        "SITE_NM": "Sunset CHC Mobile Dental Unit",
+        "SITE_ADDRESS": "115 N Somerton Ave",
+        "SITE_CITY": "Somerton",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85350",
+        "SITE_PHONE_NUM": "928-819-8999",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.70991044999994,
+        "y": 32.59690842700007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6FA068F2-4E7D-489A-A90E-F8A7C1F873B6",
+        "SITE_NM": "Sunset Community Health Center- Wellton",
+        "SITE_ADDRESS": "10425 S Williams St",
+        "SITE_CITY": "Wellton",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85356",
+        "SITE_PHONE_NUM": "928-785-3256",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.14158899999995,
+        "y": 32.67111169800006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2B7DE7C1-1C48-4723-9338-55342EA26ECC",
+        "SITE_NM": "Sunset North Yuma Building B Clinic",
+        "SITE_ADDRESS": "675 South Avenue B, Bldg B",
+        "SITE_CITY": "Yuma",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85364-2749",
+        "SITE_PHONE_NUM": "928-819-8999",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.64993290399997,
+        "y": 32.714923654000074
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "92CC34C3-83E8-4C75-B754-844B59B1380E",
+        "SITE_NM": "SUNSET CHC - SAN LUIS DENTAL",
+        "SITE_ADDRESS": "801 N 2nd Ave",
+        "SITE_CITY": "San Luis",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85336-0678",
+        "SITE_PHONE_NUM": "928-627-8584",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.77984511099999,
+        "y": 32.49229628200004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "DE8D69D0-922E-48C3-8B59-96B818A79A20",
+        "SITE_NM": "SUNSET CHC, INC. Yuma SITE",
+        "SITE_ADDRESS": "2060 W 24th St",
+        "SITE_CITY": "Yuma",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85364-6123",
+        "SITE_PHONE_NUM": "928-819-8999",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.64454828499998,
+        "y": 32.68446725500007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "DEA079B7-8675-412B-9242-696F824BF4B5",
+        "SITE_NM": "Sunset North Yuma Clinic",
+        "SITE_ADDRESS": "675 S Avenue B, Bldg A",
+        "SITE_CITY": "Yuma",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85364-2749",
+        "SITE_PHONE_NUM": "928-819-8999",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.65042005999999,
+        "y": 32.714691266000045
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9C13205E-583C-41D1-9C35-510398728B1D",
+        "SITE_NM": "Sunset Community Health Center- San Luis",
+        "SITE_ADDRESS": "815 E Cesar Chavez Blvd",
+        "SITE_CITY": "San Luis",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85336-0477",
+        "SITE_PHONE_NUM": "928-627-3822",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.78041197899995,
+        "y": 32.49378997900004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "274EBDD5-57E3-4DDD-B43A-E5ACABD011D2",
+        "SITE_NM": "NATIVE HEALTH West 8800",
+        "SITE_ADDRESS": "8800 N 22nd Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85021-4258",
+        "SITE_PHONE_NUM": "602-279-5262",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.10656525199994,
+        "y": 33.56480718800003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "CD278884-D211-44F1-B2EB-940CA6093C61",
+        "SITE_NM": "NATIVE HEALTH Central",
+        "SITE_ADDRESS": "4041 N Central Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85012-3330",
+        "SITE_PHONE_NUM": "602-279-5262",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07265927999998,
+        "y": 33.493979351000064
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "771EBA67-5332-4800-8689-FCD6F8E746AC",
+        "SITE_NM": "Wesley Health Center - Recker Road",
+        "SITE_ADDRESS": "5845 E Still Cir, Suite 104",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85206-3635",
+        "SITE_PHONE_NUM": "602-257-4323",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.70298172699995,
+        "y": 33.38091183600005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5BF5E72F-D27B-462D-A293-14B7824B9204",
+        "SITE_NM": "Golden Gate Site",
+        "SITE_ADDRESS": "1625 N 39th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-2149",
+        "SITE_PHONE_NUM": "602-233-0017",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14247776799999,
+        "y": 33.466875420000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5EEE8941-FB8B-43DE-A766-0028F705A33D",
+        "SITE_NM": "Mom and Baby Mobile Health Center",
+        "SITE_ADDRESS": "1625 N 39th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-2149",
+        "SITE_PHONE_NUM": "602-257-4323",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14247776799999,
+        "y": 33.466875420000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1524B588-4803-41C5-BE9F-93CB53D6E9AE",
+        "SITE_NM": "Coffelt",
+        "SITE_ADDRESS": "1510 S 19th Dr",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-6596",
+        "SITE_PHONE_NUM": "602-368-9896 x89896",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.10097217599997,
+        "y": 33.43334068200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "98D8016B-4CB0-451A-A8D1-B3E7D68F0D7C",
+        "SITE_NM": "Wesley - Mobile Medical Unit",
+        "SITE_ADDRESS": "1300 S 10th St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85034",
+        "SITE_PHONE_NUM": "602-257-4323",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06007586399994,
+        "y": 33.434384187000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "02652EB4-17DE-4A13-A457-2629564996F6",
+        "SITE_NM": "Wesley Health Center",
+        "SITE_ADDRESS": "1300 S 10th St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85034",
+        "SITE_PHONE_NUM": "602-257-4323",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06007586399994,
+        "y": 33.434384187000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2E77C355-0122-4161-80A3-0D08276F1116",
+        "SITE_NM": "Mobile Medical  Van",
+        "SITE_ADDRESS": "167 N Main St",
+        "SITE_CITY": "Tuba City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86045",
+        "SITE_PHONE_NUM": "928-283-2607",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.23774871799998,
+        "y": 36.135832605000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "E13F2CA0-DA38-40F0-8359-C7674F09FF53",
+        "SITE_NM": "Mobile Dental  Van",
+        "SITE_ADDRESS": "167 N Main St",
+        "SITE_CITY": "Tuba City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86045",
+        "SITE_PHONE_NUM": "928-283-2501",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.23774871799998,
+        "y": 36.135832605000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5822BFB1-0BF9-458F-A896-8B8E011C7C94",
+        "SITE_NM": "Mobile Medical Van #2",
+        "SITE_ADDRESS": "167 N Main St",
+        "SITE_CITY": "Tuba City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86045",
+        "SITE_PHONE_NUM": "928-283-2607",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.23774871799998,
+        "y": 36.135832605000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2882BFEE-145E-42BB-916C-D1F5975C9F32",
+        "SITE_NM": "Community Counseling Center",
+        "SITE_ADDRESS": "Tamarack St",
+        "SITE_CITY": "Tuba City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86045",
+        "SITE_PHONE_NUM": "928-283-2816",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Street Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.23568712699995,
+        "y": 36.135705210000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7F085D7B-350A-45A2-9DD8-BFAFC0872D32",
+        "SITE_NM": "Mobile Dental Van #2",
+        "SITE_ADDRESS": "167 N Main St",
+        "SITE_CITY": "Tuba City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86045",
+        "SITE_PHONE_NUM": "928-283-2607",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.23774871799998,
+        "y": 36.135832605000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "067775B7-321A-421E-A0AA-27FC16C2BA18",
+        "SITE_NM": "Cholla Health Center",
+        "SITE_ADDRESS": "8705 E McDowell Rd",
+        "SITE_CITY": "Scottsdale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85257-3990",
+        "SITE_PHONE_NUM": "480-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.89303844799997,
+        "y": 33.465036514000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "E1453505-BA89-4347-A4C3-D577A7C105CD",
+        "SITE_NM": "Desert Mission Health Center",
+        "SITE_ADDRESS": "9015 N 3rd St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85020-2444",
+        "SITE_PHONE_NUM": "602-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06935488199997,
+        "y": 33.568453315000056
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3D7BA989-9DB2-401F-BB53-DE826566353B",
+        "SITE_NM": "Midtown Health Center",
+        "SITE_ADDRESS": "4131 N 24th St, Suite B 102",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85016-6231",
+        "SITE_PHONE_NUM": "480-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.03002070599996,
+        "y": 33.496023781000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1B793203-E65C-4377-8104-6A34B5BC0247",
+        "SITE_NM": "Palomino Health Center",
+        "SITE_ADDRESS": "16251 N Cave Creek Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85032-2976",
+        "SITE_PHONE_NUM": "480-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.03029990799996,
+        "y": 33.63473950100007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "0E426ADC-9596-4189-882D-954DA41C9A86",
+        "SITE_NM": "Venado Valley Health Center",
+        "SITE_ADDRESS": "20440 N 27th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85027-3240",
+        "SITE_PHONE_NUM": "480-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.11774268799996,
+        "y": 33.67316843200007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F10C9295-F85F-41B1-9AC8-BB0C644A3C6B",
+        "SITE_NM": "Copperwood Health Center",
+        "SITE_ADDRESS": "11851 N 51st Ave",
+        "SITE_CITY": "Glendale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85304-2809",
+        "SITE_PHONE_NUM": "480-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.16762004099996,
+        "y": 33.593353980000074
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B0C8EDBE-316F-488A-9EA3-B2E69EDE2BC1",
+        "SITE_NM": "Copperwood II Health Center",
+        "SITE_ADDRESS": "11851 N 51st Ave, Suite F 140",
+        "SITE_CITY": "Glendale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85304-2847",
+        "SITE_PHONE_NUM": "480-882-4545",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.16762004099996,
+        "y": 33.593353980000074
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "419BCCA1-0538-4698-A56A-85A4ECC7A4A6",
+        "SITE_NM": "Oracle",
+        "SITE_ADDRESS": "980 E Mt Lemmon Hwy",
+        "SITE_CITY": "Oracle",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85623",
+        "SITE_PHONE_NUM": "520-896-2035",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.76338630699996,
+        "y": 32.609615560000066
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "61C06B58-783B-4630-81A9-6AFDF23CD857",
+        "SITE_NM": "North Valley Pediatrics",
+        "SITE_ADDRESS": "702 E Bell Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85022-6639",
+        "SITE_PHONE_NUM": "602-482-7311",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06431123999994,
+        "y": 33.64102085800005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D0FB308E-2DDC-4D87-A9AC-607E2E767B83",
+        "SITE_NM": "Queen Creek",
+        "SITE_ADDRESS": "22713 S Ellsworth Rd",
+        "SITE_CITY": "Queen Creek",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85142-7886",
+        "SITE_PHONE_NUM": "480-474-5670",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.63281145099995,
+        "y": 33.24212776200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8E6AD462-F0B6-4018-A06E-AB1372B2528D",
+        "SITE_NM": "Casa Grande",
+        "SITE_ADDRESS": "115 W 2nd St",
+        "SITE_CITY": "Casa Grande",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85122-4406",
+        "SITE_PHONE_NUM": "480-983-0065",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.75433136099997,
+        "y": 32.87734595300003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "776385BB-A241-4510-8837-004CCE6B6C8C",
+        "SITE_NM": "Florence Clinic",
+        "SITE_ADDRESS": "495 North Pinal Parkway Avenue, #106",
+        "SITE_CITY": "Florence",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85132-8870",
+        "SITE_PHONE_NUM": "833-431-4449",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.37910808999999,
+        "y": 33.03649763300007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A104C3C7-3678-41CC-927D-493C6391E250",
+        "SITE_NM": "Yuma",
+        "SITE_ADDRESS": "1185 South Redondo Center Drive, #3",
+        "SITE_CITY": "Yuma",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85365-2036",
+        "SITE_PHONE_NUM": "480-983-0065",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04027",
+        "COUNTY_NM": "Yuma",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.611987022,
+        "y": 32.70646061400004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C6E37EF7-6EFE-4F84-9FE3-AA6B62893404",
+        "SITE_NM": "Apache Junction",
+        "SITE_ADDRESS": "625 N Plaza Dr",
+        "SITE_CITY": "Apache Junction",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85120-5502",
+        "SITE_PHONE_NUM": "480-983-0065",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.55001836399998,
+        "y": 33.42078916000003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "398B4D5F-E582-4D14-9485-A205EA7E298F",
+        "SITE_NM": "Casa Grande",
+        "SITE_ADDRESS": "210 E Cottonwood Ln",
+        "SITE_CITY": "Casa Grande",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85122-2500",
+        "SITE_PHONE_NUM": "520-836-1688",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04021",
+        "COUNTY_NM": "Pinal",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.75210990599999,
+        "y": 32.89448585500003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "82C660EF-AA8E-4014-9C5D-014C2F3B265A",
+        "SITE_NM": "Globe Clinic",
+        "SITE_ADDRESS": "415 W Baseline Spur",
+        "SITE_CITY": "Globe",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85501",
+        "SITE_PHONE_NUM": "833-431-4449",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04007",
+        "COUNTY_NM": "Gila",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.774713024,
+        "y": 33.37868870400007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7CEDAA03-D8B8-43B1-BEDB-C09A97D9FCA1",
+        "SITE_NM": "Chandler Pediatrics",
+        "SITE_ADDRESS": "600 S Dobson Rd",
+        "SITE_CITY": "Chandler",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85224-5678",
+        "SITE_PHONE_NUM": "833-431-4449",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.87697285399997,
+        "y": 33.29571817200008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "78023D11-9573-47D0-AB81-3D23B38E562C",
+        "SITE_NM": "Central Valley Neighborhood Partnership (CVNP)",
+        "SITE_ADDRESS": "3522 N 3rd Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3903",
+        "SITE_PHONE_NUM": "602-776-7676",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07864001999997,
+        "y": 33.488849291000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C0587B61-ADD9-4FD4-870A-DDAA89B879A9",
+        "SITE_NM": "The Parsons Family Health Center at Circle the City",
+        "SITE_ADDRESS": "3522 N 3rd Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3903",
+        "SITE_PHONE_NUM": "602-776-9000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07864001999997,
+        "y": 33.488849291000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "CDBADEE3-3A80-4213-80CA-044F8C2AB9F4",
+        "SITE_NM": "Circle the City Medical Respite Center",
+        "SITE_ADDRESS": "333 W Indian School Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3205",
+        "SITE_PHONE_NUM": "602-776-9000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.08000115699997,
+        "y": 33.49459961200006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "4A3E5EDB-4776-4FB7-84F5-79E7C9858953",
+        "SITE_NM": "North Valley Neighborhood Partnership (NVNP)",
+        "SITE_ADDRESS": "3522 N 3rd Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3903",
+        "SITE_PHONE_NUM": "602-776-7676",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07864001999997,
+        "y": 33.488849291000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "85A1C2E4-7EC5-4908-BB83-9BD85E4BDB12",
+        "SITE_NM": "West Valley Neighborhood Partnership (WVNP)",
+        "SITE_ADDRESS": "3522 N 3rd Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3903",
+        "SITE_PHONE_NUM": "602-776-7676",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07864001999997,
+        "y": 33.488849291000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "907D1DAB-B6B3-4A70-918C-179D88A93619",
+        "SITE_NM": "Circle the City Family Health Center - UMOM Campus",
+        "SITE_ADDRESS": "3333 E Van Buren St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-6812",
+        "SITE_PHONE_NUM": "602-776-7676",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.00948370199995,
+        "y": 33.450943894000034
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3F9542E1-136F-498D-B184-114FEAB45CF3",
+        "SITE_NM": "Circle the City Medical Respite Center, Downtown Campus",
+        "SITE_ADDRESS": "210 S 12th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85007-3101",
+        "SITE_PHONE_NUM": "602-776-9000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.08832807499999,
+        "y": 33.445718113000055
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "767F4D83-8284-41E6-AA19-D5A68B73D700",
+        "SITE_NM": "Circle the City Family Health Center, Downtown Campus",
+        "SITE_ADDRESS": "220 S 12th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85007-3101",
+        "SITE_PHONE_NUM": "602-776-9000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.08837316899996,
+        "y": 33.44515769900005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "42749509-DC85-424E-805A-558009EB9273",
+        "SITE_NM": "East Valley Neighborhood Partnership (EVNP)",
+        "SITE_ADDRESS": "3522 N 3rd Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3903",
+        "SITE_PHONE_NUM": "602-776-7676",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07864001999997,
+        "y": 33.488849291000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "0E7DB240-B138-4BA1-A457-2B9181681D26",
+        "SITE_NM": "Tri-State Community Healthcare Center",
+        "SITE_ADDRESS": "8700 South Highway 95",
+        "SITE_CITY": "Mohave Valley",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86440-8519",
+        "SITE_PHONE_NUM": "760-326-0222",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04015",
+        "COUNTY_NM": "Mohave",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.59748297699997,
+        "y": 34.903943792000064
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "12AB54F8-574A-4443-AC8D-B6D3C24FBC88",
+        "SITE_NM": "Encanto Elementary",
+        "SITE_ADDRESS": "1426 W Osborn Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3688",
+        "SITE_PHONE_NUM": "602-707-2000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.09028757199997,
+        "y": 33.48778658900005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D846FD18-FDC9-4B3E-A74A-66A792ABC1E4",
+        "SITE_NM": "Alta E Butler Elementary",
+        "SITE_ADDRESS": "3843 West Roosevelt Street",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009",
+        "SITE_PHONE_NUM": "602-442-2300",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14198566599998,
+        "y": 33.45834536600006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8FBB8B59-0CA4-4B71-9D87-EE0B8FE2673C",
+        "SITE_NM": "Pueblo Del Sol Elementary School",
+        "SITE_ADDRESS": "3449 N 39th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85019-3998",
+        "SITE_PHONE_NUM": "602-455-6900",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14207979499997,
+        "y": 33.48932312000005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "AFE747BD-169B-43E3-BD04-6C6B253295E8",
+        "SITE_NM": "Edison Elementary School",
+        "SITE_ADDRESS": "804 North 18th Street",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85006",
+        "SITE_PHONE_NUM": "602-257-3848",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.04332982799997,
+        "y": 33.457552355000075
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "EDDE512A-0D81-405D-9DD3-02E68E1C66EA",
+        "SITE_NM": "Clarendon Elementary School",
+        "SITE_ADDRESS": "1225 W Clarendon Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-3359",
+        "SITE_PHONE_NUM": "602-707-2000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.08795457699995,
+        "y": 33.491104945000075
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "76B6CF0F-88A5-4A4E-91FB-D64F1E2A6408",
+        "SITE_NM": "Valle del Sol_Mesa_334",
+        "SITE_ADDRESS": "334 W 10th Pl, Suite 101",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85201-3499",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.83885690399995,
+        "y": 33.43445514000007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "71DE85F8-C0D8-4D63-A6B5-DF13E41425C4",
+        "SITE_NM": "Isaac Middle School",
+        "SITE_ADDRESS": "3402 West Mcdowell Road",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009",
+        "SITE_PHONE_NUM": "602-455-6800",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.13277797799998,
+        "y": 33.465962672000046
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2EA50D12-6DD0-4CB8-A09A-4FC1FFA17EEE",
+        "SITE_NM": "Valle del Sol_4344",
+        "SITE_ADDRESS": "4344 West Indian School Road",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85031-2984",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.15356291799998,
+        "y": 33.49677534500006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7061F7A2-5D55-4797-9183-47E6189CFF30",
+        "SITE_NM": "JB Sutton Elementary School",
+        "SITE_ADDRESS": "1001 N 31st Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-3437",
+        "SITE_PHONE_NUM": "602-442-3200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.12555294499998,
+        "y": 33.459802351000064
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "653D28A2-F507-4DCF-9066-64111B792444",
+        "SITE_NM": "Valle del Sol_Red Mountain Service Center_1209",
+        "SITE_ADDRESS": "1209 S 1st Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85003-2692",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07469733999994,
+        "y": 33.43554365600005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "BF1E58CD-75E6-4DBA-B04A-644438832F9A",
+        "SITE_NM": "Valle del Sol_4135",
+        "SITE_ADDRESS": "4135 S Power Rd, Suite 108",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85212-3625",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.68623149899997,
+        "y": 33.340296402000035
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "03A18E33-3DD3-4675-BC88-710279ADCDDA",
+        "SITE_NM": "Sousa Elementary School",
+        "SITE_ADDRESS": "616 N Mountain Rd",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85207-2303",
+        "SITE_PHONE_NUM": "480-472-8900",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.59010003899999,
+        "y": 33.42760000100003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "7695AE5B-A923-4C64-85DD-DE5DFD09D38A",
+        "SITE_NM": "Morris K. Udall Escuela de Bellas Artes",
+        "SITE_ADDRESS": "3715 West Roosevelt Street",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009",
+        "SITE_PHONE_NUM": "602-442-2700",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.13949598899995,
+        "y": 33.45834926400005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2C66FDB7-9747-47E7-8F0E-86FBA14DBE3B",
+        "SITE_NM": "Stevenson Elementary School",
+        "SITE_ADDRESS": "638 S 96th St",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85208-2480",
+        "SITE_PHONE_NUM": "480-472-9000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.62422737599996,
+        "y": 33.40325195500003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "56BB7F29-330E-4ADE-8E6A-28CA5359D674",
+        "SITE_NM": "P T Coe Elementary School",
+        "SITE_ADDRESS": "3801 W Roanoke Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-1304",
+        "SITE_PHONE_NUM": "602-442-2400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14176446799996,
+        "y": 33.477961409000045
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C2EB2C20-67BA-4731-8768-B0B524B0CFAB",
+        "SITE_NM": "Brinton Elementary School",
+        "SITE_ADDRESS": "11455 E Sunland Ave",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85208-7705",
+        "SITE_PHONE_NUM": "480-472-4075",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.58282605499994,
+        "y": 33.39603714800006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1C77C96C-3544-4C93-9D2A-B9485AF304F0",
+        "SITE_NM": "Joseph Zito Elementary School",
+        "SITE_ADDRESS": "4525 W Encanto Blvd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85035-2213",
+        "SITE_PHONE_NUM": "602-442-2500",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.15726973099999,
+        "y": 33.47309353500003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "43F56D93-7F04-4940-9F43-17DC08804B99",
+        "SITE_NM": "Longview Elementary School",
+        "SITE_ADDRESS": "1209 E Indian School Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85014-4925",
+        "SITE_PHONE_NUM": "602-707-2000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.05578273699996,
+        "y": 33.493811881000056
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6B006E79-8ED7-4E98-8357-B6DC8D38C854",
+        "SITE_NM": "Valle del Sol_502",
+        "SITE_ADDRESS": "502 N 27th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-4420",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.11779960099994,
+        "y": 33.45405789700004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "0EF9C275-120D-4E5E-A147-649F61353141",
+        "SITE_NM": "Lowell Elementary School",
+        "SITE_ADDRESS": "1121 South 3rd Avenue",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85003",
+        "SITE_PHONE_NUM": "602-257-3835",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07723227899999,
+        "y": 33.43647178400005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1DE88B2C-3400-4DA9-988D-28BEC53DD6C9",
+        "SITE_NM": "Moya Elementary School",
+        "SITE_ADDRESS": "406 N 41st Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-4069",
+        "SITE_PHONE_NUM": "602-442-2400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14774319499998,
+        "y": 33.45393116300005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9A04C764-54F0-4B6C-89CF-B73F4EE82A26",
+        "SITE_NM": "Valle del Sol_1430",
+        "SITE_ADDRESS": "1430 E Indian School Rd, Suite 230",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85014-4991",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.050847724,
+        "y": 33.49493463700003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "575FD0AC-6E9D-40A0-A2C2-B78B64C811A7",
+        "SITE_NM": "Arizona School for the Arts",
+        "SITE_ADDRESS": "1410 N 3rd St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85004-1608",
+        "SITE_PHONE_NUM": "602-257-1444",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06976919999994,
+        "y": 33.46447941100007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3A8147E6-2D12-451F-83AA-6498DC3B28CE",
+        "SITE_NM": "Valle del Sol_3807",
+        "SITE_ADDRESS": "3807 N 7th St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85014-5005",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06438977799996,
+        "y": 33.49199833000006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "03415889-CF2D-4FB0-A6E1-24FB006C4B55",
+        "SITE_NM": "Smith Junior High School",
+        "SITE_ADDRESS": "10100 E Adobe Rd",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85207-5404",
+        "SITE_PHONE_NUM": "480-472-0200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.61363365699998,
+        "y": 33.43023397200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "99B9C916-0164-4112-8C02-A912276B29EB",
+        "SITE_NM": "Patterson Elementary School",
+        "SITE_ADDRESS": "615 S Cheshire",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85208-7152",
+        "SITE_PHONE_NUM": "480-472-0200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.60465303399997,
+        "y": 33.40293101200007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FFEA728A-5074-4D51-96A2-4AD91C4D4931",
+        "SITE_NM": "Valle del Sol Mobile Van",
+        "SITE_ADDRESS": "3807 N 7th St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85014-5005",
+        "SITE_PHONE_NUM": "602-258-6797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06438977799996,
+        "y": 33.49199833000006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "771F02F8-56D4-45F3-8FA0-614F5E105D31",
+        "SITE_NM": "Falcon Hill Elementary School",
+        "SITE_ADDRESS": "1645 N Sterling",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85207-2922",
+        "SITE_PHONE_NUM": "480-472-0200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.67324608699994,
+        "y": 33.44672637200006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "53D7C2F6-5FBA-48EF-BB4B-DA8591891295",
+        "SITE_NM": "Solano Elementary School",
+        "SITE_ADDRESS": "1526 W Missouri Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85015-2616",
+        "SITE_PHONE_NUM": "602-707-2000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.09200001899995,
+        "y": 33.51781999900004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "12505528-5920-4C5E-8E40-DDF75B0CBF49",
+        "SITE_NM": "Carl Hayden High School",
+        "SITE_ADDRESS": "3333 W Roosevelt St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85009-3403",
+        "SITE_PHONE_NUM": "602-764-1100",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.13228151799996,
+        "y": 33.45829989500004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3BDC00A6-09A7-4C00-A79E-79342F28406B",
+        "SITE_NM": "Valle del Sol_ Maryvale_8410",
+        "SITE_ADDRESS": "8410 W Thomas Rd, Suite 116",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85037-3356",
+        "SITE_PHONE_NUM": "602-258-6797 x8410",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.24140450899995,
+        "y": 33.48076251500004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1A72D4AE-0040-4DE0-BDBD-B300124B9BB8",
+        "SITE_NM": "Wilson Primary School",
+        "SITE_ADDRESS": "415 North 30th Street",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008",
+        "SITE_PHONE_NUM": "602-681-2200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.01681149799998,
+        "y": 33.45307130500004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3E6C25C1-D015-4696-8AE4-F5913CCC7202",
+        "SITE_NM": "Montecito Elementary School",
+        "SITE_ADDRESS": "715 East Montecito Avenue",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85014",
+        "SITE_PHONE_NUM": "602-707-2000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06375300499997,
+        "y": 33.499112764000074
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FBBBB303-32C5-4AA4-BAF4-6935D12A6024",
+        "SITE_NM": "Family Resource Center",
+        "SITE_ADDRESS": "7677 W Bethany Home Rd",
+        "SITE_CITY": "Glendale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85303-4211",
+        "SITE_PHONE_NUM": "623-237-7100",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.22313866599995,
+        "y": 33.52291179500003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "BD972587-9A7D-428B-B798-722EC1D884E4",
+        "SITE_NM": "Valle del Sol Mobile Unit 2",
+        "SITE_ADDRESS": "3807 N 7th St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85014-5005",
+        "SITE_PHONE_NUM": "602-258-9797",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.06438977799996,
+        "y": 33.49199833000006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "F5659692-3899-462F-99B7-A062B969E4F9",
+        "SITE_NM": "Osborn Middle School",
+        "SITE_ADDRESS": "1102 W Highland Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85013-2470",
+        "SITE_PHONE_NUM": "602-707-2400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Seasonal",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.08779163299994,
+        "y": 33.50758787400002
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "5FFB4876-8101-44D3-AF22-494FAD38E2E6",
+        "SITE_NM": "FIRST PERSON CARE CLINIC",
+        "SITE_ADDRESS": "2226 S Rural Rd",
+        "SITE_CITY": "Tempe",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85282-1411",
+        "SITE_PHONE_NUM": "702-380-8118",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.92671693499994,
+        "y": 33.40372695700006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A9ED3530-E9DE-4AD4-89DC-D93957BA40D1",
+        "SITE_NM": "Creek Valley Health Clinic",
+        "SITE_ADDRESS": "20 N Colvin St # 0418",
+        "SITE_CITY": "Colorado City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86021-6155",
+        "SITE_PHONE_NUM": "435-900-1104",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Administrative/Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04015",
+        "COUNTY_NM": "Mohave",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.97175311199999,
+        "y": 36.98364097900003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8AC60591-EED9-4A87-A044-2B966F449144",
+        "SITE_NM": "Valleywise Community Health Center \u2013 South Phoenix/Laveen",
+        "SITE_ADDRESS": "5650 S 35th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85041-3531",
+        "SITE_PHONE_NUM": "602-655-6400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.13420600299997,
+        "y": 33.39530465400003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9DA76951-4FCB-443F-B3BC-49FF47AADF98",
+        "SITE_NM": "Valleywise Community Health Center- North Phoenix",
+        "SITE_ADDRESS": "2025 W Northern Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85021-5157",
+        "SITE_PHONE_NUM": "602-344-6300",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.10272826799996,
+        "y": 33.55241441800007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "129A074F-15A6-45A7-AB29-4B13DD1ECF77",
+        "SITE_NM": "Valleywise Comprehensive Health Center-Peoria",
+        "SITE_ADDRESS": "8088 W Whitney Dr",
+        "SITE_CITY": "Peoria",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85345-6564",
+        "SITE_PHONE_NUM": "833-855-9973",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.23285697999995,
+        "y": 33.57651993300004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "EA8E1B07-7FC1-4F7F-BB78-6207230B51FF",
+        "SITE_NM": "Valleywise Comprehensive Health Center - Phoenix",
+        "SITE_ADDRESS": "2525 E Roosevelt St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-4948",
+        "SITE_PHONE_NUM": "602-344-1015",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.02824558699996,
+        "y": 33.45764258600008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "C168E6D9-2AED-4396-9C5A-46B435EBF851",
+        "SITE_NM": "Valleywise Community Health Center - South Central",
+        "SITE_ADDRESS": "33 W Tamarisk St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85041-2422",
+        "SITE_PHONE_NUM": "602-344-6400",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07509162499997,
+        "y": 33.40349658100007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9A489085-C918-45FC-B023-3938951FEFC5",
+        "SITE_NM": "Valleywise Community Health Center - Mesa",
+        "SITE_ADDRESS": "950 E Main St",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85203-8820",
+        "SITE_PHONE_NUM": "602-655-6200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.81002449799996,
+        "y": 33.41558014200007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "DB8F729B-3A20-4AE2-842B-407ED649364F",
+        "SITE_NM": "Valleywise Community Health Center - McDowell",
+        "SITE_ADDRESS": "1101 N Central Ave, Suite 204",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85004-1844",
+        "SITE_PHONE_NUM": "602-344-6550",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.07353041099998,
+        "y": 33.46029671500003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "196F4398-7B62-4BE8-B547-BEE4D7D14CA5",
+        "SITE_NM": "Valleywise Community Health Center - Avondale",
+        "SITE_ADDRESS": "950 E Van Buren St",
+        "SITE_CITY": "Avondale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85323-1506",
+        "SITE_PHONE_NUM": "623-344-6800",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.33743329199996,
+        "y": 33.450594118000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "33B7117D-FA2B-4DA0-8C0D-D41CAE1E8B91",
+        "SITE_NM": "Valleywise Community Health Center - Chandler",
+        "SITE_ADDRESS": "811 S Hamilton St",
+        "SITE_CITY": "Chandler",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85225-6308",
+        "SITE_PHONE_NUM": "480-344-6100",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.83297716599998,
+        "y": 33.29374218000004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A4F36D4C-84FD-4464-8E81-820F50A38B60",
+        "SITE_NM": "Valleywise Community Health Center - Guadalupe",
+        "SITE_ADDRESS": "5825 E Calle Guadalupe",
+        "SITE_CITY": "Guadalupe",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85283-2664",
+        "SITE_PHONE_NUM": "480-344-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.95853815999999,
+        "y": 33.363359754000044
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "08932158-7950-4C80-A262-791F16C71420",
+        "SITE_NM": "Valleywise Community Health Center -  West Maryvale",
+        "SITE_ADDRESS": "7808 West Thomas Road",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85033",
+        "SITE_PHONE_NUM": "833-855-9973",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.22550361999998,
+        "y": 33.48018588200006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "B6815D2C-0200-4B1D-BF2A-2E4B404CAF3C",
+        "SITE_NM": "South Mountain",
+        "SITE_ADDRESS": "3540 East Baseline Road",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85042",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.00514237999994,
+        "y": 33.37815670500004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "0B35E6C5-B167-4C86-B333-ED59362FEB6D",
+        "SITE_NM": "Oak",
+        "SITE_ADDRESS": "4451 E Oak St",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-2410",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.98546996899995,
+        "y": 33.472227013000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "646F949A-2749-46B4-B1FB-EC024828E4CA",
+        "SITE_NM": "Stapley Integrated Care",
+        "SITE_ADDRESS": "1111 S Stapley Dr",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85204-5059",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -111.80425925699996,
+        "y": 33.39500055800005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8E23C644-A9D7-4E04-A3BA-B6A078A90479",
+        "SITE_NM": "Olive Heath Center",
+        "SITE_ADDRESS": "6153 W Olive Ave",
+        "SITE_CITY": "Glendale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85302-4564",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.19255134099996,
+        "y": 33.56643310900006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8C531EEC-3DA2-4E3E-89BA-AC8E9D3DC47C",
+        "SITE_NM": "Javelina Health Center",
+        "SITE_ADDRESS": "222 E Javelina Ave",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85210-6201",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.82739448399997,
+        "y": 33.38091338700008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "EE0FC209-B84B-4852-B028-682246AA32A9",
+        "SITE_NM": "51st Avenue Health Center",
+        "SITE_ADDRESS": "4616 N 51st Ave STE 108",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85031-1720",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.16956673799996,
+        "y": 33.504906713000025
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "09686737-D2CB-4385-86B2-E7C9F195F653",
+        "SITE_NM": "Priest Drive Health Center",
+        "SITE_ADDRESS": "1642 S Priest Dr",
+        "SITE_CITY": "Tempe",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85281-6204",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.96260489099996,
+        "y": 33.41038420000007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "4260B02E-CD78-4CD5-9816-BFBD25019133",
+        "SITE_NM": "23rd Avenue Health Center",
+        "SITE_ADDRESS": "8804 N 23rd Ave STE A1",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85021-4160",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.10885627799996,
+        "y": 33.56457676900004
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "58C7822E-7A32-4AA8-8CA6-6069D76A6A79",
+        "SITE_NM": "McDowell Road Integrated Care",
+        "SITE_ADDRESS": "4909 E McDowell Rd",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85008-4227",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.97606170199998,
+        "y": 33.465105581000046
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "6770F125-D8EC-46B1-9B2D-F816A4F006FB",
+        "SITE_NM": "Maverick Health Center",
+        "SITE_ADDRESS": "5801 N 51st Ave, Suite 107",
+        "SITE_CITY": "Glendale",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85301-6000",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.16804743399996,
+        "y": 33.520179546000065
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "EDAC8397-69FB-40BD-ABDA-D8F369ACFB2F",
+        "SITE_NM": "Desert Cove",
+        "SITE_ADDRESS": "10844 North 23rd Avenue",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85029",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.10811623899997,
+        "y": 33.585647910000034
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D04A2483-08E9-449D-BBD0-E31CA1A005D3",
+        "SITE_NM": "27th Avenue Health Clinic",
+        "SITE_ADDRESS": "3864 N 27th Ave",
+        "SITE_CITY": "Phoenix",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85017-4703",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.11759223199999,
+        "y": 33.493013672000075
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A7B6370B-390E-44BB-8747-BFB49C40C513",
+        "SITE_NM": "University",
+        "SITE_ADDRESS": "262 East University Drive",
+        "SITE_CITY": "Mesa",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85201",
+        "SITE_PHONE_NUM": "602-685-6000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04013",
+        "COUNTY_NM": "Maricopa",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.82513245899997,
+        "y": 33.42234417000003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "87EFAA7C-E894-46E2-8791-A5D2D3F019ED",
+        "SITE_NM": "ELK RIDGE - GRAND CANYON SITE",
+        "SITE_ADDRESS": "1 Clinic Rd",
+        "SITE_CITY": "Grand Canyon",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86023-0290",
+        "SITE_PHONE_NUM": "928-638-2551",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.12861217199998,
+        "y": 36.047718435000036
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "1309CECF-9532-40F8-8C00-67C79FD3D3F9",
+        "SITE_NM": "ELK RIDGE - WILLIAMS",
+        "SITE_ADDRESS": "300 S 6th St",
+        "SITE_CITY": "Williams",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86046-0110",
+        "SITE_PHONE_NUM": "928-635-4441",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -112.19211305099998,
+        "y": 35.24706613500007
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "308EEDBB-3D5F-4075-B1D0-318E7AE43507",
+        "SITE_NM": "ELK RIDGE - WINSLOW SITE",
+        "SITE_ADDRESS": "620 Lee St",
+        "SITE_CITY": "Winslow",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86047-2435",
+        "SITE_PHONE_NUM": "928-289-2000",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04017",
+        "COUNTY_NM": "Navajo",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.70117087599999,
+        "y": 35.036655429000064
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "2BA4AD90-EBC6-4FB1-95F8-1B442D654155",
+        "SITE_NM": "ELK RIDGE - FLAGSTAFF CLINIC",
+        "SITE_ADDRESS": "2920 N 4th St",
+        "SITE_CITY": "Flagstaff",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86004-1816",
+        "SITE_PHONE_NUM": "928-213-6100",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.61330600799994,
+        "y": 35.21688575200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "080B0728-F5A3-4E5C-8114-5AC4B7F08E43",
+        "SITE_NM": "ELK RIDGE - SHOW LOW CLINIC",
+        "SITE_ADDRESS": "2650 E Show Low Lake Rd",
+        "SITE_CITY": "Show Low",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85901-7955",
+        "SITE_PHONE_NUM": "928-537-4300",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04017",
+        "COUNTY_NM": "Navajo",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.01348064699994,
+        "y": 34.202455317000044
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "EA76B1EC-0F04-40B8-9442-884D6FCCED1C",
+        "SITE_NM": "ELK RIDGE - UNINCORPORATED FLAGSTAFF",
+        "SITE_ADDRESS": "1120 W University Ave, Suite 101",
+        "SITE_CITY": "Flagstaff",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86001-2851",
+        "SITE_PHONE_NUM": "928-522-1300",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.66949166499995,
+        "y": 35.184564127000044
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "23DC38DA-2F9A-49F8-A827-3A87465ABF8D",
+        "SITE_NM": "ELK RIDGE - HOLBROOK CLINIC",
+        "SITE_ADDRESS": "2109 Navajo Blvd",
+        "SITE_CITY": "Holbrook",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86025-1822",
+        "SITE_PHONE_NUM": "928-524-2851",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04017",
+        "COUNTY_NM": "Navajo",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -110.14449205699998,
+        "y": 34.92625658600008
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "FC94C184-E9D1-4051-9F0B-EC596F054ABE",
+        "SITE_NM": "ELK RIDGE - FLAGSTAFF PEDIATRICS",
+        "SITE_ADDRESS": "1501 S Yale St, Suite 252",
+        "SITE_CITY": "Flagstaff",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86001-7336",
+        "SITE_PHONE_NUM": "928-774-1811",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.66413219299994,
+        "y": 35.187040602000025
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "BC32DA48-FF18-4705-A0E7-DF15B10B32FD",
+        "SITE_NM": "ELK RIDGE - SPRINGERVILLE CLINIC",
+        "SITE_ADDRESS": "488 S Mountain Ave",
+        "SITE_CITY": "Springerville",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85938-5103",
+        "SITE_PHONE_NUM": "928-333-0127",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04001",
+        "COUNTY_NM": "Apache",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL, and Service Objects"
+      },
+      "geometry": {
+        "x": -109.28955528399996,
+        "y": 34.125779511000076
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "DF938529-D432-45ED-99EA-BDB066F0707A",
+        "SITE_NM": "ELK RIDGE - PAYSON",
+        "SITE_ADDRESS": "126 E Main St, Suite B",
+        "SITE_CITY": "Payson",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85541-5488",
+        "SITE_PHONE_NUM": "928-468-8610",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04007",
+        "COUNTY_NM": "Gila",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.32311881999999,
+        "y": 34.230178462000026
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "8D608544-168A-47E2-B116-850323951287",
+        "SITE_NM": "ELK RIDGE - KINGMAN CLINIC",
+        "SITE_ADDRESS": "1510 N Stockton Hill Rd",
+        "SITE_CITY": "Kingman",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86401-5173",
+        "SITE_PHONE_NUM": "928-753-1177",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04015",
+        "COUNTY_NM": "Mohave",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.03276524199998,
+        "y": 35.202009298000064
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "77AE2E13-EBF4-421E-B600-13118DA448A9",
+        "SITE_NM": "Elk Ridge Mobile- West",
+        "SITE_ADDRESS": "2920 N 4th St",
+        "SITE_CITY": "Flagstaff",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86004-1816",
+        "SITE_PHONE_NUM": "928-753-1177",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.61330600799994,
+        "y": 35.21688575200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "A2BC5465-01DE-42D5-885B-772E4DE618F9",
+        "SITE_NM": "Elk Ridge ---Mobile Unit",
+        "SITE_ADDRESS": "2920 N 4th St",
+        "SITE_CITY": "Flagstaff",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86004-1816",
+        "SITE_PHONE_NUM": "928-699-2515",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Mobile Van",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04005",
+        "COUNTY_NM": "Coconino",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -111.61330600799994,
+        "y": 35.21688575200005
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "3B85B3B3-CAC2-418D-B68B-ABB5F2FB1F55",
+        "SITE_NM": "ELK RIDGE - LAKE HAVASU CITY CLINIC",
+        "SITE_ADDRESS": "2090 Smoketree Ave N",
+        "SITE_CITY": "Lake Havasu City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86403-5806",
+        "SITE_PHONE_NUM": "928-854-1800",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04015",
+        "COUNTY_NM": "Mohave",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -114.32994000299999,
+        "y": 34.47987166900003
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "D58D8A3A-BA12-45E2-AC66-44604FDBEAC9",
+        "SITE_NM": "Black Canyon Community Health Center, Inc. - Black Canyon City",
+        "SITE_ADDRESS": "19251 E Oasis Dr",
+        "SITE_CITY": "Black Canyon City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85324-8878",
+        "SITE_PHONE_NUM": "623-374-0200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14787344999996,
+        "y": 34.06004296800006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "68451FFD-B691-4DC3-A7B0-84EAED287F75",
+        "SITE_NM": "Black Canyon Community Health Center, Inc. - Spring Valley",
+        "SITE_ADDRESS": "17301 E Spring Valley Rd, Suite F",
+        "SITE_CITY": "Mayer",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86333-4263",
+        "SITE_PHONE_NUM": "928-404-8004",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.15960090599998,
+        "y": 34.349337441000046
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "25E5D54A-D20E-44A6-8DF3-84D3C131B108",
+        "SITE_NM": "Black Canyon Community Health Center, Inc. - Black Canyon City",
+        "SITE_ADDRESS": "19251 E Oasis Dr",
+        "SITE_CITY": "Black Canyon City",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "85324-8878",
+        "SITE_PHONE_NUM": "623-374-0200",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.14787344999996,
+        "y": 34.06004296800006
+      }
+    },
+    {
+      "attributes": {
+        "SITE_SOURCE_ID": "9F787850-E17B-4B2A-A0A9-9D8B8C7ACE82",
+        "SITE_NM": "Black Canyon Community Health Center, Inc. - Spring Valley",
+        "SITE_ADDRESS": "17301 E Spring Valley Rd, Suite F",
+        "SITE_CITY": "Mayer",
+        "SITE_STATE_ABBR": "AZ",
+        "SITE_ZIP_CD": "86333-4263",
+        "SITE_PHONE_NUM": "928-404-8004",
+        "HCC_STATUS_DESC": "Active",
+        "HCC_LOC_DESC": "Permanent",
+        "HCC_TYP_DESC": "Service Delivery Site",
+        "STATE_COUNTY_FIPS_CD": "04025",
+        "COUNTY_NM": "Yavapai",
+        "LOC_NAME_DESC": "Data was matched at the Address level using AGOL"
+      },
+      "geometry": {
+        "x": -112.15960090599998,
+        "y": 34.349337441000046
+      }
+    }
+  ]
+}

@@ -17,6 +17,13 @@ These release labels do not imply a single observation year. Study version: **az
 
 ## Controls
 
+Version 1.2.0 adds **Show HRSA health centers** inside **Map & tract details**.
+It shows permanent active sites in your selected counties; mobile and seasonal
+sites are optional. **Inspect a health center** highlights a facility and displays
+its contact information. Facilities follow county selections only, independently
+of tract group/indicator filters. A nearby point does not establish available care.
+See `docs/HRSA_HEALTH_CENTERS.md` for the worked example and source methodology.
+
 The page offers **Start guided example: Apache County** and **How to explore the map**.
 Hover over the **?** beside any sidebar control for its purpose
 and an example. Results update automatically; there is no Apply button.

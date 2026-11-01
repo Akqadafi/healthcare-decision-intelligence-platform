@@ -17,6 +17,7 @@ COPY data_contracts ./data_contracts
 COPY scripts ./scripts
 COPY examples/workbench-pilot ./examples/workbench-pilot
 COPY docs/evidence/tract-study ./docs/evidence/tract-study
+COPY docs/evidence/hrsa ./docs/evidence/hrsa
 COPY docs/user-guide ./docs/user-guide
 COPY docs/evidence/tract-dashboard ./docs/evidence/tract-dashboard
 

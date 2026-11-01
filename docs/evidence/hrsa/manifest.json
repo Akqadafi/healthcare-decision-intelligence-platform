@@ -1,0 +1,20 @@
+{
+  "source": "https://gisportal.hrsa.gov/server/rest/services/HealthCareFacilities/PrimaryHealthCareFacilities_FS/MapServer/0",
+  "query": {
+    "where": "SITE_STATE_ABBR = 'AZ'",
+    "outFields": "SITE_SOURCE_ID,SITE_NM,SITE_ADDRESS,SITE_CITY,SITE_STATE_ABBR,SITE_ZIP_CD,SITE_PHONE_NUM,HCC_STATUS_DESC,HCC_LOC_DESC,HCC_TYP_DESC,STATE_COUNTY_FIPS_CD,COUNTY_NM,LOC_NAME_DESC",
+    "returnGeometry": "true",
+    "outSR": 4326,
+    "f": "json"
+  },
+  "retrieved_utc": "2026-11-01T19:56:17.505578+00:00",
+  "source_updated_at": null,
+  "date_note": "HRSA layer does not expose a dataset update date; retrieval is not freshness.",
+  "rows": 264,
+  "sha256": "3231bedef0ce0ce89d5a7516a45b057a8416a3d20885265260a8d3c85f75e6d0",
+  "location_types": {
+    "Mobile Van": 30,
+    "Permanent": 208,
+    "Seasonal": 26
+  }
+}
