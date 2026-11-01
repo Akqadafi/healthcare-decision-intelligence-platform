@@ -374,4 +374,3 @@ def render(mart, version):
     else:
         reset()
         st.rerun()
-

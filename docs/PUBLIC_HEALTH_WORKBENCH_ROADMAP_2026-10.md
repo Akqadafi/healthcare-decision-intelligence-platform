@@ -130,4 +130,3 @@ Update the existing case study after release verification; prepare an actual syn
 ## Immediate next task
 
 Complete Phase 0: review the county workbench module, define county and tract upload templates, create synthetic fixtures with expected results, and sketch the upload-to-map-to-brief journey. Then build the county upload wizard as the first complete increment.
-

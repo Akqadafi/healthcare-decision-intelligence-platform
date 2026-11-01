@@ -157,4 +157,3 @@ def test_upload_journey_recognizes_names_and_requires_date_acknowledgement(monke
     assert table.loc[table["County"] == "Coconino", "Record status"].iloc[0] == "Reported zero"
     assert (table["Record status"] == "No record supplied").sum() == 13
     assert not app.number_input
-
