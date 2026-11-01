@@ -1,0 +1,5 @@
+county_fips,contacts,need_percent,resident_population,contacts_per_1000,investigate,reasons
+04001,10,30,10000,1,true,
+04003,80,10,20000,4,false,
+04005,0,25,10000,0,true,
+04013,,22,50000,,,missing_service_record

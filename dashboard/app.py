@@ -143,11 +143,11 @@ except Exception as exc:
 with st.sidebar:
     page = st.radio(
         "Dashboard index", ["Start here", "Explore counties", "Explore census tracts",
-                            "Metrics & methods", "Trust center"]
+                            "Outreach workbench", "Metrics & methods", "Trust center"]
     )
     tiers = ["Critical", "High", "Elevated", "Monitor"]
     minimum_population = 0
-    if page != "Explore census tracts":
+    if page not in ("Explore census tracts", "Outreach workbench"):
         st.markdown("## County decision controls")
         tiers = st.multiselect("Priority tier", options=tiers, default=tiers,
                                help="Show counties in the selected priority categories. "
@@ -167,6 +167,7 @@ with st.sidebar:
     st.caption("Tract study: az-tract-v1" if page == "Explore census tracts"
                else f"Dataset version: {version[:12]}")
     st.caption("No patient-level or protected health information is used.")
+    st.caption("Version 1.1.0 · Guided exploration & outreach workbench")
 
 filtered = mart[
     mart["priority_tier"].isin(tiers) & (mart["population"] >= minimum_population)
@@ -193,6 +194,13 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+if page == "Outreach workbench":
+    from healthcare_di.workbench_view import render as render_workbench
+
+    render_workbench(mart, version)
+    render_footer()
+    st.stop()
+
 if page == "Explore census tracts":
     from healthcare_di.tract_view import render
 
@@ -201,6 +209,9 @@ if page == "Explore census tracts":
     st.stop()
 
 if page == "Start here":
+    st.info("New to the dashboard? Choose Explore census tracts, then Start guided example: "
+            "Apache County. The walkthrough explains clustering, what the map colors mean, "
+            "and how to use the findings for a public health planning discussion.")
     st.subheader("What this dashboard looks at")
     st.info("New: Explore census tracts compares saved K-means and hierarchical community "
             "profiles. Filter counties and measures, compare tracts, and inspect stability. "

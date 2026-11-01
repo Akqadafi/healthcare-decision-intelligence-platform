@@ -1,0 +1,27 @@
+{
+  "invalid/duplicate_county.csv": {
+    "row": 3,
+    "field": "row",
+    "message_contains": "Duplicate key"
+  },
+  "invalid/unknown_county.csv": {
+    "row": 2,
+    "field": "county_fips",
+    "message_contains": "Unknown or out-of-scope"
+  },
+  "invalid/missing_contacts.csv": {
+    "row": 2,
+    "field": "contacts",
+    "message_contains": "nonnegative integer"
+  },
+  "invalid/lost_leading_zero.csv": {
+    "row": 2,
+    "field": "county_fips",
+    "message_contains": "Unknown or out-of-scope"
+  },
+  "invalid/wrong_period.csv": {
+    "row": 2,
+    "field": "reporting_month",
+    "message_contains": "study month"
+  }
+}

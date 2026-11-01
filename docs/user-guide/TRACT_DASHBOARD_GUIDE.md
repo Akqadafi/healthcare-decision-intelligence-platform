@@ -8,8 +8,8 @@ It does not predict individual illness, determine eligibility, or recommend fund
 
 Run `streamlit run dashboard/app.py` from the repository root with the project's
 environment activated. Open the local URL printed by Streamlit, then select
-**Explore census tracts** in **Dashboard index**. The current integration is local;
-the public deployment has not been updated or verified for this feature.
+**Explore census tracts** in **Dashboard index**. The sidebar displays the application version. Version 1.1.0 includes the guided
+example and optional indicator filtering.
 
 The county pages still use their original scoring and allocation controls. The
 tract page uses ACS **2019–2023**, CDC PLACES **2025 release**, and **2023 boundaries**.
@@ -17,8 +17,8 @@ These release labels do not imply a single observation year. Study version: **az
 
 ## Controls
 
-The page opens with **How to use the controls**, a five-step walkthrough you can
-collapse when ready. Hover over the **?** beside any sidebar control for its purpose
+The page offers **Start guided example: Apache County** and **How to explore the map**.
+Hover over the **?** beside any sidebar control for its purpose
 and an example. Results update automatically; there is no Apply button.
 
 | Control | What changes |
@@ -27,11 +27,18 @@ and an example. Results update automatically; there is no Apply button.
 | Number of groups | Selects a saved statewide fit with 2–6 groups |
 | Counties | Filters the map, tract table, comparison choices, and download |
 | Community group | Shows all groups, one group, or excluded tracts |
-| Measure | Chooses the percentage used by the range filter, summary median, and map hover |
-| Measure range (%) | Retains estimates inside the inclusive range |
-| Include missing measure values | Keeps unknown estimates even when a numeric range is set |
+| Indicator to inspect | Chooses the summary median and map-hover estimate; by itself does not filter areas |
+| Filter areas by this indicator | Optional, off by default. Enables the percentage range and missing-value setting |
+| Keep estimates between (%) | When enabled, retains estimates inside the inclusive range; 20–100 means at least 20% |
+| Also include areas with no estimate | When filtering, keeps unknown estimates in addition to those inside the range |
 | Include excluded tracts | Allows rows that could not enter the model to remain visible |
-| Reset tract controls | Restores two-group K-means, all counties/groups, diabetes, full range, and both inclusion options |
+| Reset tract controls | Restores two-group K-means, all counties/groups, diabetes, and turns the indicator filter off |
+
+Grouping finds similar patterns across all five indicators. The optional filter narrows
+the areas to a specific condition; it never changes groups or map colors. When it is off,
+the range and missing-value controls are disabled and ignored. County, community-group
+and excluded-tract selections still apply. Turning the filter back on restores its saved
+range. The study receipt records whether the indicator filter was enabled.
 
 These controls **do not retrain models**, change feature weights, or calculate new
 health estimates. Method/group-count changes select one of ten evaluated saved fits.
@@ -107,3 +114,25 @@ broaden the range, select a county, or reset.
 modeled estimate = estimate produced using a statistical model; exclusion = tract
 retained in the data but omitted from fitting; sensitivity = how a result changes
 when an analysis choice changes.
+
+## Understanding clustering and group labels
+
+A census tract is a small statistical area. Clustering sorts tracts with similar patterns across five indicators: diabetes, frequent mental distress, uninsured adults, poverty and households without a vehicle. Similar tracts need not be geographically adjacent.
+
+K-means looks for K representative group profiles and assigns eligible tracts to the nearest one after putting the indicators on comparable scales. K=2 means two groups. Ward hierarchical builds groups by repeatedly merging those whose combination adds the least within-group variation. These controls select saved results; they do not retrain models.
+
+Group 1, Group 2 and other numbers are neutral identifiers, not risk ranks. A group may have mixed characteristics. Its meaning can also change when you switch method or number of groups. Do not assume that Group 1 in one model equals Group 1 in another.
+
+Read **What the groups look like** above the map. It shows the number of tracts and median diabetes and uninsured rates for each selected-model group. Expand **Compare all five indicators** for the complete profile. These values describe the full eligible Arizona cohort and do not change when you filter counties. A median is the middle tract estimate, not the combined population rate. Individual tracts can differ from the group median.
+
+For a first visit, keep K-means and two groups, choose a county, and compare its tracts. Colors identify groups; they are not a low-to-high scale and do not switch to the selected Measure. More groups is a finer breakdown, not automatically a better result. Stability asks whether similar groupings remain when samples or indicators change. Group membership alone does not establish individual health risks or funding priorities.
+
+## Follow the guided Apache example
+
+On **Explore census tracts**, select **Start guided example: Apache County** near the top of the page. The walkthrough sets the controls for you and uses the bundled public estimates.
+
+1. **Read the groups.** Start with Apache County and K-means with two groups. See the 18 tracts and read what map colors mean. The group summaries describe statewide profiles, not Apache County rates.
+2. **Focus on diabetes estimates.** Select **Next: focus on diabetes estimates**. The range changes to 20–100% and the tutorial explains the resulting count. This is an illustrative filter, not an official intervention threshold; it does not refit the model.
+3. **Interpret and save.** Select **Next: interpret and save**. Review the example planning question, compare individual estimates and uncertainty, then use **Downloads & help** to save the filtered CSV and study receipt.
+
+**Finish walkthrough** closes the guide and keeps your current filters. Changing sidebar controls ends the guided mode so its instructions cannot describe stale settings. **Reset tract controls** restores the statewide view. Use the results to frame local questions about outreach and access barriers; group membership does not establish which intervention will work.

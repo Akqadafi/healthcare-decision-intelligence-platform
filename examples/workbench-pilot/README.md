@@ -1,5 +1,9 @@
 # Synthetic Arizona pilot fixtures
 
+October 27 design package: see [Step 1 study design](../../docs/WORKBENCH_STEP_1_STUDY_DESIGN.md) for the screen sketch, upload contracts, expected results and source-code review. Blank templates are in `templates/`; intentionally invalid files are in `invalid/`. Files labeled `DRAFT` describe future tract/site uploads and are not accepted by the current county parser. All activity values and service locations are synthetic.
+
+Verify the checked-in answers and invalid examples with `python scripts/verify_workbench_design.py`. This checks county results only; it does not implement a dashboard upload screen.
+
 Run the implemented validation/comparison functions from the repository root:
 
 ```powershell

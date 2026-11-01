@@ -10,8 +10,9 @@ including model switching and both downloads; this is not a human reading time.
    selected model is K-means with two groups. Read the source periods and the note
    explaining that filters do not retrain the model.
 2. In **Counties**, clear the existing selections and select **Apache**. Keep
-   **All groups**, **Diabetes (%)**, range **0–100**, and both inclusion checkboxes
-   selected. Expect **18 tracts shown**. The map and table now show Apache County.
+   **All groups**, **Diabetes (%)** as the indicator to inspect, and **Include excluded
+   tracts** selected. Leave **Filter areas by this indicator** off. Expect **18 tracts
+   shown**. The map and table now show Apache County.
 3. In **First tract**, choose **04001942600**. In **Comparison tract**, choose
    **04001942700**. Both belong to **Group 2** in this saved model. Expected values:
 
@@ -39,7 +40,10 @@ including model switching and both downloads; this is not a human reading time.
    rows**, model **kmeans_k2**, county selection **Apache**, and study **az-tract-v1**
    in the receipt. Preserve both files together. The receipt's hash identifies the
    downloaded CSV; its model manifest identifies the saved analysis.
-8. Try a narrower measure range or another county, then reset when finished. If no
+8. Enable **Filter areas by this indicator**, then set **Keep estimates between (%)**
+   to **20–100** and uncheck **Also include areas with no estimate**. This shows
+   diabetes estimates of at least 20%; it does not change groups. Turn the filter off
+   to restore all 18 Apache tracts. Try another county, then reset when finished. If no
    rows match, the page explains how to recover. Returning to **Explore counties**
    takes you back to the separate county planning model.
 

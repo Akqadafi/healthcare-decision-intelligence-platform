@@ -1,0 +1,39 @@
+{
+  "schema_version": "design-1",
+  "synthetic": true,
+  "question": "Which selected counties meet the synthetic need and low recorded activity thresholds?",
+  "counties": [
+    "04001",
+    "04003",
+    "04005",
+    "04013"
+  ],
+  "month": "2025-01",
+  "program": "Demo outreach",
+  "counting_unit": "contacts, including repeat contacts",
+  "need_threshold": 20,
+  "activity_threshold": 2,
+  "period_rationale": "",
+  "context_file": "context_SYNTHETIC.csv",
+  "upload_file": "outreach_SYNTHETIC.csv",
+  "measure": {
+    "id": "synthetic_need_percent",
+    "label": "Synthetic need measure",
+    "units": "percent",
+    "source": "Invented software fixture; not an uninsured-rate estimate",
+    "observation_month": "2025-01"
+  },
+  "denominator": {
+    "field": "resident_population",
+    "definition": "Invented resident population; not program eligibility"
+  },
+  "expected_counts": {
+    "uploaded": 3,
+    "matched": 3,
+    "rejected": 0,
+    "context_only": 1,
+    "classifiable": 3,
+    "unclassifiable": 1,
+    "flagged": 2
+  }
+}

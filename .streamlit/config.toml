@@ -3,6 +3,7 @@ gatherUsageStats = false
 
 [server]
 headless = true
+maxUploadSize = 10
 
 [theme]
 base = "light"

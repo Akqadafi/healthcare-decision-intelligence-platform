@@ -1,6 +1,6 @@
 # Public Health Research Workbench — implementation plan
 
-Prepared October 14, 2026. Status: proposed design; no workbench features have been implemented or deployed.
+Updated October 27, 2026: the active delivery sequence is now [the revised public health workbench roadmap](PUBLIC_HEALTH_WORKBENCH_ROADMAP_2026-10.md). It incorporates the existing tract analysis, map workspace, user uploads, HRSA service context, documentation and portfolio milestones. Arizona comes first; national coverage is deferred. The October 14 design below is retained as historical detail; its status statements and milestone order are superseded.
 
 ## 1. Product decision
 
