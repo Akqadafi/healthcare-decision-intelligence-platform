@@ -2,7 +2,7 @@
 
 Prepared October 21, 2026. Updated after the first code increment: pure CSV validation and comparison functions are built and tested. The upload interface, source catalog, exports, and complete study receipt are not built.
 
-This narrows the October 14 Workbench plan into an Arizona pilot. It does not replace the larger national roadmap. CSV is the first build increment; XLSX follows once the CSV journey passes its checks. The existing Arizona dashboard remains available with its current scoring.
+October 27 update: use the [revised roadmap](PUBLIC_HEALTH_WORKBENCH_ROADMAP_2026-10.md) and [Step 1 study design](WORKBENCH_STEP_1_STUDY_DESIGN.md) for the active sequence. Arizona now precedes national expansion. This county pilot supplies the first CSV increment; XLSX and tract uploads follow. The existing Arizona dashboard remains available with its current scoring.
 
 ## Study question
 

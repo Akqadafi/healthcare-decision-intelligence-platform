@@ -1,0 +1,3 @@
+site_id,site_name,site_type,latitude,longitude,as_of_date
+DEMO-001,Synthetic outreach site A,demonstration,33.45,-112.07,2025-01-31
+DEMO-002,Synthetic outreach site B,demonstration,32.22,-110.97,2025-01-31

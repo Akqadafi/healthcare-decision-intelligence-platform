@@ -11,8 +11,12 @@ from healthcare_di.config import PROJECT_ROOT
 from healthcare_di.tract_serving import MEASURES, filter_view, load_study, model_view
 
 CONTROL_HELP = {
-    "method": "K-means groups similar standardized profiles around centers. Ward merges similar "
-              "profiles step by step. This switches saved assignments; it does not train a model.",
+    "filter_enabled": "Optional: narrow the map and table by one indicator. Community groups "
+                      "still use all five indicators. Turn off to ignore the range and "
+                      "missing-value setting.",
+    "method": "A grouping method finds tracts with similar patterns across five indicators. "
+              "K-means compares tracts with group centers; Ward builds groups by merging "
+              "similar ones. Start with the default; you do not need to change this to explore.",
     "k": "Drag to choose a saved model with 2–6 groups. More groups means a finer split, "
          "not necessarily a better model. Check the stability warning after changing this.",
     "counties": "Choose one or more counties. Remove a county with its ×, or clear all and type "
@@ -34,6 +38,17 @@ CONTROL_HELP = {
 
 def remember(name):
     st.session_state["tract_controls"][name] = st.session_state[f"_tract_{name}"]
+    st.session_state.pop("tract_tutorial_step", None)
+
+
+def tutorial_step(step):
+    st.session_state["tract_tutorial_step"] = step
+    st.session_state["tract_controls"] = {
+        "method": "K-means", "k": 2, "counties": ["Apache"],
+        "group": "All groups", "measure": "diabetes_pct",
+        "range": (20.0, 100.0) if step >= 2 else (0.0, 100.0),
+        "missing": False, "excluded": True, "filter_enabled": step >= 2,
+    }
 
 
 def render():
@@ -45,15 +60,17 @@ def render():
         return
     defaults = {"method": "K-means", "k": 2, "counties": sorted(data.countyname.unique()),
                 "group": "All groups", "measure": "diabetes_pct", "range": (0.0, 100.0),
-                "missing": True, "excluded": True}
+                "missing": True, "excluded": True, "filter_enabled": False}
     saved = st.session_state.setdefault("tract_controls", defaults.copy())
+    saved.setdefault("filter_enabled", False)
     with st.sidebar:
         st.subheader("Tract study controls")
         st.caption("Changes update the results automatically. Hover over a ? for control help.")
         if st.button("Reset tract controls", help="Restore two-group K-means, all counties and "
-                     "groups, Diabetes, range 0–100, and both inclusion options."):
+                     "groups, Diabetes, both inclusion options, and no indicator filter."):
             saved.clear()
             saved.update(defaults)
+            st.session_state.pop("tract_tutorial_step", None)
         for name, value in saved.items():
             st.session_state[f"_tract_{name}"] = value
 
@@ -70,33 +87,133 @@ def render():
             saved["group"] = "All groups"
             st.session_state["_tract_group"] = "All groups"
         group = st.selectbox("Community group", groups, **widget("group"))
-        measure = st.selectbox("Measure", list(MEASURES), format_func=MEASURES.get,
+        st.subheader("Focus on an indicator (optional)")
+        st.caption("Grouping uses all five indicators. This section only changes what you inspect.")
+        measure = st.selectbox("Indicator to inspect", list(MEASURES), format_func=MEASURES.get,
                                **widget("measure"))
-        limits = st.slider("Measure range (%)", 0.0, 100.0, step=0.5, **widget("range"))
-        missing = st.checkbox("Include missing measure values", **widget("missing"))
+        filter_enabled = st.checkbox("Filter areas by this indicator", **widget("filter_enabled"))
+        limits = st.slider("Keep estimates between (%)", 0.0, 100.0, step=0.5,
+                           disabled=not filter_enabled, **widget("range"))
+        missing = st.checkbox("Also include areas with no estimate", disabled=not filter_enabled,
+                              **widget("missing"))
+        if filter_enabled:
+            st.caption(f"Showing {MEASURES[measure]} estimates from {limits[0]:g}% to "
+                       f"{limits[1]:g}% (both endpoints included). "
+                       + ("Areas with no estimate are also included." if missing else
+                          "Areas with no estimate are hidden."))
+        else:
+            st.caption("No indicator filter: the range is ignored and areas with missing estimates "
+                       "remain included. This indicator only sets the summary and map hover.")
         excluded = st.checkbox("Include excluded tracts", **widget("excluded"))
         st.caption("These controls select saved results. "
                    "They do not refit models or change inputs.")
     model = f"{'kmeans' if method == 'K-means' else 'ward'}_k{k}"
     full = model_view(data, model)
-    visible = filter_view(full, counties, group, measure, limits, missing, excluded)
+    visible = filter_view(full, counties, group, measure,
+                          limits if filter_enabled else (0.0, 100.0),
+                          missing if filter_enabled else True, excluded)
     selected = metrics.loc[metrics.model.eq(model)].iloc[0]
     st.header("Explore census tracts")
-    st.write("Compare community profiles, inspect estimates, and test how saved model choices "
-             "affect grouping across Arizona.")
+    st.caption("Version 1.1.0 · Guided tract exploration")
+    st.subheader("What can I learn here?")
+    st.write("Which small areas have similar combinations of health conditions and barriers "
+             "to care—and how do individual areas differ? This page helps you explore those "
+             "patterns before investigating local outreach needs.")
+    st.markdown("**Clustering means grouping similar areas.** We compare five indicators "
+                "together: diabetes, mental distress, lack of insurance, poverty and households "
+                "without a vehicle. **K-means** is the sorting method: K means the number of "
+                "groups, and means refers to their average profiles. It repeatedly assigns "
+                "tracts to the nearest profile and updates those profiles. Indicators are "
+                "put on comparable scales first. Here you are exploring saved results.")
+    st.info("For a public health planner: similar profiles can suggest communities to compare "
+            "when discussing outreach, benefits navigation or transportation support. "
+            "Confirm local services, community priorities and data limitations before acting. "
+            "The groups do not determine which intervention will work.")
+    st.markdown("**Group numbers are names, not scores.** Group 1 is not first priority. "
+                "Read the group profiles below to learn what each group actually looks like.")
+    st.info("Grouping answers: Which areas have similar patterns across all five indicators? "
+            "The optional indicator filter answers: Which areas meet a specific condition, "
+            "such as a diabetes estimate of at least 20%? It narrows the map and table; "
+            "it does not change community groups or their colors.")
+    st.button("Start guided example: Apache County", on_click=tutorial_step, args=(1,),
+              type="primary", help="Sets the controls for a three-step example using real "
+              "public estimates. No uploaded data or models are changed.")
+    step = st.session_state.get("tract_tutorial_step")
+    if step:
+        with st.container(border=True):
+            st.subheader(f"Apache walkthrough · Step {step} of 3")
+            if step == 1:
+                st.write(f"**Start with an area.** The map now shows {len(visible)} Apache "
+                         "County tracts. Each color identifies a community profile, not a "
+                         "high-to-low risk score. Scroll to the map and compare the colors "
+                         "with the group descriptions.")
+                reference = full.loc[full.eligible].groupby("profile")[list(MEASURES)].median()
+                for name, row in reference.iterrows():
+                    st.write(f"{name}: statewide median diabetes {row['diabetes_pct']:.1f}%, "
+                             f"uninsured adults {row['access2_pct']:.1f}%, "
+                             f"poverty {row['poverty_pct']:.1f}%.")
+                st.caption("These are medians across all Arizona tracts in each group—not "
+                           "Apache County rates. All five indicators were used to form groups.")
+                st.button("Next: focus on diabetes estimates", on_click=tutorial_step, args=(2,))
+            elif step == 2:
+                st.write(f"**Ask a specific question.** The controls now keep diabetes estimates "
+                         f"of at least 20%. {len(visible)} Apache tracts match. This is an "
+                         "illustrative filter, not a clinical or funding threshold.")
+                st.write("Notice that the colors and group assignments stay the same. "
+                         "Filtering selects areas to inspect; it does not run K-means again. "
+                         "Use the tract table to compare insurance, poverty and vehicle access "
+                         "instead of assuming every matching tract has the same barriers.")
+                st.button("Next: interpret and save", on_click=tutorial_step, args=(3,))
+            else:
+                st.write("**Turn the pattern into a question for local review.** A planner "
+                         "might ask: Do these areas have outreach services that residents can "
+                         "reach, and what do community partners say is missing? The dashboard "
+                         "does not answer that service-gap question on its own.")
+                st.write("Open **Downloads & help** below and download the filtered tract data "
+                         "and study receipt. They document the selected areas, filters and model. "
+                         "Review source uncertainty before interpreting small differences.")
+                st.success("You have learned to select an area, distinguish groups from "
+                           "measurement filters, and prepare a documented shortlist for review.")
+                st.button("Finish walkthrough", on_click=lambda: st.session_state.pop(
+                    "tract_tutorial_step", None))
+            st.caption("Changing a sidebar control ends the walkthrough. Reset tract controls "
+                       "returns to the statewide view.")
     st.caption("ACS 2019–2023 · CDC PLACES 2025 release · 2023 tract boundaries · "
                f"Study {manifest['study_version']}")
-    with st.expander("How to use the controls", expanded=True):
+    with st.expander("Start here: what are these groups?", expanded=True):
+        st.markdown(
+            "A **census tract** is a small statistical area. Here, **clustering** means "
+            "sorting tracts into groups with similar patterns across five indicators: "
+            "diabetes, frequent mental distress, uninsured adults, poverty, and households "
+            "without a vehicle. Tracts in the same group can be far apart on the map.\n\n"
+            "**K-means** is one way to do that sorting. The **K** means the number of groups. "
+            "With two groups, the method looks for two representative profiles and assigns "
+            "each eligible tract to the closer one. The indicators are put on comparable "
+            "scales before calculating similarity.\n\n"
+            "**Group 1 and Group 2 are identifiers, not rankings.** Group 2 is not necessarily "
+            "worse, higher priority, or twice anything. Read the profiles below to see what "
+            "distinguishes them. We retain neutral numbers because a group can have a mixed "
+            "pattern, and its meaning can change with the method or number of groups.\n\n"
+            "**New here? Keep K-means and two groups.** Choose a county, then compare the "
+            "profiles and individual tract estimates. No knowledge of machine learning is needed."
+        )
+        st.caption("These are descriptions of communities, not diagnoses of residents. "
+                   "Group membership alone does not establish where funding or services should go.")
+    with st.expander("How to explore the map", expanded=False):
         st.markdown(
             "1. **Choose an area.** In Counties, clear the selections and choose a county "
             "such as Apache. The map, table, comparison choices, and download update together.\n"
-            "2. **Choose what to inspect.** Select a Measure, then move the two Measure range "
-            "handles. For a diabetes estimate of at least 20%, choose Diabetes and set 20–100. "
-            "Uncheck Include missing measure values if you want only known estimates.\n"
-            "3. **Explore groupings.** Start with K-means and two groups. Change Clustering method "
-            "or Number of groups to compare saved alternatives; review any warning in Stability "
-            "& methods. Community group filters to one profile. Map colors show groups, "
-            "not the selected measure.\n"
+            "2. **Optionally narrow the areas.** Choose an Indicator to inspect, then enable "
+            "Filter areas by this indicator. For diabetes estimates of at least 20%, choose "
+            "Diabetes and set Keep estimates between (%) to 20–100. Uncheck Also include areas "
+            "with no estimate for known estimates only. Leave the filter off to explore all "
+            "areas matching your county and group choices.\n"
+            "3. **Understand the colors.** Read **What the groups look like** below. "
+            "Each color identifies one group of similar tracts; it is not a low-to-high scale. "
+            "Community group shows only that group. Choosing an indicator changes displayed "
+            "estimates and, when enabled, the filter—not group colors. Leave the grouping method "
+            "and "
+            "number of groups at their defaults unless you want to compare alternatives.\n"
             "4. **Compare and save.** Below the map, choose First tract and Comparison tract. "
             "Read their estimates and uncertainty, then use Downloads & help to save the "
             "filtered CSV and its study receipt.\n"
@@ -107,8 +224,8 @@ def render():
                    "was not fitted into a group; it may still have some estimates. Both inclusion "
                    "options work together with the other filters. Statewide profile medians stay "
                    "fixed when you filter. Collapse this panel when you are ready to explore.")
-    st.info("County, group, and measure controls filter the view. Method and group count switch "
-            "between ten previously fitted statewide models. Group numbers have no rank and "
+    st.info("County, group, and optional indicator filters narrow the view. Method and group count "
+            "switch between ten previously fitted statewide models. Group numbers have no rank and "
             "are not equivalent across models. No model is retrained here.")
     if selected.passes_project_rules:
         st.success("This model passed the study's prespecified separation and stability checks.")
@@ -119,8 +236,27 @@ def render():
     a.metric("Tracts shown", f"{len(visible):,}")
     b.metric("Excluded tracts shown", int((~visible.eligible).sum()))
     median = visible[measure].median()
-    c.metric("Median selected measure", "Unavailable" if pd.isna(median) else f"{median:.2f}%")
+    c.metric(f"Median: {MEASURES[measure]}", "Unavailable" if pd.isna(median) else f"{median:.2f}%")
     c.caption("Median across visible tracts, not population-weighted.")
+    st.subheader("What the groups look like")
+    st.caption(f"Current grouping: {method}, {k} groups. These profiles describe all eligible "
+               "Arizona tracts in each group, even when the map is filtered to one county. "
+               "Median means the middle tract value, not the percentage for the "
+               "combined population.")
+    profiles = full.loc[full.eligible].groupby("profile")[list(MEASURES)].median()
+    sizes = full.loc[full.eligible].groupby("profile").size()
+    for name, profile in profiles.iterrows():
+        st.markdown(
+            f"**{name} · {sizes[name]:,} tracts** — median diabetes estimate "
+            f"{profile['diabetes_pct']:.1f}%; uninsured adults "
+            f"{profile['access2_pct']:.1f}%."
+        )
+    with st.expander("Compare all five indicators"):
+        st.dataframe(profiles.rename(columns=MEASURES).round(1), width="stretch")
+    st.caption("The two figures above are a quick introduction; all five indicators define "
+               "the grouping. Individual tracts can differ from their group's typical profile. "
+               "Changing the method or group count updates these descriptions; Group 1 in "
+               "one model is not necessarily the same set of tracts in another.")
     explore, stability, downloads = st.tabs(["Map & tract details", "Stability & methods",
                                             "Downloads & help"])
     with explore:
@@ -170,6 +306,13 @@ def render():
             st.caption("These profile medians use the full fitted cohort and stay fixed when "
                        "you filter. Individual tracts can differ from their group median.")
     with stability:
+        st.markdown("**Comparing methods (optional):** K-means finds representative group centers. "
+                    "Ward hierarchical starts with separate tracts and repeatedly merges groups "
+                    "whose combination adds the least variation within a group. More groups "
+                    "gives a finer breakdown, not automatically a better answer.\n\n"
+                    "**Stability** asks whether similar groupings appear when the study changes "
+                    "its sample or indicators. A stable grouping can still have limitations. "
+                    "These controls load saved analyses; they do not train a new model.")
         st.write("Silhouette measures separation. Adjusted Rand index (ARI) measures agreement "
                  "between assignments: 1 means identical grouping, even if labels change. "
                  "Neither is a probability of illness or a measure of predictive accuracy.")

@@ -134,10 +134,16 @@ def compare_contacts(content: bytes, context: list[dict], study: Study) -> dict:
     codes = [row.get("county_fips") for row in context]
     if len(codes) != len(set(codes)) or set(codes) != set(study.counties):
         raise ValueError("Context must contain exactly one row per selected county")
-    periods = {row.get("observation_month", "") for row in context}
-    if any(not isinstance(period, str) or not valid_month(period) for period in periods):
-        raise ValueError("Context observation months must be YYYY-MM")
-    if periods != {study.month} and not study.period_rationale.strip():
+    periods = set()
+    for row in context:
+        start = row.get("period_start", row.get("observation_month", ""))
+        end = row.get("period_end", row.get("observation_month", ""))
+        if not all(isinstance(value, str) and valid_month(value) for value in (start, end)):
+            raise ValueError("Context observation months must be YYYY-MM")
+        if start > end:
+            raise ValueError("Context period start must not follow its end")
+        periods.add((start, end))
+    if periods != {(study.month, study.month)} and not study.period_rationale.strip():
         raise ValueError("Period mismatch requires a recorded rationale")
     contacts = {row["county_fips"]: row["contacts"] for row in parsed["records"]}
     results = []
@@ -174,7 +180,10 @@ def compare_contacts(content: bytes, context: list[dict], study: Study) -> dict:
         "results": results,
         "input_sha256": parsed["sha256"],
         "study_month": study.month,
-        "observation_months": sorted(periods),
+        "observation_months": sorted(start for start, end in periods if start == end),
+        "observation_periods": [
+            {"start": start, "end": end} for start, end in sorted(periods)
+        ],
         "period_rationale": study.period_rationale,
         "thresholds": {
             "need_at_least": study.need_threshold,
