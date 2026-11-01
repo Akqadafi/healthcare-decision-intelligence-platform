@@ -167,7 +167,7 @@ with st.sidebar:
     st.caption("Tract study: az-tract-v1" if page == "Explore census tracts"
                else f"Dataset version: {version[:12]}")
     st.caption("No patient-level or protected health information is used.")
-    st.caption("Version 1.1.0 · Guided exploration & outreach workbench")
+    st.caption("Version 1.2.0 · Guided exploration & outreach workbench")
 
 filtered = mart[
     mart["priority_tier"].isin(tiers) & (mart["population"] >= minimum_population)

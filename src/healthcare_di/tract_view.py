@@ -5,9 +5,11 @@ import json
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 from healthcare_di.config import PROJECT_ROOT
+from healthcare_di.health_center_view import add_markers, controls, details
 from healthcare_di.tract_serving import MEASURES, filter_view, load_study, model_view
 
 CONTROL_HELP = {
@@ -114,7 +116,7 @@ def render():
                           missing if filter_enabled else True, excluded)
     selected = metrics.loc[metrics.model.eq(model)].iloc[0]
     st.header("Explore census tracts")
-    st.caption("Version 1.1.0 · Guided tract exploration")
+    st.caption("Version 1.2.0 · Guided tract exploration")
     st.subheader("What can I learn here?")
     st.write("Which small areas have similar combinations of health conditions and barriers "
              "to care—and how do individual areas differ? This page helps you explore those "
@@ -260,9 +262,18 @@ def render():
     explore, stability, downloads = st.tabs(["Map & tract details", "Stability & methods",
                                             "Downloads & help"])
     with explore:
+        layer = controls(data.loc[data.countyname.isin(counties), "county_fips"].unique())
         if visible.empty:
             st.warning("No tracts match these controls. Broaden the range, select a county, "
                        "or use Reset tract controls.")
+            if layer is not None:
+                figure = go.Figure()
+                figure.update_layout(map={"style": "white-bg", "center": {
+                    "lat": 34.3, "lon": -111.8}, "zoom": 5}, height=550)
+                add_markers(figure, layer)
+                st.plotly_chart(figure, width="stretch")
+                st.caption("No tract polygons match; facility markers still follow Counties.")
+                details(layer)
         else:
             colors = dict(zip([f"Group {n}" for n in range(1, 7)],
                               ["#0072B2", "#D55E00", "#009E73", "#CC79A7", "#E69F00", "#56B4E9"],
@@ -275,9 +286,11 @@ def render():
                 hover_name="tractfips", hover_data=["countyname", measure, "exclusion_reason"],
                 labels={**MEASURES, "profile": "Community group", "countyname": "County"})
             figure.update_layout(height=550, margin={"l": 0, "r": 0, "t": 10, "b": 0})
+            add_markers(figure, layer)
             st.plotly_chart(figure, width="stretch")
             st.caption("Gray = excluded from modeling. Zoom and pan to inspect. "
                        "Boundaries are generalized and are unsuitable for distance calculations.")
+            details(layer)
             columns = ["tractfips", "countyname", "profile", *MEASURES, "exclusion_reason"]
             st.dataframe(visible[columns].rename(columns=MEASURES), hide_index=True,
                          width="stretch")
@@ -290,12 +303,12 @@ def render():
                                       key="tract_second", help="Choose a second visible tract. "
                                       "Compare estimates and intervals, not just group labels. "
                                       "Choosing the same tract twice shows one column.")
-            details = visible.set_index("tractfips").loc[list(dict.fromkeys([first, second]))]
+            tract_details = visible.set_index("tractfips").loc[list(dict.fromkeys([first, second]))]
             st.subheader("Compare estimates and uncertainty")
             detail_columns = ["countyname", "profile", *MEASURES, "diabetes_crude95ci",
                               "mhlth_crude95ci", "access2_crude95ci", "B17001_M001",
                               "B17001_M002", "B08201_M001", "B08201_M002", "exclusion_reason"]
-            st.dataframe(details[detail_columns].T, width="stretch")
+            st.dataframe(tract_details[detail_columns].T, width="stretch")
             st.caption("PLACES fields ending in 95ci are modeled 95% intervals. ACS M001/M002 "
                        "are 90% margins of error for denominator/numerator counts, not the "
                        "displayed percentages. Negative source codes indicate unavailable values. "
